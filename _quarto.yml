@@ -32,9 +32,13 @@ website:
 
 format:
   html:
-    theme: solona
+    theme: morph
     css: styles.css
     toc: true
+    grid:
+      sidebar-width: 150px   # Adjust sidebar width (default ~250px)
+      body-width: 1200px      # Change main content width
+      margin-width: 200px    # Adjust the margins
 
 editor: visual
 
