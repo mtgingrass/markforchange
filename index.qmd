@@ -10,6 +10,8 @@ format:
         <div class="alert alert-info text-center" role="alert">
           <i class="bi bi-info-circle"></i> <b>Info</b> - This is not a campaign, it’s a conversation for now. Take it with a grain of salt.
         </div>
+website:
+  google-analytics: "G-FY061TKBSB"
 ---
 
 # Mark for Change
