@@ -28,6 +28,7 @@ website:
 
 format:
   html:
+    include-in-header: "ga4.html"
     theme: lux
     css: styles.css
     toc: true
