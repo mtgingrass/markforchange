@@ -27,7 +27,6 @@ website:
 
 format:
   html:
-    include-in-header: "ga.html"
     theme: lux
     css: styles.css
     toc: true
