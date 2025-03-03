@@ -3,6 +3,13 @@ title: "Mark Gingrass"
 about:
   template: trestles
   image: images/markforchange.jpg
+format:
+  html:
+    include-in-header: 
+      text: |
+        <div class="alert alert-info text-center" role="alert">
+          <i class="bi bi-info-circle"></i> <b>Info</b> - This is not a campaign, it’s a conversation for now. Take it with a grain of salt.
+        </div>
 ---
 
 # Mark for Change
@@ -17,7 +24,7 @@ Sherry Biggs isn’t a leader; she’s a copy-paste artist. When I reached out w
 
 I grew up on the streets. I grew up poor. I traveled. I worked my way up from a McDonald’s job and a paper route to enlisted service in the Air Force, climbing the blue, then white-collar ladders and stepping into senior management and leadership.
 
-I’m done with bipartisan politics, and you should be done, too. **Done with the BS.** Done with empty buzzwords, and empty promises. We don't need to pay you for spitting out buzzwords pre-scripted. We need to pay for action and critical thinking, not running around like a sheep. 
+I’m done with bipartisan politics, and you should be done, too. **Done with the BS.** Done with empty buzzwords, and empty promises. We don't need to pay you for spitting out buzzwords pre-scripted. We need to pay for action and critical thinking, not running around like a sheep.
 
 I’m the real deal.
 
@@ -46,9 +53,9 @@ That’s where the division starts.
 
 Vote for me because I stand for being **real, pragmatic, and relentless**. I’ll work hard so everyone can rise up.
 
-- No cookie-cutter responses.
-- No canned statements.
-- No “yes-man” politics.
+-   No cookie-cutter responses.
+-   No canned statements.
+-   No “yes-man” politics.
 
 My process is simple:
 
@@ -68,9 +75,9 @@ We can *rip off the band-aid*, but we’re not here to burn the house down in th
 
 The middle class is strong. We fight for what we’ve earned. We don’t hate the poor. We don’t want division. We want to **rise together** effectively, meaningfully, and without waste.
 
-- This is our community.
-- And I believe in it.
-- **No fluff. No nonsense. No bull.**
+-   This is our community.
+-   And I believe in it.
+-   **No fluff. No nonsense. No bull.**
 
 ## **You Want Real Change? You Want a Leader?**
 
