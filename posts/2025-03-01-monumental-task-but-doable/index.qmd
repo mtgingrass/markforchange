@@ -1,9 +1,9 @@
 ---
 title: "Running a Serious Campaign"
 author: "Mark Gingrass"
-date: 2025-02-26
+date: 2025-03-02
 categories: ["Career", "Politics"]
-image: images/politics.png
+image: images/political_hard_work.png
 execute:
   eval: false
 summary: "Running for office isn’t something you just decide to do one day—it takes groundwork, connections, and a serious commitment. I’m laying out the steps I need to take now to give myself a real shot later. No fluff, just the hard truth about what it takes to run a serious campaign."
