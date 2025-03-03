@@ -2,7 +2,7 @@
 title: "Mark Gingrass"
 about:
   template: trestles
-image: images/markpolitic.jpg
+image: images/mark_hike.jpg
 ---
 
 # Mark for Change
