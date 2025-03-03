@@ -15,9 +15,9 @@ format:
 lightbox: true
 ---
 
-# **H. 3457: What It Means & How to Stop It**
+# **[H. 3457](https://www.scstatehouse.gov/sess126_2025-2026/bills/3457.htm): What It Means & How to Stop It**
 
-## **What This Bill Does (The Short Version)**  
+## **What [This Bill](https://www.scstatehouse.gov/sess126_2025-2026/bills/3457.htm) Does (The Short Version)**  
 H. 3457 is a **total abortion ban in South Carolina**, except in cases where the mother’s life is at risk.  
 - **No exceptions for rape, incest, or fatal fetal anomalies.**  
 - **Doctors can be charged with felonies** for performing an abortion outside of the narrow exception.  
