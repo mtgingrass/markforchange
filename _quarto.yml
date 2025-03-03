@@ -3,6 +3,7 @@ project:
 
 website:
   title: "Mark For Change"
+  google-analytics: "G-FY061TKBSB"
   navbar:
     left:
       - href: index.qmd
