@@ -14,6 +14,9 @@ format:
     toc-expand: true
 lightbox: true
 ---
+This site and this blog post exist to make sure that people don’t just read about change or discuss it on social media, but to take real action.
+
+So, read carefully. Then go out and **take action.**
 
 # **[H. 3457](https://www.scstatehouse.gov/sess126_2025-2026/bills/3457.htm): What It Means & How to Stop It**
 
