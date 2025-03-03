@@ -1,0 +1,99 @@
+---
+title: "H. 3457 Complete Aboring Ban - Bull Shit"
+author: "Mark Gingrass"
+date: 2025-03-03
+categories: ["Career", "Politics"]
+image: images/my_body_my_choice.png
+execute:
+  eval: false
+summary: "This blog post breaks down H. 3457, South Carolina’s proposed total abortion ban, in plain language so that everyone can understand its real-world impacts."
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    toc-expand: true
+lightbox: true
+---
+
+# **H. 3457: What It Means & How to Stop It**
+
+## **What This Bill Does (The Short Version)**  
+H. 3457 is a **total abortion ban in South Carolina**, except in cases where the mother’s life is at risk.  
+- **No exceptions for rape, incest, or fatal fetal anomalies.**  
+- **Doctors can be charged with felonies** for performing an abortion outside of the narrow exception.  
+- Women will likely be forced to travel **out of state** or resort to **underground options**.
+
+:::{.callout-warning collapse=false appearance='default' icon=true}
+## Oh, this doesn't affect you? Bull shit. Here is the hard truth nobody talks about.
+- What if it's your 14 year old daugher that gets pregnant by her uncle?
+- What if your wife is raped and gets pregnant by the perpetrator? Are you going to love that baby like your own, raising them with love and never see the perpetrator in there eyes?
+- What if it's a choice of losing your wife, or saving a baby that is medically determined that it's chance of survivor is 10%, and even if it survives, it will be brain damaged. 
+
+### **These examples too harsh for you? This is reality. Let's not forget that we live in reality. Vote NO!**
+:::
+
+
+---
+
+## **How to Stop H. 3457 from Becoming Law**  
+
+If you think this bill shouldn’t pass, here’s what you **can do**—broken down into **real, actionable steps**.  
+
+### **1. Understand the Process (How a Bill Becomes a Law in SC)**  
+This bill **isn’t law yet**. It still has to pass:  
+1. **Judiciary Committee** (this is the best chance to kill it)  
+2. **House Vote**  
+3. **Senate Vote**  
+4. **Governor’s Approval (or Veto)**  
+
+---
+
+### **2. Where You Can Make a Difference**  
+#### **Call, Email, or Meet Your State Legislators**  
+- The **Judiciary Committee** is reviewing this bill first. If they **vote against it**, the bill **stops here**.  
+- **Find your state legislators here**: [South Carolina State House Finder](https://www.scstatehouse.gov/member.php?chamber=H)\
+**Find your state Senators here**: [South Carolina State Senators](https://www.scstatehouse.gov/member.php?chamber=S)
+
+- **What to say?** Keep it **short, direct, and personal**. I highly recommend downloading the [5Calls](https://5calls.org/) App to make the process even simpler (no affiliation).
+    
+:::{.callout-tip collapse=false appearance='default' icon=true}
+## Example Script
+"I'm a South Carolina voter, and I oppose H. 3457. It bans abortion in all cases except medical emergencies, including rape and incest. This is extreme. Please vote NO."  
+:::
+
+#### **Show Up to Hearings & Protests**  
+- **Committee hearings** are often **open to the public**. If you can, **attend and speak against the bill.** I will update this list with direct links as soon as I find out more. 
+
+#### **Talk to Friends & Family**  
+- **Most people don’t follow politics daily.** Bring this up in conversations, explain **what it does in plain terms**, and encourage people to call their representatives. Again, use [5Calls](https://5calls.org/) for simplicty.   
+- Share **real-world stories**—many people change their minds when they hear how laws impact **actual people, not just theoretical debates.**  
+
+#### **Pressure the Governor**  
+- If this bill passes the House and Senate, **Governor McMaster** gets the final say.  
+- **McMaster SUPPORTS abortion bans**, but **mass public pressure** (calls, emails, and protests) could push him to **reconsider a total ban without exceptions**.  
+
+---
+
+### **3. Support Pro-Choice Groups & Candidates**  
+- Groups like **Planned Parenthood, WREN, and the ACLU of South Carolina** are **already fighting this battle.** Support them through:  
+    - **Donations** (to help with legal challenges)  
+    - **Volunteering** (phone banking, voter outreach)  
+    - **Attending events & protests**  
+
+:::{.callout-note collapse=false appearance='default' icon=true}
+- Adding Links Soon for direct support
+:::
+
+
+- **Vote in every state election**—most abortion laws are decided **at the state level**, not federal. Even **local races** (for state rep, state senate) matter **a lot**.  
+
+---
+
+## **Final Thoughts**  
+Stopping H. 3457 **is possible,** but only if **enough people** take action. **If nothing happens, this will become law.**  
+
+- **Step 1:** Call/email your **House Reps NOW** (especially Judiciary Committee members).  
+- **Step 2:** Spread the word—tell **friends, family, and coworkers.**  
+- **Step 3:** Support organizations that are actively fighting this.  
+
+The clock is ticking. If you care about stopping this, **now is the time to act.**  
