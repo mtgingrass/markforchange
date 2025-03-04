@@ -3,7 +3,7 @@ title: "SHeri Biggs Canned Response on Ukraine"
 author: "Mark Gingrass"
 date: 2025-03-04
 categories: ["Politics"]
-image: images/sheri-biggs.jpeg
+image: images/sheri-biggs-mug.png
 execute:
   eval: false
 summary: "Sheri Biggs’ response on Ukraine is a shallow, ill-informed, and reckless misrepresentation of U.S. foreign policy. Despite sitting on the House Foreign Affairs Committee’s East Asia and Pacific Subcommittee, she fails to grasp basic geopolitical realities. She completely ignores the 1994 Budapest Memorandum, where the U.S. promised to support Ukraine’s sovereignty in exchange for nuclear disarmament—making her argument not just misleading, but historically illiterate."
@@ -14,18 +14,19 @@ format:
     toc-expand: true
 lightbox: true
 ---
+![](images/sheri-biggs-mug.png)
 
-I recently used the app **Five Calls** to contact Sheri Biggs and urge her to oppose the executive order on military aid to Ukraine. As an ally of Ukraine, the U.S. should not support actions that undermine our values and commitments.  
+I recently used the app **Five Calls** to contact Sheri Biggs and urge her to oppose the executive order on military aid to Ukraine. As an ally of Ukraine, the U.S. should not support actions that undermine our values and commitments.
 
-There are many reasons to oppose this order, but a key concern is Trump’s suspicious pro-Putin stance, which directly contradicts America’s strategic interests. Using Five Calls made it easy to take action, and I want to share my experience with you.  
+There are many reasons to oppose this order, but a key concern is Trump’s suspicious pro-Putin stance, which directly contradicts America’s strategic interests. Using Five Calls made it easy to take action, and I want to share my experience with you.
 
-![Five Calls Script](images/5calls.jpeg)  
+![Five Calls Script](images/5calls.jpeg)
 
 Below is my response and thoughts on the conversation.
 
 # Debunking Sherri Biggs’ Response on Ukraine
 
-Sheri Biggs  responded to concerns about Ukraine with a statement that, while politically crafted, contains so many flaws, contradictions, and omissions.
+Sheri Biggs responded to concerns about Ukraine with a statement that, while politically crafted, contains so many flaws, contradictions, and omissions.
 
 ## Ignoring U.S. Commitments
 
@@ -130,4 +131,4 @@ If the U.S. wants to **remain a global leader**, it must **honor its commitments
 
 ## Bigg's Full Response
 
-![Five Calls Script](images/sheri-biggs.jpeg)  
+![Five Calls Script](images/sheri-biggs.jpeg)
