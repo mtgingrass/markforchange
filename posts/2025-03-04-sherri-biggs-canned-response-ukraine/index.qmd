@@ -1,8 +1,8 @@
 ---
 title: "Shery Biggs Canned Response on Ukraine"
 author: "Mark Gingrass"
-date: 2025-03-03
-categories: ["Career", "Politics"]
+date: 2025-03-04
+categories: ["Politics"]
 image: images/sheri-biggs.jpeg
 execute:
   eval: false
@@ -15,107 +15,115 @@ format:
 lightbox: true
 ---
 
-# Debunking Sherry Biggs’ Response on Ukraine  
+I recently used the app **Five Calls** to contact Sherry Biggs and urge her to oppose the executive order on military aid to Ukraine. As an ally of Ukraine, the U.S. should not support actions that undermine our values and commitments.  
 
-Sherry Biggs recently responded to concerns about Ukraine with a statement that, while politically crafted, contains significant flaws, contradictions, and omissions. Below, I break down the key issues in her argument and why they don’t hold up under scrutiny.
+There are many reasons to oppose this order, but a key concern is Trump’s suspicious pro-Putin stance, which directly contradicts America’s strategic interests. Using Five Calls made it easy to take action, and I want to share my experience with you.  
 
-## 1. Ignoring U.S. Commitments to Ukraine (Budapest Memorandum)  
+![Five Calls Script](images/5calls.jpeg)  
 
-One of the biggest omissions in Biggs’ response is the **1994 Budapest Memorandum**. Under this agreement, Ukraine gave up its **nuclear weapons** in exchange for security assurances from the **United States, the UK, and Russia**.  
+Below is my response and thoughts on the conversation.
 
-By suggesting that supporting Ukraine is merely an **optional burden**, Biggs disregards **U.S. credibility** in global security agreements. If the U.S. abandons Ukraine now, why would any other country trust future American security guarantees? This weakens **nonproliferation efforts**, making future nuclear disarmament agreements much harder to achieve.  
+# Debunking Sherri Biggs’ Response on Ukraine
+
+Sherry Biggs  responded to concerns about Ukraine with a statement that, while politically crafted, contains so many flaws, contradictions, and omissions.
+
+## Ignoring U.S. Commitments
+
+One of the biggest omissions in Biggs’ response is the **1994 Budapest Memorandum**. Under this agreement, Ukraine gave up its **nuclear weapons** in exchange for security assurances from the **United States, the UK, and Russia**.
+
+By suggesting that supporting Ukraine is merely an **optional burden**, Biggs disregards **U.S. credibility** in global security agreements. If the U.S. abandons Ukraine now, why would any other country trust future American security guarantees? This weakens **nonproliferation efforts**, making future nuclear disarmament agreements much harder to achieve.
 
 > **Flaw:** The U.S. made a formal commitment to protect Ukraine’s sovereignty. Ignoring it **damages U.S. credibility** on the global stage.
 
----
+------------------------------------------------------------------------
 
-## 2. False Equivalence Between European Defense Spending and U.S. Obligations  
+## European Defense Spending and U.S. Obligations
 
-Biggs claims that wealthy European nations have not "stepped up" enough, yet also argues that the U.S. cannot handle multiple global threats. This is misleading:  
+Biggs claims that wealthy European nations have not "stepped up" enough, yet also argues that the U.S. cannot handle multiple global threats. This is misleading:
 
-- Many European countries **have** significantly increased their defense spending.  
-- **Germany, Poland, and others have contributed billions to Ukraine.**  
-- The **UK and France have expanded their military commitments.**  
+-   Many European countries **have** significantly increased their defense spending.\
+-   **Germany, Poland, and others have contributed billions to Ukraine.**\
+-   The **UK and France have expanded their military commitments.**
 
-If these allies are **already increasing their spending**, then why is the U.S. reducing its support? Biggs’ argument contradicts itself: either Europe is failing to step up (which is incorrect) or the U.S. is making a **strategic mistake** by disengaging.  
+If these allies are **already increasing their spending**, then why is the U.S. reducing its support? Biggs’ argument contradicts itself: either Europe is failing to step up (which is incorrect) or the U.S. is making a **strategic mistake** by disengaging.
 
-> **Flaw:** Europe **is** stepping up, yet Biggs still uses this as an excuse to reduce U.S. involvement.  
+> **Flaw:** Europe **is** stepping up, yet Biggs still uses this as an excuse to reduce U.S. involvement.
 
----
+------------------------------------------------------------------------
 
-## 3. Contradictory Stance on Defense Spending  
+## Contradictory Stance on Defense Spending
 
-Biggs argues that the U.S. **cannot handle multiple global threats** without **substantial increases in defense spending**. Yet, in the next breath, she says that **cutting defense spending** is necessary.  
+Biggs argues that the U.S. **cannot handle multiple global threats** without **substantial increases in defense spending**. Yet, in the next breath, she says that **cutting defense spending** is necessary.
 
-- If **China is the main concern**, wouldn’t strengthening alliances (including Ukraine) be a **key strategy**?  
-- The U.S. has **historically spent on defense to prevent larger conflicts** (e.g., WWII, the Cold War).  
-- Ukraine’s fight **weakens Russia without U.S. troops being deployed**, which is a cost-effective strategy.  
+-   If **China is the main concern**, wouldn’t strengthening alliances (including Ukraine) be a **key strategy**?\
+-   The U.S. has **historically spent on defense to prevent larger conflicts** (e.g., WWII, the Cold War).\
+-   Ukraine’s fight **weakens Russia without U.S. troops being deployed**, which is a cost-effective strategy.
 
-Biggs presents **two opposing arguments at the same time**: that the world is more dangerous but that we should spend less on countering these dangers.  
+Biggs presents **two opposing arguments at the same time**: that the world is more dangerous but that we should spend less on countering these dangers.
 
 > **Flaw:** She **recognizes** growing threats but **argues against** sustaining military deterrence.
 
----
+------------------------------------------------------------------------
 
-## 4. Omission of Strategic and Economic Benefits of Supporting Ukraine  
+## Omission Benefits of Supporting Ukraine
 
-The response frames Ukraine aid as a waste of taxpayer money, but **fails to mention** the **strategic** and **economic** benefits:  
+The response frames Ukraine aid as a waste of taxpayer money, but **fails to mention** the **strategic** and **economic** benefits:
 
-- **Weakens Russia** without U.S. troop involvement.  
-- **Strengthens NATO and U.S. alliances**, ensuring future security cooperation.  
-- **Stabilizes global markets**, preventing economic ripple effects.  
+-   **Weakens Russia** without U.S. troop involvement.\
+-   **Strengthens NATO and U.S. alliances**, ensuring future security cooperation.\
+-   **Stabilizes global markets**, preventing economic ripple effects.
 
-If the U.S. **abandons Ukraine**, Russia is emboldened to expand further, leading to a **larger, more expensive conflict later** (e.g., against NATO allies).  
+If the U.S. **abandons Ukraine**, Russia is emboldened to expand further, leading to a **larger, more expensive conflict later** (e.g., against NATO allies).
 
 > **Flaw:** The cost of **inaction** could be **far greater** than the cost of supporting Ukraine now.
 
----
+------------------------------------------------------------------------
 
-## 5. Misrepresentation of Biden’s Foreign Policy Record  
+## Misrepresentation of Biden
 
-Biggs blames President Biden for global instability, but her reasoning is flawed:  
+Biggs blames President Biden for global instability, but her reasoning is flawed:
 
-- **Crimea was invaded in 2014** (under Obama), proving Russian aggression was **not caused by Biden**.  
-- The **Colonial Pipeline attack** was carried out by a **cybercriminal group**, not the Russian government.  
-- **Trump weakened NATO** by **threatening to leave** and **downplaying Russian threats**, despite Congress supporting Ukraine.  
+-   **Crimea was invaded in 2014** (under Obama), proving Russian aggression was **not caused by Biden**.\
+-   The **Colonial Pipeline attack** was carried out by a **cybercriminal group**, not the Russian government.\
+-   **Trump weakened NATO** by **threatening to leave** and **downplaying Russian threats**, despite Congress supporting Ukraine.
 
-Biggs cherry-picks foreign policy events while **ignoring Trump’s own failures** and **downplaying Russia’s long-term aggression**.  
+Biggs cherry-picks foreign policy events while **ignoring Trump’s own failures** and **downplaying Russia’s long-term aggression**.
 
 > **Flaw:** The argument **distorts history** to blame Biden while ignoring **broader geopolitical trends**.
 
----
+------------------------------------------------------------------------
 
-## 6. Overlooking the Connection Between Ukraine and China  
+## Ukraine and China
 
-Biggs treats **Ukraine and China as separate issues**, but they are **deeply connected**:  
+Biggs treats **Ukraine and China as separate issues**, but they are **deeply connected**:
 
-- If the U.S. **fails to deter Russia**, China sees weakness and is **more likely to invade Taiwan**.  
-- A **strong U.S. response in Ukraine deters China** by proving that America **stands by its allies**.  
+-   If the U.S. **fails to deter Russia**, China sees weakness and is **more likely to invade Taiwan**.\
+-   A **strong U.S. response in Ukraine deters China** by proving that America **stands by its allies**.
 
-By pulling support from Ukraine, the U.S. would be **signaling to China** that **it won’t protect its allies**, making war in the Pacific more likely.  
+By pulling support from Ukraine, the U.S. would be **signaling to China** that **it won’t protect its allies**, making war in the Pacific more likely.
 
 > **Flaw:** Weakness in Ukraine **emboldens** China, contradicting Biggs’ claim that we need to focus on Asia.
 
----
+------------------------------------------------------------------------
 
-## 7. Oversimplification of National Debt and Spending  
+## Oversimplification
 
-Biggs argues that the U.S. **cannot afford Ukraine aid due to national debt**, but this **ignores key realities**:  
+Biggs argues that the U.S. **cannot afford Ukraine aid due to national debt**, but this **ignores key realities**:
 
-- Military spending is **an investment in long-term security**.  
-- The U.S. ran deficits while engaging in **WWII, the Cold War, and post-9/11 security efforts**—and still maintained economic growth.  
-- Aid to Ukraine is **a fraction** of the defense budget but **delivers massive strategic benefits**.  
+-   Military spending is **an investment in long-term security**.\
+-   The U.S. ran deficits while engaging in **WWII, the Cold War, and post-9/11 security efforts**—and still maintained economic growth.\
+-   Aid to Ukraine is **a fraction** of the defense budget but **delivers massive strategic benefits**.
 
-If the U.S. is **worried about debt**, cutting aid to Ukraine isn’t the solution—reforming tax policy and discretionary spending would have a **far greater impact**.  
+If the U.S. is **worried about debt**, cutting aid to Ukraine isn’t the solution—reforming tax policy and discretionary spending would have a **far greater impact**.
 
 > **Flaw:** National debt concerns **don’t justify abandoning global security commitments**.
 
----
+------------------------------------------------------------------------
 
-## Conclusion  
+## Conclusion
 
-Biggs’ response **ignores U.S. commitments**, **misrepresents global dynamics**, **contradicts itself on defense spending**, and **downplays the strategic consequences of abandoning Ukraine**.  
+Biggs’ response **ignores U.S. commitments**, **misrepresents global dynamics**, **contradicts itself on defense spending**, and **downplays the strategic consequences of abandoning Ukraine**.
 
-Supporting Ukraine is **not just about Ukraine**—it’s about **U.S. credibility, global stability, and deterring larger wars**. The **real cost** isn’t spending taxpayer money now, but the **future conflicts and economic instability** that would result from inaction.  
+Supporting Ukraine is **not just about Ukraine**—it’s about **U.S. credibility, global stability, and deterring larger wars**. The **real cost** isn’t spending taxpayer money now, but the **future conflicts and economic instability** that would result from inaction.
 
 If the U.S. wants to **remain a global leader**, it must **honor its commitments, invest in strategic security, and recognize that weakness in Ukraine strengthens America’s adversaries**.
