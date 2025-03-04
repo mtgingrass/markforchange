@@ -1,12 +1,12 @@
 ---
-title: "Shery Biggs Canned Response on Ukraine"
+title: "SHeri Biggs Canned Response on Ukraine"
 author: "Mark Gingrass"
 date: 2025-03-04
 categories: ["Politics"]
 image: images/sheri-biggs.jpeg
 execute:
   eval: false
-summary: "Sherry Biggs’ response on Ukraine is a shallow, ill-informed, and reckless misrepresentation of U.S. foreign policy. Despite sitting on the House Foreign Affairs Committee’s East Asia and Pacific Subcommittee, she fails to grasp basic geopolitical realities. She completely ignores the 1994 Budapest Memorandum, where the U.S. promised to support Ukraine’s sovereignty in exchange for nuclear disarmament—making her argument not just misleading, but historically illiterate."
+summary: "Sheri Biggs’ response on Ukraine is a shallow, ill-informed, and reckless misrepresentation of U.S. foreign policy. Despite sitting on the House Foreign Affairs Committee’s East Asia and Pacific Subcommittee, she fails to grasp basic geopolitical realities. She completely ignores the 1994 Budapest Memorandum, where the U.S. promised to support Ukraine’s sovereignty in exchange for nuclear disarmament—making her argument not just misleading, but historically illiterate."
 format:
   html:
     toc: true
@@ -15,7 +15,7 @@ format:
 lightbox: true
 ---
 
-I recently used the app **Five Calls** to contact Sherry Biggs and urge her to oppose the executive order on military aid to Ukraine. As an ally of Ukraine, the U.S. should not support actions that undermine our values and commitments.  
+I recently used the app **Five Calls** to contact Sheri Biggs and urge her to oppose the executive order on military aid to Ukraine. As an ally of Ukraine, the U.S. should not support actions that undermine our values and commitments.  
 
 There are many reasons to oppose this order, but a key concern is Trump’s suspicious pro-Putin stance, which directly contradicts America’s strategic interests. Using Five Calls made it easy to take action, and I want to share my experience with you.  
 
@@ -25,7 +25,7 @@ Below is my response and thoughts on the conversation.
 
 # Debunking Sherri Biggs’ Response on Ukraine
 
-Sherry Biggs  responded to concerns about Ukraine with a statement that, while politically crafted, contains so many flaws, contradictions, and omissions.
+Sheri Biggs  responded to concerns about Ukraine with a statement that, while politically crafted, contains so many flaws, contradictions, and omissions.
 
 ## Ignoring U.S. Commitments
 
@@ -127,3 +127,7 @@ Biggs’ response **ignores U.S. commitments**, **misrepresents global dynamics*
 Supporting Ukraine is **not just about Ukraine**—it’s about **U.S. credibility, global stability, and deterring larger wars**. The **real cost** isn’t spending taxpayer money now, but the **future conflicts and economic instability** that would result from inaction.
 
 If the U.S. wants to **remain a global leader**, it must **honor its commitments, invest in strategic security, and recognize that weakness in Ukraine strengthens America’s adversaries**.
+
+## Bigg's Full Response
+
+![Five Calls Script](images/sheri-biggs.jpeg)  
