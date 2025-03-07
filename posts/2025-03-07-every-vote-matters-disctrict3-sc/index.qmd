@@ -3,7 +3,7 @@ title: "Every Vote Matters - SC District 3"
 author: "Mark Gingrass"
 date: 2025-03-07
 categories: ["Politics"]
-image: images/every-vote-matters.png
+image: images/registered.png
 execute:
   eval: false
 summary: "In our district, over 200,000 people didn’t vote in the last election—that’s enough to change everything. The system stays broken when we stay home. Let’s change that. Read more and register to vote today."
