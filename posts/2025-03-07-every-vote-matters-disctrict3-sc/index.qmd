@@ -1,0 +1,50 @@
+---
+title: "Every Vote Matters - SC District 3"
+author: "Mark Gingrass"
+date: 2025-03-04
+categories: ["Politics"]
+image: images/sheri-biggs-mug.png
+execute:
+  eval: false
+summary: "Sheri Biggs’ response on Ukraine is a shallow, ill-informed, and reckless misrepresentation of U.S. foreign policy. Despite sitting on the House Foreign Affairs Committee’s East Asia and Pacific Subcommittee, she fails to grasp basic geopolitical realities. She completely ignores the 1994 Budapest Memorandum, where the U.S. promised to support Ukraine’s sovereignty in exchange for nuclear disarmament—making her argument not just misleading, but historically illiterate."
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    toc-expand: true
+lightbox: true
+---
+
+### **Our District Didn’t Vote**
+
+![](images/every-vote-matters.png)
+
+Did you know that in our district, **over 200,000 eligible voters sat out the last election?** That’s more than enough to change the outcome of any race.
+
+### **Every Vote Counts**  
+
+I want every vote to count. I want people who have never voted before to show up. I want my neighbors to vote. I want the poor, the minorities, the people working 6 AM to 7 PM, exhausted, stretched thin, and fed up; I want you to vote.  
+
+Sitting out isn’t the answer. The system doesn’t change when you stay silent. It changes when you show up. Show up, show up, show up. Action. 
+
+**You are safe. You are protected. Nothing is going to happen to you for voting.** It’s your right, and no one can take that away.
+
+I’ll plan to give out voting pamphlets and give examples of how easy it is to vote. I’ll show you where to find your polling place. I’ll walk you through the whole process so you know what to expect. Stay tuned for more info as voting deadlines get closer
+
+**Math:**
+
+- **570,000+ adults in District 3 could vote.**
+- **Only about 360,000 actually did.**
+- **That leaves over 200,000 people whose voices weren’t heard.**
+
+![](images/Voter Participation in SC District 3.png)
+
+That’s not just a number, it’s a missed opportunity to elect leaders who actually listen. And if we’re serious about real change, it starts with one simple step: [**getting registered and showing up.**]((https://vrems.scvotes.sc.gov/ovr/start))
+
+[**Not registered yet? Clicke here now.**](https://vrems.scvotes.sc.gov/ovr/start)
+
+**Tell me: What would make you vote this year if you didn’t last time? Drop a comment or send me a message—I want to hear your thoughts.**
+
+### District 3 Map
+
+![](images/district3.png)
