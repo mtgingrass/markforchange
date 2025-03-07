@@ -3,10 +3,10 @@ title: "Every Vote Matters - SC District 3"
 author: "Mark Gingrass"
 date: 2025-03-04
 categories: ["Politics"]
-image: images/sheri-biggs-mug.png
+image: images/every-vote-matters.png
 execute:
   eval: false
-summary: "Sheri Biggs’ response on Ukraine is a shallow, ill-informed, and reckless misrepresentation of U.S. foreign policy. Despite sitting on the House Foreign Affairs Committee’s East Asia and Pacific Subcommittee, she fails to grasp basic geopolitical realities. She completely ignores the 1994 Budapest Memorandum, where the U.S. promised to support Ukraine’s sovereignty in exchange for nuclear disarmament—making her argument not just misleading, but historically illiterate."
+summary: "In our district, over 200,000 people didn’t vote in the last election—that’s enough to change everything. The system stays broken when we stay home. Let’s change that. Read more and register to vote today."
 format:
   html:
     toc: true

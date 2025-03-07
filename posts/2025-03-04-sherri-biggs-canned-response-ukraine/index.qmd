@@ -1,5 +1,5 @@
 ---
-title: "SHeri Biggs Canned Response on Ukraine"
+title: "Sheri Biggs Canned Response on Ukraine"
 author: "Mark Gingrass"
 date: 2025-03-04
 categories: ["Politics"]
@@ -14,6 +14,7 @@ format:
     toc-expand: true
 lightbox: true
 ---
+
 ![](images/sheri-biggs-mug.png)
 
 I recently used the app **Five Calls** to contact Sheri Biggs and urge her to oppose the executive order on military aid to Ukraine. As an ally of Ukraine, the U.S. should not support actions that undermine our values and commitments.
