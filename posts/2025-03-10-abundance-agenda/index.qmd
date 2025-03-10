@@ -1,0 +1,100 @@
+---
+title: "Abundance Agenda"
+author: "Mark Gingrass"
+date: 2025-03-10
+categories: ["Politics"]
+image: images/Abundance-Agenda.png
+execute:
+  eval: false
+summary: "Building with the Abundance Agenda – Easley, SC, and District 3 have the potential to grow by expanding supply in housing, transportation, jobs, and infrastructure. Instead of limiting progress, let’s remove barriers and create a future where opportunity is abundant for everyone."
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    toc-expand: true
+lightbox: true
+---
+
+# 
+
+# Unlocking Easley
+
+## Expanding Supply
+
+The Abundance Agenda is a forward-thinking approach that focuses on *expanding supply* rather than *subsidizing demand*. For small cities like Easley, South Carolina, adopting an abundance-focused strategy can drive economic growth, improve affordability, and create opportunities for all residents.
+
+### Applying the Abundance Agenda to Easley
+
+Easley, a city of approximately 23,000 residents in Pickens County, is part of the rapidly growing Greenville metro area. As Greenville expands, Easley faces increased demand for housing, transportation, and jobs. By tacking action using abundance-oriented policies, Easley can manage its growth sustainably and become a model for other cities in South Carolina’s 3rd Congressional District.
+
+![](images/clipboard-478616933.png)
+
+## Building More, Faster, and Cheaper
+
+Easley struggles with rising housing costs due to limited supply, restrictive zoning regulations, and slow traditional construction methods. Without action, affordability will decline, forcing more residents to commute long distances or relocate.
+
+```{=html}
+<iframe id="cr-embed-16000US4521985-housing-ownership-value_distribution" class="census-reporter-embed" src="https://s3.amazonaws.com/embed.censusreporter.org/1.0/iframe.html?geoID=16000US4521985&amp;chartDataID=housing-ownership-value_distribution&amp;dataYear=2023&amp;releaseID=ACS_2023_5-year&amp;chartType=histogram&amp;chartHeight=200&amp;chartQualifier=&amp;chartTitle=Value+of+owner-occupied+housing+units&amp;initialSort=&amp;statType=scaled-percentage" frameborder="0" width="100%" height="300" style="margin: 1em; max-width: 720px;">
+</iframe>
+<script src="https://s3.amazonaws.com/embed.censusreporter.org/1.0/js/embed.chart.make.js"></script>
+```
+
+### The Abundance Approach
+
+Rather than relying on subsidies, Easley could focus on unlocking supply by making it easier to build. The number of housing unites is about half of the population.
+
+![](images/clipboard-4062177413.png)
+
+-   **Zoning Reform** – make it easier to build duplexes, triplexes, and accessory dwelling units (ADUs) in single-family zones. Greenville is already experimenting with these changes, setting a precedent for Easley to follow.
+
+::: {.callout-tip collapse="false" appearance="default" icon="true"}
+#### Example Policy: Fast-track permits for duplexes and triplexes on lots zoned for single-family homes.
+:::
+
+## Transportation & Walkability
+
+Easley remains heavily car-dependent, and as more people move in, traffic congestion will worsen. Pedestrian-friendly infrastructure is lacking, making non-car travel unsafe or impractical.
+
+### The Abundance Approach
+
+Instead of solely expanding roads, Easley should invest in alternative transportation options:
+
+-   **Bike Lanes & Sidewalk Expansions** – Make non-car travel safer and more accessible.
+
+## Small Businesses & Startups
+
+### The Problem
+
+Many Easley residents commute to Greenville for work, while small businesses struggle with high commercial rents and limited support.
+
+### The Abundance Approach
+
+Easley can boost local job creation by prioritizing small businesses and entrepreneurship:
+
+-   **Streamline Business Permitting** – Cut red tape to make opening a business easier and faster.
+-   **Co-Working & Startup Spaces** – Convert underused buildings into affordable office spaces for remote workers and startups.
+-   **Attract Remote Workers** – Market Easley as a lower-cost alternative to Greenville for remote professionals.
+
+:::{.callout-tip collapse=false appearance='default' icon=true}
+#### Example Policy: Launch a small business permit accelerator program to reduce startup red tape.
+:::
+
+
+## Underused Spaces
+
+### The Problem
+
+Easley has numerous vacant lots, parking lots, and old strip malls that could be repurposed for greater economic and social benefit.
+
+### The Abundance Approach
+
+Instead of letting land sit unused, Easley should encourage creative redevelopment:
+
+-   **Adaptive Reuse** – Convert vacant commercial buildings into coworking spaces.
+-   **Encourage Mixed-Use Development** – Permit small apartments above retail stores in business districts.
+
+## Thoughts
+
+The Abundance Agenda is about *removing barriers*, *streamlining processes*, and unleashing private-sector *innovation.* By embracing these principles, Easley can grow while maintaining affordability and economic opportunity for all its residents.
+
+With the right policies, Easley can make a stronger South Carolina and can lead the way in demonstrating how abundance-oriented policies create wealth for all.
