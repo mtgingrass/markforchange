@@ -19,12 +19,12 @@ website:
           - text: "@MarkGingrass"
             href: https://youtube.com/@markgingrass
       - icon: envelope-arrow-up-fill
-        href: "mailto:vote@markgingrass.com"  # Ensure correct spacing and quotes
+        href: "contact.html"  # Ensure correct spacing and quotes
   page-footer: 
     left: "Copyright 2025, Mark Gingrass" 
     right: 
       - icon: envelope-arrow-up-fill
-        href: "mailto:vote@markgingrass.com"  # Ensure correct spacing and quotes
+        href: "contact.html"  # Ensure correct spacing and quotes
 
 format:
   html:
