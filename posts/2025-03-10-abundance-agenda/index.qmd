@@ -15,86 +15,61 @@ format:
 lightbox: true
 ---
 
-# 
+# **The Abundance Agenda**
 
-# Unlocking Easley
+I’m not an expert on the **Abundance Agenda**, but I’m fascinated by it. I want to explore how this approach could benefit smaller towns like Easley and other cities in South Carolina’s District 3 (and beyond).
 
-## Expanding Supply
+At its core, the Abundance Agenda is about **unlocking supply**—removing unnecessary barriers that make everyday life more expensive. It’s a way to appeal to both the left and the right. Instead of simply handing out benefits (which conservatives criticize), you **cut red tape** to allow more goods, services, and opportunities to be created faster and more efficiently (which conservatives love). At the same time, progressives should support this because it lowers costs and expands access to essential needs like housing, transportation, and education.
 
-The Abundance Agenda is a forward-thinking approach that focuses on *expanding supply* rather than *subsidizing demand*. For small cities like Easley, South Carolina, adopting an abundance-focused strategy can drive economic growth, improve affordability, and create opportunities for all residents.
+So the key question is: **How do we unlock supply?**
 
-### Applying the Abundance Agenda to Easley
+## **Housing: Faster, Cheaper, & Available**
 
-Easley, a city of approximately 23,000 residents in Pickens County, is part of the rapidly growing Greenville metro area. As Greenville expands, Easley faces increased demand for housing, transportation, and jobs. By tacking action using abundance-oriented policies, Easley can manage its growth sustainably and become a model for other cities in South Carolina’s 3rd Congressional District.
-
-![](images/clipboard-478616933.png)
-
-## Building More, Faster, and Cheaper
-
-Easley struggles with rising housing costs due to limited supply, restrictive zoning regulations, and slow traditional construction methods. Without action, affordability will decline, forcing more residents to commute long distances or relocate.
+Look at Easley. The population has jumped from **24,000 in 2022 to nearly 28,000 today**, and housing prices are climbing fast. A third of homes are between **\$200,000 and \$300,000**, with another **15% between \$300,000 and \$400,000**—and these numbers will only go up.
 
 ```{=html}
-<iframe id="cr-embed-16000US4521985-housing-ownership-value_distribution" class="census-reporter-embed" src="https://s3.amazonaws.com/embed.censusreporter.org/1.0/iframe.html?geoID=16000US4521985&amp;chartDataID=housing-ownership-value_distribution&amp;dataYear=2023&amp;releaseID=ACS_2023_5-year&amp;chartType=histogram&amp;chartHeight=200&amp;chartQualifier=&amp;chartTitle=Value+of+owner-occupied+housing+units&amp;initialSort=&amp;statType=scaled-percentage" frameborder="0" width="100%" height="300" style="margin: 1em; max-width: 720px;">
-</iframe>
+<iframe id="cr-embed-16000US4521985-housing-ownership-value_distribution" class="census-reporter-embed" src="https://s3.amazonaws.com/embed.censusreporter.org/1.0/iframe.html?geoID=16000US4521985&chartDataID=housing-ownership-value_distribution&dataYear=2023&releaseID=ACS_2023_5-year&chartType=histogram&chartHeight=200&chartQualifier=&chartTitle=Value+of+owner-occupied+housing+units&initialSort=&statType=scaled-percentage" frameborder="0" width="100%" height="300" style="margin: 1em; max-width: 720px;"></iframe>
 <script src="https://s3.amazonaws.com/embed.censusreporter.org/1.0/js/embed.chart.make.js"></script>
 ```
 
-### The Abundance Approach
+If we want affordable housing, a question we need to ask is if we need **zoning reform**. That means:\
+- Removing outdated regulations that slow down construction.\
+- Making **permitting faster** and more efficient.\
+- Cutting permit delays—because six months of waiting adds thousands to home prices.\
+- Allowing more **duplexes, apartments, and mixed-use developments** to be built where people need them.
 
-Rather than relying on subsidies, Easley could focus on unlocking supply by making it easier to build. The number of housing unites is about half of the population.
+If it takes **1.5 years to sell a home instead of 1 year**, that extra delay drives up costs. The sooner homes hit the market, the more affordable they are.
 
-![](images/clipboard-4062177413.png)
+## **Moving People More Efficiently**
 
--   **Zoning Reform** – make it easier to build duplexes, triplexes, and accessory dwelling units (ADUs) in single-family zones. Greenville is already experimenting with these changes, setting a precedent for Easley to follow. I would consult with subject matter experts, engage with residents, and have open discussions to understand how zoning adjustments might impact affordability, infrastructure, and overall community growth. These are just ideas, and I don’t claim to have all the answers—my goal is to explore what’s possible together.
+Transportation ties directly into affordability. If you can **easily get to work**, you save money. If businesses can **transport goods faster and cheaper**, prices drop.
 
-::: {.callout-tip collapse="false" appearance="default" icon="true"}
-#### Example Policy: Fast-track permits for duplexes and triplexes on lots zoned for single-family homes.
-:::
+-   **Reduce unnecessary toll roads.** If we can eliminate them without raising taxes, let’s do it.\
+-   **Expand public transit.** Easley has a bus route to Greenville, but almost no one knows about it. Let’s **advertise it, expand it, and make it more useful. Let's make it less of a stigma to take public transportation in general. We have great weather here in South Carolina, let's promote some more outdoor walking.** \
+-   **Make roads safer for cyclists and pedestrians.** Add bike lanes. Extend sidewalks. If people can walk safely, they’ll use their cars less. Less car usage means **less congestion, fewer potholes, and lower maintenance costs**.
 
-## Transportation & Walkability
+Small changes add up. And over **20–30 years**, these changes transform cities. Your kids can be walking to school for the next 10 years instead of you putting wear and tear on your car, clogging up streets, and raising insurance costs.
 
-Easley remains heavily car-dependent, and as more people move in, traffic congestion will worsen. Pedestrian-friendly infrastructure is lacking, making non-car travel unsafe or impractical.
+## **Small Businesses**
 
-### The Abundance Approach
+Starting a business shouldn’t be a bureaucratic nightmare. Let’s **streamline business permits, cut unnecessary regulations, and open up coworking spaces** in empty lots to attract entrepreneurs. People complain about population growth, but what if **new residents worked remotely** instead of adding to traffic?
 
-Instead of solely expanding roads, Easley should invest in alternative transportation options:
+## **Education for Everyone**
 
--   **Bike Lanes & Sidewalk Expansions** – Make non-car travel safer and more accessible.
+Education should be about **access**, not obstacles. Unlock education access.
 
-## Small Businesses & Startups
+-   **Make vocational training more affordable and accessible.** Welding, plumbing, and electrical work pay well—why make it hard to learn these trades?\
+-   **Embrace AI tools.** AI is here, and it’s not going away. Every student should have access to **AI-powered tutors** through platforms like **Khan Academy and MIT OpenCourseWare**.\
+-   **Support online education.** The future isn’t just traditional college—it’s **flexible, accessible, and practical learning.**
 
-### The Problem
+## **Long-Term: Small Wins Add Up**
 
-Many Easley residents commute to Greenville for work, while small businesses struggle with high commercial rents and limited support.
+City councils **must** start thinking beyond short election cycles. Every policy should be viewed as a **30+ year investment**.
 
-### The Abundance Approach
+If we don’t act now, where will we be in 2040? If your kids could safely walk to school instead of needing a ride every day, what is that **worth** to you over a decade?
 
-Easley can boost local job creation by prioritizing small businesses and entrepreneurship:
+This *Abundance Agenda* can be a **practical strategy for building better cities**. We don’t need a **perfect** solution. We need a **70% solution** that moves us in the right direction.
 
--   **Streamline Business Permitting** – Cut red tape to make opening a business easier and faster.
--   **Co-Working & Startup Spaces** – Convert underused buildings into affordable office spaces for remote workers and startups.
--   **Attract Remote Workers** – Market Easley as a lower-cost alternative to Greenville for remote professionals.
+The **Abundance Agenda** isn’t about handouts—it’s about **unlocking supply** and making life easier for everyone. If we remove the barriers that **artificially** drive up costs, we create **opportunities instead of obstacles**.
 
-:::{.callout-tip collapse=false appearance='default' icon=true}
-#### Example Policy: Launch a small business permit accelerator program to reduce startup red tape.
-:::
-
-
-## Underused Spaces
-
-### The Problem
-
-Easley has numerous vacant lots, parking lots, and old strip malls that could be repurposed for greater economic and social benefit.
-
-### The Abundance Approach
-
-Instead of letting land sit unused, Easley should encourage creative redevelopment:
-
--   **Adaptive Reuse** – Convert vacant commercial buildings into coworking spaces.
--   **Encourage Mixed-Use Development** – Permit small apartments above retail stores in business districts.
-
-## Thoughts
-
-The Abundance Agenda is about *removing barriers*, *streamlining processes*, and unleashing private-sector *innovation.* By embracing these principles, Easley can grow while maintaining affordability and economic opportunity for all its residents.
-
-With the right policies, Easley can make a stronger South Carolina and can lead the way in demonstrating how abundance-oriented policies create wealth for all.
+I challenge **city leaders, county officials, and South Carolina’s House representatives** to take this idea seriously. Let’s stop debating over whether we need more housing, better transportation, and stronger education—we **know** we do. The question is: **What’s stopping us from making it happen?**
