@@ -13,6 +13,7 @@ format:
 website:
   google-analytics: "G-FY061TKBSB"
 ---
+
 ```{=html}
 <div id="countdown">
   <p>Registration Deadline: <span id="timer"></span></p>
@@ -48,7 +49,7 @@ const intervalId = setInterval(updateTimer, 1000);
 
 # **Sheri, Copy-Paste Politics Won’t Save You in 26'.**
 
-I have a background in computer science, a master’s in business, and a **PhD in street smarts**. And I’m coming for your position, **Sheri Biggs**.
+I have a background in computer science, a master’s in business, and a **PhD in street smarts**. Public service is about listening, learning, and leading. Our district deserves the kind of leadership that puts people first, and that’s what I intend to bring to the conversation, Sheri.
 
 ::: callout-warning
 Sheri Biggs isn’t a leader; she’s a copy-paste artist. When I reached out with real concerns, she didn’t answer me. She sent back a **pre-written, party-approved script**. That’s not leadership. That’s being a yes-woman to the administration **instead of thinking** for the people she was elected to represent.
