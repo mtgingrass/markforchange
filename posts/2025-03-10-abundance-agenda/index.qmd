@@ -66,12 +66,14 @@ Look at Easley. The population has jumped from **24,000 in 2022 to nearly 28,000
 <script src="https://s3.amazonaws.com/embed.censusreporter.org/1.0/js/embed.chart.make.js"></script>
 ```
 
-If we want affordable housing, a question we need to ask is if we need **zoning reform**. That means:
+If we want affordable housing, we need to ask whether zoning reform is necessary. That means:
 
 -   Removing outdated regulations that slow down construction
 -   Making **permitting faster** and more efficient.
 -   Cutting permit delays—because six months of waiting adds thousands to home prices.
 -   Allowing more **duplexes, apartments, and mixed-use developments** to be built where people need them.
+
+Zoning reform doesn’t mean ignoring environmental concerns, water resources, or the need for trees and public spaces. None of that should be bypassed. It simply means making the process more efficient, practical, and achievable while still prioritizing the community’s needs. Every decision must consider our surroundings, environmental impact, and the voices of local constituents.
 
 If it takes **1.5 years to sell a home instead of 1 year**, that extra delay drives up costs. The sooner homes hit the market, the more affordable they are.
 
