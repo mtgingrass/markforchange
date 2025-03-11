@@ -14,7 +14,16 @@ format:
     toc-expand: true
 lightbox: true
 ---
+```{=html}
+<html>
+<body>
 
+<iframe width="420" height="345" src="https://youtu.be/GN75lRPKCqs">
+</iframe>
+
+</body>
+</html>
+```
 # **The Abundance Agenda**
 
 I’m not an expert on the **Abundance Agenda**, but I’m fascinated by it. I want to explore how this approach could benefit smaller towns like Easley and other cities in South Carolina’s District 3 (and beyond).
