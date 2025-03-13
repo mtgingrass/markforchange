@@ -1,6 +1,7 @@
 ---
 title: "Save South Carolina State Parks"
 date: 2025-03-13
+image: images/table-rock-image.webp
 execute:
   eval: false
 summary: "South Carolina’s forests are vital to our environment, economy, and way of life. We’re urging our representatives to fully fund, staff, and protect our state forests—leading by example instead of following harmful federal policies."
@@ -288,3 +289,5 @@ Sincerely,
 }
 </script>
 ```
+
+![](images/table-rock-image.webp)
