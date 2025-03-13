@@ -16,32 +16,32 @@ lightbox: true
 
 ## Conservation Leader
 
-**Subject:** Keep South Carolina a Conservation Leader – Continue Investing in Our State Parks  
+**Subject:** Keep South Carolina a Conservation Leader – Continue Investing in Our State Parks
 
-**Dear [Representative’s Name],**  
+**Dear \[Representative’s Name\],**
 
-I want to take a moment to **thank you and South Carolina’s leadership** for the ongoing efforts to **protect, expand, and invest in our state parks**. It’s encouraging to see the commitment to preserving our forests and ensuring they remain fully staffed, accessible, and thriving for generations to come.  
+I want to take a moment to **thank you and South Carolina’s leadership** for the ongoing efforts to **protect, expand, and invest in our state parks**. It’s encouraging to see the commitment to preserving our forests and ensuring they remain fully staffed, accessible, and thriving for generations to come.
 
 South Carolina has **set an example for the nation** with initiatives like:
 
-- The **proposed $18 million investment** to open four new state parks in 2025  
-- Expanding our park system by **more than 10% in the last five years**  
-- Securing essential funding to **support conservation efforts and recreation**  
+-   The **proposed \$18 million investment** to open four new state parks in 2025\
+-   Expanding our park system by **more than 10% in the last five years**\
+-   Securing essential funding to **support conservation efforts and recreation**
 
-In a time when **federal policies threaten national forests**, it is critical that **South Carolina continues to lead in responsible land management**. These parks provide not only natural beauty but also economic growth, tourism, and recreational opportunities that benefit all South Carolinians.  
+In a time when **federal policies threaten national forests**, it is critical that **South Carolina continues to lead in responsible land management**. These parks provide not only natural beauty but also economic growth, tourism, and recreational opportunities that benefit all South Carolinians.
 
 I urge you to **maintain this strong commitment** by:
 
-- **Ensuring full funding and staffing** for our parks and forest services  
-- **Continuing to expand and protect** our public lands  
-- **Opposing any future policies that could weaken conservation efforts**  
+-   **Ensuring full funding and staffing** for our parks and forest services\
+-   **Continuing to expand and protect** our public lands\
+-   **Opposing any future policies that could weaken conservation efforts**
 
-South Carolina’s forests are **one of our greatest assets**, and I am proud to see our state leading the way. Let’s keep setting the standard for environmental stewardship and economic sustainability.  
+South Carolina’s forests are **one of our greatest assets**, and I am proud to see our state leading the way. Let’s keep setting the standard for environmental stewardship and economic sustainability.
 
-**Sincerely,**  
-[Your Name]  
-[City, SC]  
-[Optional: Affiliation with Girl Scouts, Community Group, etc.]  
+**Sincerely,**\
+\[Your Name\]\
+\[City, SC\]\
+\[Optional: Affiliation with Girl Scouts, Community Group, etc.\]
 
 ## Future Generations
 
@@ -99,7 +99,6 @@ South Carolina’s forests belong to us. **Let’s lead by example and show the 
 \[City, SC\]\
 \[Optional: Affiliation with Girl Scouts, Community Group, etc.\]
 
-
 # Easy Method - Click Links
 
 ## 📌 Send a Pre-Filled Letter to Lawmakers
@@ -108,26 +107,60 @@ Click the button below to **open your email client** with everything pre-filled.
 
 ### 📜 U.S. Federal Officials
 
-<button onclick="openEmailModal('senator@lgraham.senate.gov')">Email Senator Lindsey Graham</button>  
-<button onclick="openEmailModal('senator@scott.senate.gov')">Email Senator Tim Scott</button>  
-<button onclick="openEmailModal('info@sheribiggs.com')">Email Congresswoman Sheri Biggs</button>  
+<button onclick="openEmailModal(&#39;senator@lgraham.senate.gov&#39;)">
 
----
+Email Senator Lindsey Graham
+
+</button>
+
+<button onclick="openEmailModal(&#39;senator@scott.senate.gov&#39;)">
+
+Email Senator Tim Scott
+
+</button>
+
+<button onclick="openEmailModal(&#39;info@sheribiggs.com&#39;)">
+
+Email Congresswoman Sheri Biggs
+
+</button>
+
+------------------------------------------------------------------------
 
 ### 🏛️ SC State Officials
 
-<button onclick="openEmailModal('rexrice@scsenate.gov')">Email Senator Rex Rice</button>  
-<button onclick="openEmailModal('nealcollins@schouse.gov')">Email Representative Neal Collins</button>  
-<button onclick="openEmailModal('info@dnr.sc.gov')">Email SCDNR Director</button>  
-<button onclick="openEmailModal('info@scfc.gov')">Email SCFC Chief Forester</button>  
+<button onclick="openEmailModal(&#39;rexrice@scsenate.gov&#39;)">
 
----
+Email Senator Rex Rice
+
+</button>
+
+<button onclick="openEmailModal(&#39;nealcollins@schouse.gov&#39;)">
+
+Email Representative Neal Collins
+
+</button>
+
+<button onclick="openEmailModal(&#39;info@dnr.sc.gov&#39;)">
+
+Email SCDNR Director
+
+</button>
+
+<button onclick="openEmailModal(&#39;info@scfc.gov&#39;)">
+
+Email SCFC Chief Forester
+
+</button>
+
+------------------------------------------------------------------------
 
 ### **💡 How It Works**
-1. Click the button for the recipient you want to email.
-2. **Choose a letter template** from the dropdown.
-3. Your email client (Gmail, Outlook, etc.) will open with a **pre-filled subject & body**.
-4. Review, personalize if needed, and **hit send**.
+
+1.  Click the button for the recipient you want to email.
+2.  **Choose a letter template** from the dropdown.
+3.  Your email client (Gmail, Outlook, etc.) will open with a **pre-filled subject & body**.
+4.  Review, personalize if needed, and **hit send**.
 
 ```{=html}
 <script>
@@ -137,19 +170,76 @@ function openEmailModal(recipient) {
             subject: "Keep South Carolina a Conservation Leader – Continue Investing in Our State Parks",
             body: `Dear [Representative’s Name],
 
-I want to take a moment to thank you and South Carolina’s leadership for the ongoing efforts to protect, expand, and invest in our state parks... [truncated for brevity]`
+I want to take a moment to thank you and South Carolina’s leadership for the ongoing efforts to protect, expand, and invest in our state parks. It’s encouraging to see the commitment to preserving our forests and ensuring they remain fully staffed, accessible, and thriving for generations to come.
+
+South Carolina has set an example for the nation with initiatives like:
+
+- The proposed $18 million investment to open four new state parks in 2025  
+- Expanding our park system by more than 10% in the last five years  
+- Securing essential funding to support conservation efforts and recreation  
+
+In a time when federal policies threaten national forests, it is critical that South Carolina continues to lead in responsible land management. These parks provide not only natural beauty but also economic growth, tourism, and recreational opportunities that benefit all South Carolinians.  
+
+I urge you to maintain this strong commitment by:
+
+- Ensuring full funding and staffing for our parks and forest services  
+- Continuing to expand and protect our public lands  
+- Opposing any future policies that could weaken conservation efforts  
+
+South Carolina’s forests are one of our greatest assets, and I am proud to see our state leading the way. Let’s keep setting the standard for environmental stewardship and economic sustainability.  
+
+Sincerely,  
+[Your Name]  
+[City, SC]  
+[Optional: Affiliation with Girl Scouts, Community Group, etc.]`
         },
         "future_generations": {
             subject: "Protect South Carolina’s State Forests – Our Future Depends on It",
             body: `Dear [Representative’s Name],
 
-As a South Carolinian, I take great pride in our beautiful forests, parks, and public lands... [truncated for brevity]`
+As a South Carolinian, I take great pride in our beautiful forests, parks, and public lands. They are more than just scenic landscapes—they are vital to our environment, our economy, and our way of life. Our state forests deserve to be fully funded, fully staffed, and fully protected for future generations.
+
+Recently, we have seen troubling changes at the **federal level** that put national forests at risk. South Carolina should not follow this example. Instead, **we should set the standard for conservation, responsible land management, and long-term sustainability.**
+
+Our forests provide:  
+✅ **Clean air & water** for all South Carolinians  
+✅ **Habitat for wildlife** and protection of endangered species  
+✅ **Outdoor recreation** that supports local businesses  
+✅ **A legacy for future generations** of Girl Scouts, families, and nature lovers  
+
+I urge you to advocate for **full staffing, proper funding, and strong conservation policies** to keep our forests thriving. The federal government may be making choices that threaten national forests, but **we have the power to protect South Carolina’s lands and set the right example.**
+
+Please stand with us in preserving South Carolina’s forests and public lands.
+
+**Sincerely,**  
+[Your Name]  
+[City, SC]  
+[Optional: Affiliation with Girl Scouts, Community Group, etc.]`
         },
         "state_led_approach": {
             subject: "Support South Carolina’s Forests – Oppose Harmful Federal Policies",
             body: `Dear [Representative’s Name],
 
-I am writing to express my strong support for preserving and protecting South Carolina’s state forests... [truncated for brevity]`
+I am writing to express my strong support for preserving and protecting **South Carolina’s state forests and public lands.** As a member of this community, I know how much these natural spaces mean to our state.
+
+Recently, the **federal government has moved in a direction that threatens the sustainability of national forests.** South Carolina **must take an independent approach** to ensure our forests remain protected, well-managed, and fully staffed.
+
+### **Key concerns:**
+-   **Federal policies risk undermining conservation efforts** that keep our forests healthy and thriving.  
+-   **Reduced funding and staffing** would leave our parks vulnerable to mismanagement and degradation.  
+-   **South Carolina’s forests should be managed based on our state’s needs, not one-size-fits-all federal policies.**  
+
+### **I urge you to:**
+-   **Ensure full funding & staffing** for state forest management  
+-   **Reject federal-style policies** that weaken conservation efforts  
+-   **Support local decision-making** that reflects the needs of South Carolinians  
+
+South Carolina’s forests belong to us. **Let’s lead by example and show the federal government how to do conservation the right way.**
+
+**Sincerely,**  
+[Your Name]  
+[City, SC]  
+[Optional: Affiliation with Girl Scouts, Community Group, etc.]`
         }
     };
 
