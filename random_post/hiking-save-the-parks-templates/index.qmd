@@ -5,6 +5,18 @@ image: images/table-rock-image.webp
 execute:
   eval: false
 summary: "South Carolina’s forests are vital to our environment, economy, and way of life. We’re urging our representatives to fully fund, staff, and protect our state forests—leading by example instead of following harmful federal policies."
+metadata:
+  og:title: "Save South Carolina State Parks"
+  og:description: "South Carolina’s forests are vital to our environment, economy, and way of life. Urging full funding and protection for our state forests."
+  og:image: "https://markforchange.com/random_post/hiking-save-the-parks-templates/images/table-rock-image.webp"
+  og:image:alt: "A scenic view of Table Rock State Park, South Carolina."
+  og:url: "https://yourwebsite.com/save-sc-state-parks"
+
+  twitter:card: summary_large_image
+  twitter:title: "Save South Carolina State Parks"
+  twitter:description: "South Carolina’s forests need protection. Take action now."
+  twitter:image: "https://markforchange.com/random_post/hiking-save-the-parks-templates/table-rock-image.webp"
+  twitter:image:alt: "A scenic view of Table Rock State Park, South Carolina."
 format:
   html:
     toc: true
