@@ -26,42 +26,36 @@ But either way, we need to stop the division and start talking like neighbors ag
 ```{=html}
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-    }
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #000; /* Optional: helps simulate YouTube's dark background */
-    }
-    .video-container {
-      width: 100%;
-      max-width: 360px; /* Adjust as needed */
-      aspect-ratio: 9 / 16; /* Ensures a vertical (9:16) aspect ratio */
-      overflow: hidden;
-      border-radius: 8px; /* Optional: adds subtle rounding */
-      box-shadow: 0 2px 10px rgba(0,0,0,0.3); /* Optional: adds depth */
-    }
-    .video-container iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-  </style>
+<style>
+  /* Make the iframe responsive for 9:16 vertical aspect ratio */
+  .video-container {
+    position: relative;
+    width: 100vw; /* Full viewport width */
+    height: 177.78vw; /* 9:16 aspect ratio (height = width * 16 / 9) */
+    max-height: 100vh; /* Prevent from exceeding screen height */
+    overflow: hidden;
+  }
+
+  .video-container iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+</style>
 </head>
 <body>
-  <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/Io3_Wrf6hvk" 
-            title="YouTube Short" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen>
-    </iframe>
-  </div>
+
+<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/Io3_Wrf6hvk" 
+          title="YouTube Short" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" 
+          allowfullscreen>
+  </iframe>
+</div>
+
 </body>
 </html>
 ```
