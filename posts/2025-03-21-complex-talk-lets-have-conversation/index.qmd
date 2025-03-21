@@ -27,27 +27,28 @@ But either way, we need to stop the division and start talking like neighbors ag
 <html>
 <head>
 <style>
-  /* Make the iframe responsive */
+  /* Make the iframe responsive for 9:16 vertical aspect ratio */
   .video-container {
     position: relative;
     width: 100vw; /* Full viewport width */
-    height: 56.25vw; /* Aspect ratio of 16:9 */
-    max-width: 100%;
-    max-height: 100vh; /* Ensures it doesn't exceed screen height */
+    height: 177.78vw; /* 9:16 aspect ratio (height = width * 16 / 9) */
+    max-height: 100vh; /* Prevent from exceeding screen height */
+    overflow: hidden;
   }
-  
+
   .video-container iframe {
     position: absolute;
     width: 100%;
     height: 100%;
+    border: 0;
   }
 </style>
 </head>
 <body>
 
 <div class="video-container">
-  <iframe src="https://youtube.com/shorts/Io3_Wrf6hvk" 
-          title="YouTube video player" 
+  <iframe src="https://www.youtube.com/embed/Io3_Wrf6hvk" 
+          title="YouTube Short" 
           frameborder="0" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
           referrerpolicy="strict-origin-when-cross-origin" 
