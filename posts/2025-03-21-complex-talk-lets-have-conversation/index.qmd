@@ -1,7 +1,7 @@
 ---
 title: "Complex Issues with Simple Conversations"
 date: 2025-03-21
-image: images/mark-gingrass-conversation.png
+image: images/mark-gingrass-easley.png
 execute:
   eval: false
 summary: "Complex issues require conversations, so let's talk."
@@ -63,3 +63,5 @@ But either way, we need to stop the division and start talking like neighbors ag
 ------------------------------------------------------------------------
 
 Whether you're left, right, or somewhere in between—I'm here to listen and lead with common sense. Join the conversation. #MarkForChange
+
+![](images/mark-gingrass-easley.png)
