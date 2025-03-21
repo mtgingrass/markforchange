@@ -13,8 +13,6 @@ format:
 lightbox: true
 ---
 
-# 
-
 ### Young Activists of Greenville County: A Growing Movement
 
 I started attending meetings with a local group of young activists in Greenville County, and after my second meeting, I wanted to write about what I’ve observed so far. From the meeeting organizers, it seems this group has experienced noticeable growth, largely fueled by a few well-placed posts on Reddit. That, and the super heated political climate lately.
