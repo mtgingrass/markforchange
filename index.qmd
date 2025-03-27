@@ -10,6 +10,12 @@ format:
         <div class="alert alert-info text-center" role="alert">
           <i class="bi bi-info-circle"></i> <b>Info</b> - This is not a campaign, it’s a conversation for now. Take it with a grain of salt.
         </div>
+        <div class="alert alert-danger text-center" role="alert">
+          <i class="bi bi-exclamation-triangle-fill"></i> <b>Emergency Wildfire Notice</b> - 
+          <a href="https://markforchange.com/posts/2025-03-27-wildfires-sc-volunteer-tablerock/" class="alert-link" target="_blank">
+            Click here to learn how to help at Table Rock
+          </a>.
+        </div>
 website:
   google-analytics: "G-FY061TKBSB"
 ---
