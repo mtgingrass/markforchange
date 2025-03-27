@@ -13,13 +13,13 @@ execute:
   eval: false
 ---
 
-[Jump to Random FB Updates](#random-fb-updates)
-
 # **Help During the Table Rock Wildfires**
 
 As wildfires continue to impact the Table Rock region, affecting both South Carolina and neighboring North Carolina communities, we must come together and support those on the front lines and those displaced by this crisis.
 
 We must support our wildland firefighters, local volunteer fire departments, emergency medical technicians (EMTs), police officers, sheriff’s deputies, South Carolina Forestry Commission crews, and National Guard personnel who may be assisting with evacuations and logistics.
+
+**[Jump Directly to Latest Updates](#random-fb-updates)**
 
 Here’s how you can help:
 
@@ -167,19 +167,12 @@ Your generosity and compassion make a significant difference.
 
 ![](images/clipboard-4187336991.png)
 
-```{=html}
-<figure>
-  <img src="images/clipboard-4187336991.png" alt="Table Rock Fire">
-  <figcaption>The Table Rock Fire in South Carolina’s Upstate started late Friday, March 21, and has burned about 1,300 acres, according to the state Forestry Commission. (Photo provided by S.C. Forestry Commission)</figcaption>
-</figure>
-```
-
 ## Random FB Updates
 
-![](images/IMG_4808.webp)
+![](images/IMG_4808.webp){ style="max-width: 100%; height: auto;" }
 
-![](images/IMG_4807.webp)
+![](images/IMG_4807.webp){ style="max-width: 100%; height: auto;" }
 
-![](images/IMG_4806.webp)
+![](images/IMG_4806.webp){ style="max-width: 100%; height: auto;" }
 
-![](images/IMG_4805.webp)
+![](images/IMG_4805.webp){ style="max-width: 100%; height: auto;" }
