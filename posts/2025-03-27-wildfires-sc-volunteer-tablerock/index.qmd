@@ -1,7 +1,7 @@
 ---
 title: "Supporting Our Community During the Table Rock Wildfires"
 date: 2025-03-27
-image: images/clipboard-2989769869.png
+image: images/clipboard-4187336991.png
 summary: "At first glance, H.Res.7 appears to promote compassionate women’s healthcare—but beneath its polished language lies a targeted ideological agenda - a bunch of bull shit. Tthe resolution’s hidden anti-contraception stance and the troubling trend of performative politics. Showmans ship, con artist, and bull shit artist is what we call it. Where is D.O.G.E. when it comes to political waste?"
 format:
   html:
@@ -117,20 +117,20 @@ As evacuations continue, many families are being forced to leave their homes—a
 
 **Here’s how you can help:**
 
-- **Foster a Pet:** If you have space, consider taking in a dog, cat, or other small pet for a few weeks while their family regroups. This provides enormous relief for both animals and owners.
-- **Donate Pet Supplies:** Drop off food, leashes, crates, bowls, and bedding to local animal shelters or supply collection sites.
-- **Volunteer for Animal Transport or Shelter Help:** Moving animals or helping care for them at temporary shelters is critical.
+-   **Foster a Pet:** If you have space, consider taking in a dog, cat, or other small pet for a few weeks while their family regroups. This provides enormous relief for both animals and owners.
+-   **Donate Pet Supplies:** Drop off food, leashes, crates, bowls, and bedding to local animal shelters or supply collection sites.
+-   **Volunteer for Animal Transport or Shelter Help:** Moving animals or helping care for them at temporary shelters is critical.
 
 **Local Resources:**
 
-- **Pickens County Humane Society**  
-    864-843-9693  
-    [https://www.pchumanesociety.org](https://www.pchumanesociety.org)  
+-   **Pickens County Humane Society**\
+    864-843-9693\
+    <https://www.pchumanesociety.org>\
     500 Five Forks Rd, Liberty, SC 29657
 
-- **Greenville County Animal Care**  
-    864-467-3950  
-    [https://www.greenvillecounty.org/ACS/](https://www.greenvillecounty.org/ACS/)  
+-   **Greenville County Animal Care**\
+    864-467-3950\
+    <https://www.greenvillecounty.org/ACS/>\
     They are coordinating emergency pet needs and sometimes post specific requests on their [Facebook page](https://www.facebook.com/GreenvilleCountyAnimalCare/).
 
 You can also watch **Facebook community groups** for posts from evacuees needing help with animals. Just be sure to vet requests before responding—coordinate where possible through official shelter channels.
@@ -162,3 +162,13 @@ Our community’s strength and resilience shine brightest when we work together 
 Your generosity and compassion make a significant difference.
 
 > *Please note that the situation is evolving. For the most current information, refer to official sources and local authorities.*
+
+![](images/clipboard-4187336991.png)
+
+```{=html}
+<figure>
+  <img src="images/clipboard-4187336991.png" alt="Table Rock Fire">
+  <figcaption>The Table Rock Fire in South Carolina’s Upstate started late Friday, March 21, and has burned about 1,300 acres, according to the state Forestry Commission. (Photo provided by S.C. Forestry Commission)</figcaption>
+</figure>
+```
+
