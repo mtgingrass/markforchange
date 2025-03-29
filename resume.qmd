@@ -1,10 +1,10 @@
 ---
-title: "Resume"
+title: "Mark's Experience"
 about:
   template: trestles
 ---
 
-# **From Enlisted to the Hill: Mark's Experience**
+# **From Enlisted to the Hill, to SC District 3**
 
 **1. Strategic Defense with Operational Depth**
 
