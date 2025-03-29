@@ -17,9 +17,7 @@ website:
       - href: volunteerlist.qmd
     right:
       - icon: youtube
-        menu:
-          - text: "@MarkGingrass"
-            href: https://www.youtube.com/@markforchange
+        href: https://www.youtube.com/@markforchange
       - icon: envelope-arrow-up-fill
         href: "contact.html"  # Ensure correct spacing and quotes
   page-footer: 
