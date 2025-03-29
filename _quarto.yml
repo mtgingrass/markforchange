@@ -9,10 +9,11 @@ website:
       - href: index.qmd
         text: Home
       - href: about.qmd
-        text: About
+        text: Meet Mark
       - href: resume.qmd
-        text: Resume
+        text: Experience
       - href: posts.qmd
+        text: Field Notes
       - href: booklist.qmd
       - href: volunteerlist.qmd
     right:
