@@ -8,24 +8,25 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: about.qmd
-        text: Meet Mark
-      - href: resume.qmd
-        text: Experience
+      - text: Meet Mark
+        menu:
+          - href: about.qmd
+            text: About
+          - href: resume.qmd
+            text: Experience
       - href: posts.qmd
-        text: Field Notes
-      - href: booklist.qmd
-      - href: volunteerlist.qmd
+        text: Thoughts & Updates
     right:
+      - text: Engage
+        menu:
+          - href: booklist.qmd
+            text: Recommended Reading
+          - href: volunteerlist.qmd
+            text: Community Involvement
       - icon: youtube
         href: https://www.youtube.com/@markforchange
       - icon: envelope-arrow-up-fill
-        href: "contact.html"  # Ensure correct spacing and quotes
-  page-footer: 
-    left: "Copyright 2025, Mark Gingrass" 
-    right: 
-      - icon: envelope-arrow-up-fill
-        href: "contact.html"  # Ensure correct spacing and quotes
+        href: "contact.html"
 
 format:
   html:
