@@ -1,11 +1,9 @@
 ---
-title: "Mark Gingrass"
+title: "Mark For Change"
 about:
   template: trestles
 image: images/Mark03.png
 ---
-
-# Mark for Change
 
 ## **Real-World Solutions**
 
@@ -82,17 +80,19 @@ If you believe in practical solutions, responsible spending, and leadership that
 ## Contact
 
 ```{=html}
-</body>
 <style>
   body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
     color: #333;
+    margin: 0;
+  }
+
+  .contact-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    margin: 0;
   }
 
   .contact-container {
@@ -157,22 +157,25 @@ If you believe in practical solutions, responsible spending, and leadership that
   }
 </style>
 
-<div class="contact-container">
-  <h1>Get in Touch</h1>
-  <p>Have a question, idea, or just want to connect? Send me a message, and I'll get back to you as soon as possible.</p>
+<div class="contact-wrapper">
+  <div class="contact-container">
+    <h1>Get in Touch</h1>
+    <p>Have a question, idea, or just want to connect? Send me a message, and I'll get back to you as soon as possible.</p>
 
-  <form name="contact" method="POST" netlify>
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" placeholder="Your Name" required />
+    <form name="contact" method="POST" netlify>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your Name" required />
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" placeholder="Your Email" required />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Your Email" required />
 
-    <label for="message">Message:</label>
-    <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
 
-    <button type="submit">Send Message</button>
-  </form>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
 </div>
-</body>
 ```
+
+
