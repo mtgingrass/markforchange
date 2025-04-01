@@ -21,8 +21,6 @@ website:
         menu:
           - href: booklist.qmd
             text: Recommended Reading
-          - href: volunteerlist.qmd
-            text: Community Involvement
       - icon: youtube
         href: https://www.youtube.com/@markforchange
       - icon: envelope-arrow-up-fill
