@@ -1,8 +1,8 @@
 ---
 title: "Supporting Our Community During the Table Rock Wildfires"
-date: 2025-03-27
+date: 2025-04-05
 image: images/clipboard-4187336991.png
-summary: "At first glance, H.Res.7 appears to promote compassionate women’s healthcare—but beneath its polished language lies a targeted ideological agenda - a bunch of bull shit. Tthe resolution’s hidden anti-contraception stance and the troubling trend of performative politics. Showmans ship, con artist, and bull shit artist is what we call it. Where is D.O.G.E. when it comes to political waste?"
+summary: "A clear-eyed look at why continued U.S. support for Ukraine is not just a moral stance, but a strategic investment in America’s economic strength, global influence, and long-term national security."
 format:
   html:
     toc: true
@@ -140,3 +140,5 @@ Any talk of “walking away” ignores the stakes. The U.S. either leads now—o
 
 This isn’t just about Ukraine.\
 It’s about us.
+
+![](images/clipboard-2130835156.png)
