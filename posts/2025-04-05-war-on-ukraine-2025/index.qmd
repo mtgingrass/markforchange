@@ -1,7 +1,7 @@
 ---
-title: "Supporting Our Community During the Table Rock Wildfires"
+title: "Stay with Ukraine"
 date: 2025-04-05
-image: images/clipboard-4187336991.png
+image: images/clipboard-2130835156.png
 summary: "A clear-eyed look at why continued U.S. support for Ukraine is not just a moral stance, but a strategic investment in America’s economic strength, global influence, and long-term national security."
 format:
   html:
