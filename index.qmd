@@ -8,7 +8,7 @@ format:
     include-in-header:
       text: |
         <div class="alert alert-info text-center" role="alert">
-          <i class="bi bi-info-circle"></i> <b>Info</b> - This is not a campaign, it’s a conversation. Not Left. Not Right. Foward.
+          <i class="bi bi-info-circle"></i> <b>Info</b> - This is not a campaign, it’s a conversation. Not Left. Not Right. Just Forward.
         </div>
 website:
   google-analytics: "G-FY061TKBSB"
