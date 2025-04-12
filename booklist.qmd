@@ -47,9 +47,20 @@ This Pulitzer Prize-winning biography delves into the life of Robert Moses, the 
 
 # Completed Books
 
-### [**Abundance: The Future Is Better Than You Think** by Peter H. Diamandis and Steven Kotler](https://www.amazon.com/Abundance-Future-Better-Than-Think/dp/145161683X?tag=hatro-20)
+### [**Abundance** by Ezra Klein and Derek Thompson](https://www.amazon.com/dp/1668023482?tag=hatro-20)
 
-In this optimistic exploration, Diamandis and Kotler argue that technological innovation and human ingenuity are driving us toward an era of abundance. They discuss how advancements in AI, robotics, and digital manufacturing are poised to solve many of the world's pressing challenges, offering a hopeful vision for the future.
+<table>
+  <tr>
+    <td style="vertical-align: top; padding-right: 20px;">
+      <a href="https://www.amazon.com/dp/1668023482?tag=hatro-20" target="_blank">
+        <img src="/book_images/abundance.jpg" alt="Abundance book cover" style="max-width: 120px; height: auto;" />
+      </a>
+    </td>
+    <td style="vertical-align: top;">
+      In *Abundance*, Ezra Klein and Derek Thompson argue that America's persistent shortages—in housing, infrastructure, and clean energy—stem from well-intentioned but outdated regulations and bureaucratic inertia. They advocate for a renewed liberalism focused on building and innovation, proposing reforms to overcome these self-imposed scarcities and foster a more prosperous future.
+    </td>
+  </tr>
+</table>
 
 ### [**The Color of Law: A Forgotten History of How Our Government Segregated America** by Richard Rothstein](https://www.amazon.com/Color-Law-Forgotten-Government-Segregated/dp/1631494538?tag=hatro-20)
 
