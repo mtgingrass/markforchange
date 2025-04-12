@@ -23,7 +23,7 @@ I'll try to keep up with the books I have read and add them here. From this poin
   <tr>
     <td style="vertical-align: top; padding-right: 20px;">
       <a href="https://www.amazon.com/dp/0307455777?tag=hatro-20" target="_blank">
-        <img src="/book_images/righteous-mind.jpg" alt="The Righteous Mind cover" style="max-width: 150px; height: auto;" />
+        <img src="/book_images/righteous-mind.jpg" alt="The Righteous Mind cover" style="max-width: 120px; height: auto;" />
       </a>
     </td>
     <td style="vertical-align: top;">
