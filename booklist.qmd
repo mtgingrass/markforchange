@@ -19,22 +19,31 @@ I'll try to keep up with the books I have read and add them here. From this poin
 
 ### [**The Righteous Mind: Why Good People Are Divided by Politics and Religion** by Jonathan Haidt](https://www.amazon.com/dp/0307455777?tag=hatro-20)
 
-<a href="https://www.amazon.com/dp/0307455777?tag=hatro-20" target="_blank">
-  <img src="https://m.media-amazon.com/images/I/81Y8b9bK1eL._SL1500_.jpg" alt="The Righteous Mind book cover" style="max-width: 200px; height: auto;" />
-</a>
-
-In this insightful work, social psychologist Jonathan Haidt explores the roots of our moral divisions, arguing that moral judgments stem more from intuition than reason. Haidt introduces concepts like moral foundations theory and the “rider and elephant” metaphor to explain how different political and religious groups prioritize values differently. By understanding these moral underpinnings, the book offers a path toward greater empathy and constructive dialogue across ideological divides.
+<table>
+  <tr>
+    <td style="vertical-align: top; padding-right: 20px;">
+      <a href="https://www.amazon.com/dp/0307455777?tag=hatro-20" target="_blank">
+        <img src="/book_images/righteous-mind.jpg" alt="The Righteous Mind cover" style="max-width: 150px; height: auto;" />
+      </a>
+    </td>
+    <td style="vertical-align: top;">
+      In this insightful work, social psychologist Jonathan Haidt explores the roots of our moral divisions, arguing that moral judgments stem more from intuition than reason. Haidt introduces concepts like moral foundations theory and the “rider and elephant” metaphor to explain how different political and religious groups prioritize values differently. By understanding these moral underpinnings, the book offers a path toward greater empathy and constructive dialogue across ideological divides.
+    </td>
+  </tr>
+</table>
 
 ### [**Fantasyland: How America Went Haywire** by Kurt Andersen](https://www.amazon.com/Fantasyland-America-Haywire-500-Year-History/dp/1400067219?tag=hatro-20)
 
 In this comprehensive analysis, Kurt Andersen explores America's 500-year history of embracing fantasy and its impact on contemporary society. He argues that the nation's foundation on dreamers and believers has led to a blurred line between reality and illusion, culminating in today's post-truth era. Andersen traces this phenomenon from the early settlers to modern times, examining how magical thinking has shaped politics, religion, and culture. A thought-provoking read for those seeking to understand the roots of America's current challenges.
 
+```{=html}
 <!-- ### [**The Power Broker: Robert Moses and the Fall of New York** by Robert A. Caro](https://www.amazon.com/Power-Broker-Robert-Moses-Fall/dp/0394720245?tag=hatro-20)
 
 This Pulitzer Prize-winning biography delves into the life of Robert Moses, the influential urban planner who shaped much of modern New York City. Caro meticulously examines how Moses wielded power to build infrastructure, often at the expense of communities. The book offers profound insights into urban development and political dynamics.
 
 *Personal Note*: This book has been a beast. I've been switching back and forth between audio and text, and this is my third attempt at reading it. It's a very good book—I love it. I've loved all of Robert Caro's books so far, but for some reason, this one has been a challenge to continue. I think it has to do with the fact that I keep wanting to read other books, so I might just need to take a break on this one.
 -->
+```
 
 # Completed Books
 
