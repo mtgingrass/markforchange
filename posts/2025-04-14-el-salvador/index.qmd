@@ -1,8 +1,8 @@
 ---
-title: "Why the Easley UDO Review Matters"
+title: "The Nuremberg We Need - El Salvador Prison Release Response (Abrego Garcia)"
 date: 2025-04-14
 image: images/clipboard-1147121738.png
-summary: "A bold response to international defiance and domestic corruption—why real accountability and systemic reform must be the cornerstone of our democracy’s future."
+summary: "This is what fascism looks like. We do not have rights according to this regime. And now Trump's saying he's open to sending American citizens convicted of violent crimes to the same prison. "
 format:
   html:
     toc: true
