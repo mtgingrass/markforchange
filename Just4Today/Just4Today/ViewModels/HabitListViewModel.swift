@@ -165,6 +165,31 @@ class HabitListViewModel: ObservableObject {
         habits[index] = updatedHabit
     }
     
+    func setRepeatOption(for habit: Habit, option: RepeatOption) {
+        guard let index = habits.firstIndex(where: { $0.id == habit.id }) else { return }
+        
+        var updatedHabit = habit
+        updatedHabit.repeatOption = option
+        
+        switch option {
+        case .tomorrow:
+            // Set the goal type to .justForToday
+            updatedHabit.goal.type = .justForToday
+            
+        case .forever:
+            // Set the goal type to .totalDays with no target (continuous)
+            updatedHabit.goal.type = .totalDays
+            updatedHabit.goal.targetType = .forever
+            updatedHabit.goal.totalDaysTarget = nil
+            
+        case .none:
+            // Keep the current goal type, but ensure it's marked as completed for today
+            break
+        }
+        
+        habits[index] = updatedHabit
+    }
+    
     // This method is now deprecated, use toggleHabitCompletion instead
     func markHabitComplete(_ habit: Habit) {
         guard let index = habits.firstIndex(where: { $0.id == habit.id }) else { return }

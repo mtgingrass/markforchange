@@ -112,6 +112,9 @@ struct HabitListView: View {
                     },
                     onOverrideStreak: { date in
                         viewModel.overrideStreak(for: habit, startDate: date)
+                    },
+                    onRepeatOptionSelected: { option in
+                        viewModel.setRepeatOption(for: habit, option: option)
                     }
                 )
             }

@@ -7,11 +7,14 @@ struct HabitRowView: View {
     var onResetStreak: () -> Void
     var onResetRecord: () -> Void
     var onOverrideStreak: (Date) -> Void
+    var onRepeatOptionSelected: (RepeatOption) -> Void
     
     @State private var showingResetStreakConfirmation = false
     @State private var showingResetRecordConfirmation = false
     @State private var showingDatePicker = false
     @State private var selectedDate = Date()
+    @State private var showingCongratulations = false
+    @State private var showingRepeatOptions = false
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
@@ -27,10 +30,37 @@ struct HabitRowView: View {
                 
                 Spacer()
                 
-                Button(action: onToggleCompletion) {
-                    Image(systemName: habit.isCompletedToday() ? "checkmark.circle.fill" : "circle")
-                        .imageScale(.large)
-                        .foregroundColor(habit.isCompletedToday() ? .green : .primary)
+                Button(action: {
+                    if !habit.isCompletedToday() {
+                        onToggleCompletion()
+                        if habit.goal.type == .justForToday {
+                            showingCongratulations = true
+                        }
+                    } else {
+                        onToggleCompletion()
+                    }
+                }) {
+                    ZStack {
+                        Circle()
+                            .stroke(lineWidth: 2)
+                            .frame(width: 28, height: 28)
+                            .foregroundColor(habit.isCompletedToday() ? .green : .primary.opacity(0.6))
+                            .background(
+                                Circle()
+                                    .fill(habit.isCompletedToday() ? Color.green.opacity(0.2) : Color.clear)
+                            )
+                            
+                        if habit.isCompletedToday() {
+                            Image(systemName: "checkmark")
+                                .font(.system(size: 14, weight: .bold))
+                                .foregroundColor(.green)
+                        } else {
+                            // Show day of week letter
+                            Text(Weekday.today.shortName.prefix(1))
+                                .font(.system(size: 12, weight: .medium))
+                                .foregroundColor(.primary.opacity(0.8))
+                        }
+                    }
                 }
             }
             
@@ -93,6 +123,29 @@ struct HabitRowView: View {
             }
         } message: {
             Text("This will reset your all-time record to your current streak (\(habit.currentStreak)). This action cannot be undone.")
+        }
+        .alert("Congratulations! 🎉", isPresented: $showingCongratulations) {
+            Button("Choose Repeat Option") {
+                showingRepeatOptions = true
+            }
+            Button("Don't Repeat") {
+                onRepeatOptionSelected(.none)
+            }
+        } message: {
+            Text("You've completed your daily habit: \(habit.name)")
+        }
+        .alert("Repeat Options", isPresented: $showingRepeatOptions) {
+            Button("Repeat Tomorrow") {
+                onRepeatOptionSelected(.tomorrow)
+            }
+            Button("Repeat Forever") {
+                onRepeatOptionSelected(.forever)
+            }
+            Button("Cancel", role: .cancel) {
+                onRepeatOptionSelected(.none)
+            }
+        } message: {
+            Text("Would you like to repeat this habit?")
         }
         .sheet(isPresented: $showingDatePicker) {
             NavigationView {
@@ -182,13 +235,9 @@ struct HabitRowView: View {
             return habit.isCompletedToday() ? 1.0 : 0.0
             
         case .weekly:
-            // For demo: Return a random value between 0.1 and 0.9
-            // In a real app, calculate based on weekly progress
-            let daysInWeek = 7
-            let completedDays = habit.isCompletedToday() ? habit.currentStreak % daysInWeek : (habit.currentStreak % daysInWeek) - 1
+            let completedDays = habit.completedDaysThisWeek().count
             let targetDays = habit.goal.selectedDays.count
-            
-            return targetDays > 0 ? Double(max(0, completedDays)) / Double(targetDays) : 0
+            return targetDays > 0 ? Double(completedDays) / Double(targetDays) : 0
             
         case .totalDays:
             if let totalTarget = habit.goal.totalDaysTarget, totalTarget > 0 {
@@ -263,7 +312,8 @@ struct HabitRowView_Previews: PreviewProvider {
                 onEdit: {},
                 onResetStreak: {},
                 onResetRecord: {},
-                onOverrideStreak: { _ in }
+                onOverrideStreak: { _ in },
+                onRepeatOptionSelected: { _ in }
             )
             
             HabitRowView(
@@ -277,7 +327,8 @@ struct HabitRowView_Previews: PreviewProvider {
                 onEdit: {},
                 onResetStreak: {},
                 onResetRecord: {},
-                onOverrideStreak: { _ in }
+                onOverrideStreak: { _ in },
+                onRepeatOptionSelected: { _ in }
             )
             
             HabitRowView(
@@ -291,7 +342,8 @@ struct HabitRowView_Previews: PreviewProvider {
                 onEdit: {},
                 onResetStreak: {},
                 onResetRecord: {},
-                onOverrideStreak: { _ in }
+                onOverrideStreak: { _ in },
+                onRepeatOptionSelected: { _ in }
             )
         }
     }

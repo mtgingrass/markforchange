@@ -46,8 +46,14 @@ struct WeeklyProgressView: View {
         }
         .overlay(
             Circle()
-                .stroke(isToday ? Color.blue : Color.clear, lineWidth: 1)
+                .stroke(isToday ? Color.blue : Color.clear, lineWidth: isToday ? 2 : 0)
                 .padding(-2)
+        )
+        // Add a subtle highlight for today
+        .background(
+            Circle()
+                .fill(isToday ? Color.blue.opacity(0.1) : Color.clear)
+                .padding(-4)
         )
     }
     
