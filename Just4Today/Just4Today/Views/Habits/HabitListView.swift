@@ -115,6 +115,9 @@ struct HabitListView: View {
                     },
                     onRepeatOptionSelected: { option in
                         viewModel.setRepeatOption(for: habit, option: option)
+                    },
+                    onDelete: {
+                        viewModel.deleteHabit(habit)
                     }
                 )
             }

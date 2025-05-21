@@ -8,9 +8,11 @@ struct HabitRowView: View {
     var onResetRecord: () -> Void
     var onOverrideStreak: (Date) -> Void
     var onRepeatOptionSelected: (RepeatOption) -> Void
+    var onDelete: () -> Void
     
     @State private var showingResetStreakConfirmation = false
     @State private var showingResetRecordConfirmation = false
+    @State private var showingDeleteConfirmation = false
     @State private var showingDatePicker = false
     @State private var selectedDate = Date()
     @State private var showingCongratulations = false
@@ -118,12 +120,20 @@ struct HabitRowView: View {
         }
         .swipeActions(edge: .trailing) {
             Button {
+                showingDeleteConfirmation = true
+            } label: {
+                Text("Delete\nHabit")
+                    .multilineTextAlignment(.center)
+            }
+            .tint(.red)
+            
+            Button {
                 showingResetRecordConfirmation = true
             } label: {
                 Text("Reset\nRecord")
                     .multilineTextAlignment(.center)
             }
-            .tint(.red)
+            .tint(.orange)
             
             Button {
                 showingResetStreakConfirmation = true
@@ -131,7 +141,15 @@ struct HabitRowView: View {
                 Text("Reset\nStreak")
                     .multilineTextAlignment(.center)
             }
-            .tint(.orange)
+            .tint(.yellow)
+        }
+        .alert("Delete Habit?", isPresented: $showingDeleteConfirmation) {
+            Button("Cancel", role: .cancel) { }
+            Button("Delete", role: .destructive) {
+                onDelete()
+            }
+        } message: {
+            Text("Are you sure you want to delete '\(habit.name)'? This action cannot be undone.")
         }
         .alert("Reset Streak?", isPresented: $showingResetStreakConfirmation) {
             Button("Cancel", role: .cancel) { }
@@ -338,7 +356,8 @@ struct HabitRowView_Previews: PreviewProvider {
                 onResetStreak: {},
                 onResetRecord: {},
                 onOverrideStreak: { _ in },
-                onRepeatOptionSelected: { _ in }
+                onRepeatOptionSelected: { _ in },
+                onDelete: {}
             )
             
             HabitRowView(
@@ -353,7 +372,8 @@ struct HabitRowView_Previews: PreviewProvider {
                 onResetStreak: {},
                 onResetRecord: {},
                 onOverrideStreak: { _ in },
-                onRepeatOptionSelected: { _ in }
+                onRepeatOptionSelected: { _ in },
+                onDelete: {}
             )
             
             HabitRowView(
@@ -368,7 +388,8 @@ struct HabitRowView_Previews: PreviewProvider {
                 onResetStreak: {},
                 onResetRecord: {},
                 onOverrideStreak: { _ in },
-                onRepeatOptionSelected: { _ in }
+                onRepeatOptionSelected: { _ in },
+                onDelete: {}
             )
         }
     }
