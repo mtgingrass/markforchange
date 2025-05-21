@@ -17,15 +17,23 @@ struct HabitRowView: View {
     @State private var showingRepeatOptions = false
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            HStack {
-                VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack(spacing: 12) {
+                VStack(alignment: .leading, spacing: 6) {
                     Text(habit.name)
                         .font(.headline)
+                        .foregroundColor(.primary)
                     
-                    Text("Streak: \(habit.currentStreak) 🔥 • Record: \(habit.recordStreak)")
-                        .font(.subheadline)
-                        .foregroundColor(.secondary)
+                    HStack(spacing: 4) {
+                        Text("\(habit.currentStreak)")
+                            .font(.system(.subheadline, design: .rounded, weight: .semibold))
+                            .foregroundColor(.blue)
+                        Text("\(habit.currentStreak == 1 ? "day" : "days")")
+                            .font(.system(.subheadline, design: .rounded))
+                            .foregroundColor(.secondary)
+                        Text("🔥")
+                            .font(.system(.subheadline))
+                    }
                 }
                 
                 Spacer()
@@ -42,22 +50,22 @@ struct HabitRowView: View {
                 }) {
                     ZStack {
                         Circle()
-                            .stroke(lineWidth: 2)
-                            .frame(width: 28, height: 28)
+                            .stroke(lineWidth: 2.5)
+                            .frame(width: 32, height: 32)
                             .foregroundColor(habit.isCompletedToday() ? .green : .primary.opacity(0.6))
                             .background(
                                 Circle()
-                                    .fill(habit.isCompletedToday() ? Color.green.opacity(0.2) : Color.clear)
+                                    .fill(habit.isCompletedToday() ? Color.green.opacity(0.15) : Color.clear)
                             )
                             
                         if habit.isCompletedToday() {
                             Image(systemName: "checkmark")
-                                .font(.system(size: 14, weight: .bold))
+                                .font(.system(size: 16, weight: .bold))
                                 .foregroundColor(.green)
                         } else {
                             // Show day of week letter
                             Text(Weekday.today.shortName.prefix(1))
-                                .font(.system(size: 12, weight: .medium))
+                                .font(.system(size: 14, weight: .medium))
                                 .foregroundColor(.primary.opacity(0.8))
                         }
                     }
@@ -68,12 +76,26 @@ struct HabitRowView: View {
                 // Progress indicator
                 progressCircle
                 
-                // Goal description
-                goalDescriptionView
+                VStack(alignment: .leading, spacing: 6) {
+                    // Goal description
+                    goalDescriptionView
+                    
+                    HStack(spacing: 4) {
+                        Text("Record:")
+                            .font(.system(.caption2, design: .rounded))
+                            .foregroundColor(.secondary.opacity(0.8))
+                        Text("\(habit.recordStreak)")
+                            .font(.system(.caption2, design: .rounded, weight: .semibold))
+                            .foregroundColor(.purple)
+                        Text("\(habit.recordStreak == 1 ? "day" : "days")")
+                            .font(.system(.caption2, design: .rounded))
+                            .foregroundColor(.secondary.opacity(0.8))
+                    }
+                }
             }
-            .padding(.top, 4)
+            .padding(.top, 2)
         }
-        .padding(.vertical, 8)
+        .padding(.vertical, 10)
         .swipeActions(edge: .leading) {
             Button {
                 onEdit()
