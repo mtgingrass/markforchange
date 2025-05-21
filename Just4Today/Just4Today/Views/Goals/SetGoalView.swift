@@ -73,29 +73,32 @@ struct SetGoalView: View {
                             }
                             .pickerStyle(.segmented)
                             .padding(.vertical, 4)
-                            .onChange(of: viewModel.goalType) { _ in
+                            .onChange(of: viewModel.goalType) { oldValue, newValue in
                                 viewModel.validateGoal()
                             }
                             
-                            DaySelectorView(
-                                selectedDays: $viewModel.selectedDays,
-                                isDisabled: viewModel.goalType == .justForToday
-                            )
-                            .padding(.top, 4)
-                            
-                            InfoToggleView(
-                                isOn: $viewModel.isLenientTracking,
-                                label: "Lenient Tracking",
-                                infoTitle: "What is lenient tracking?",
-                                infoText: """
-                                With lenient tracking, it doesn't matter which days you do the habit.
-                                As long as you complete it the desired number of times in a week,
-                                it is counted as successful. You can choose the days of week for your own tracking,
-                                but the count is what matters with lenient tracking enabled.
-                                """,
-                                isDisabled: viewModel.goalType == .justForToday
-                            )
-                            .padding(.top, 4)
+                            // Only show day selector and lenient tracking for weekly goals
+                            if viewModel.goalType == .weekly {
+                                DaySelectorView(
+                                    selectedDays: $viewModel.selectedDays,
+                                    isDisabled: false
+                                )
+                                .padding(.top, 4)
+                                
+                                InfoToggleView(
+                                    isOn: $viewModel.isLenientTracking,
+                                    label: "Lenient Tracking",
+                                    infoTitle: "What is lenient tracking?",
+                                    infoText: """
+                                    With lenient tracking, it doesn't matter which days you do the habit.
+                                    As long as you complete it the desired number of times in a week,
+                                    it is counted as successful. You can choose the days of week for your own tracking,
+                                    but the count is what matters with lenient tracking enabled.
+                                    """,
+                                    isDisabled: false
+                                )
+                                .padding(.top, 4)
+                            }
                         }
                     }
                     .padding(.vertical, 4)
@@ -105,12 +108,18 @@ struct SetGoalView: View {
                     Section(header: Text("Duration")) {
                         Picker("Target Type", selection: $viewModel.targetType) {
                             ForEach(TargetType.allCases) { type in
-                                Text(type.displayName).tag(type)
+                                // Customize label based on goal type
+                                if type == .timebound {
+                                    let label = viewModel.goalType == .weekly ? "Number of Weeks" : "Number of Days" 
+                                    Text(label).tag(type)
+                                } else {
+                                    Text(type.displayName).tag(type)
+                                }
                             }
                         }
                         .pickerStyle(.segmented)
                         .padding(.vertical, 4)
-                        .onChange(of: viewModel.targetType) { _ in
+                        .onChange(of: viewModel.targetType) { oldValue, newValue in
                             viewModel.validateGoal()
                         }
                         
@@ -118,13 +127,13 @@ struct SetGoalView: View {
                             if viewModel.goalType == .weekly {
                                 TextField("Number of weeks", text: $viewModel.weeklyTargetWeeks)
                                     .keyboardType(.numberPad)
-                                    .onChange(of: viewModel.weeklyTargetWeeks) { _ in
+                                    .onChange(of: viewModel.weeklyTargetWeeks) { oldValue, newValue in
                                         viewModel.validateGoal()
                                     }
                             } else if viewModel.goalType == .totalDays {
                                 TextField("Total completions", text: $viewModel.totalDaysTarget)
                                     .keyboardType(.numberPad)
-                                    .onChange(of: viewModel.totalDaysTarget) { _ in
+                                    .onChange(of: viewModel.totalDaysTarget) { oldValue, newValue in
                                         viewModel.validateGoal()
                                     }
                             }
@@ -163,7 +172,7 @@ struct SetGoalView: View {
                     .frame(maxWidth: .infinity, alignment: .center)
                 }
             }
-            .navigationTitle(mode == .create ? "Add Habit" : "Edit Habit")
+            .navigationTitle("Set Goals")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {

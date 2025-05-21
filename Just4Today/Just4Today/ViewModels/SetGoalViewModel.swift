@@ -71,8 +71,8 @@ class SetGoalViewModel: ObservableObject {
             return
         }
         
-        // Day selection is required for non-Just-for-Today goals
-        if selectedDays.isEmpty {
+        // Weekly goals need day selection
+        if goalType == .weekly && selectedDays.isEmpty {
             isValidGoal = false
             validationMessage = "Please select at least one day of the week"
             return
@@ -125,10 +125,13 @@ class SetGoalViewModel: ObservableObject {
         let weeklyWeeks = targetType == .timebound && goalType == .weekly ? Int(weeklyTargetWeeks) : nil
         let totalDays = targetType == .timebound && goalType == .totalDays ? Int(totalDaysTarget) : nil
         
+        // For total days goal type, don't require day selection
+        let days = goalType == .weekly ? Array(selectedDays) : []
+        
         return Goal(
             type: goalType,
             targetType: targetType,
-            selectedDays: Array(selectedDays),
+            selectedDays: days,
             isLenientTracking: isLenientTracking,
             weeklyTargetWeeks: weeklyWeeks,
             totalDaysTarget: totalDays

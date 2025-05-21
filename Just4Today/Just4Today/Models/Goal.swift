@@ -25,7 +25,7 @@ enum TargetType: String, Codable, CaseIterable, Identifiable {
     var displayName: String {
         switch self {
         case .timebound: return "For a specific time"
-        case .forever: return "Forever"
+        case .forever: return "Ongoing (Forever)"
         }
     }
 }

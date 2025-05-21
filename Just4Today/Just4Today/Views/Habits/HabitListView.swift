@@ -4,6 +4,8 @@ struct HabitListView: View {
     @StateObject private var viewModel = HabitListViewModel()
     @State private var showingAddSheet = false
     @State private var selectedHabit: Habit?
+    @State private var showingTipJar = false
+    @AppStorage("isDarkMode") private var isDarkMode: Bool = false
     
     var body: some View {
         NavigationView {
@@ -16,11 +18,33 @@ struct HabitListView: View {
             }
             .navigationTitle("Your Habits")
             .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        isDarkMode.toggle()
+                    } label: {
+                        Image(systemName: isDarkMode ? "sun.max.fill" : "moon.fill")
+                            .imageScale(.medium)
+                    }
+                }
+                
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {
-                        showingAddSheet = true
-                    }) {
-                        Label("Add Habit", systemImage: "plus")
+                    HStack(spacing: 16) {
+                        // Tip jar button
+                        Button {
+                            showingTipJar = true
+                        } label: {
+                            Image(systemName: "heart.fill")
+                                .imageScale(.medium)
+                                .foregroundColor(.pink)
+                        }
+                        
+                        // Add button
+                        Button(action: {
+                            showingAddSheet = true
+                        }) {
+                            Image(systemName: "plus")
+                                .imageScale(.medium)
+                        }
                     }
                 }
             }
@@ -47,7 +71,11 @@ struct HabitListView: View {
                     }
                 }
             }
+            .sheet(isPresented: $showingTipJar) {
+                TipJarView()
+            }
         }
+        .preferredColorScheme(isDarkMode ? .dark : .light)
     }
     
     private var emptyStateView: some View {
@@ -89,4 +117,6 @@ struct HabitListView: View {
             }
         }
     }
-} 
+}
+
+ 

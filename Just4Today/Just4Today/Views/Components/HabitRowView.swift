@@ -39,31 +39,27 @@ struct HabitRowView: View {
             Button {
                 onEdit()
             } label: {
-                Label("Edit Goal", systemImage: "gear")
+                Text("Set\nGoal")
+                    .multilineTextAlignment(.center)
             }
             .tint(.blue)
-            
-            Button {
-                showingDatePicker = true
-            } label: {
-                Label("Override Streak", systemImage: "calendar")
-            }
-            .tint(.orange)
         }
         .swipeActions(edge: .trailing) {
             Button {
-                showingResetStreakConfirmation = true
+                showingResetRecordConfirmation = true
             } label: {
-                Label("Reset Streak", systemImage: "arrow.counterclockwise")
+                Text("Reset\nRecord")
+                    .multilineTextAlignment(.center)
             }
             .tint(.red)
             
             Button {
-                showingResetRecordConfirmation = true
+                showingResetStreakConfirmation = true
             } label: {
-                Label("Reset Record", systemImage: "xmark.circle")
+                Text("Reset\nStreak")
+                    .multilineTextAlignment(.center)
             }
-            .tint(.red)
+            .tint(.orange)
         }
         .alert("Reset Streak?", isPresented: $showingResetStreakConfirmation) {
             Button("Cancel", role: .cancel) { }
