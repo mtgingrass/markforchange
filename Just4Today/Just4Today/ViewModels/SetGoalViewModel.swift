@@ -3,7 +3,7 @@ import SwiftUI
 import Combine
 
 class SetGoalViewModel: ObservableObject {
-    @Published var goalType: GoalType = .justForToday
+    @Published var goalType: GoalType = .weekly
     @Published var targetType: TargetType = .timebound
     @Published var selectedDays: Set<Weekday> = []
     @Published var isLenientTracking: Bool = false
@@ -45,7 +45,7 @@ class SetGoalViewModel: ObservableObject {
     }
     
     func resetToDefaults() {
-        goalType = .justForToday
+        goalType = .weekly
         targetType = .timebound
         selectedDays = []
         isLenientTracking = false
