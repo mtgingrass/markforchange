@@ -35,6 +35,7 @@ struct HabitRowView: View {
                             .font(.system(.subheadline))
                     }
                 }
+                .contentShape(Rectangle())
                 
                 Spacer()
                 
@@ -63,13 +64,15 @@ struct HabitRowView: View {
                                 .font(.system(size: 16, weight: .bold))
                                 .foregroundColor(.green)
                         } else {
-                            // Show day of week letter
                             Text(Weekday.today.shortName.prefix(1))
                                 .font(.system(size: 14, weight: .medium))
                                 .foregroundColor(.primary.opacity(0.8))
                         }
                     }
                 }
+                .frame(width: 32, height: 32)
+                .contentShape(Circle())
+                .buttonStyle(PlainButtonStyle())
             }
             
             HStack(spacing: 16) {
