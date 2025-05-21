@@ -1,0 +1,180 @@
+import SwiftUI
+
+enum SetGoalMode: Equatable {
+    case create
+    case edit(Habit)
+    
+    static func == (lhs: SetGoalMode, rhs: SetGoalMode) -> Bool {
+        switch (lhs, rhs) {
+        case (.create, .create):
+            return true
+        case (.edit(let lhsHabit), .edit(let rhsHabit)):
+            return lhsHabit.id == rhsHabit.id
+        default:
+            return false
+        }
+    }
+}
+
+struct SetGoalView: View {
+    @Environment(\.dismiss) private var dismiss
+    @StateObject private var viewModel: SetGoalViewModel
+    @State private var habitName: String = ""
+    let mode: SetGoalMode
+    let onSave: (Goal?, String) -> Void
+    
+    init(mode: SetGoalMode, onSave: @escaping (Goal?, String) -> Void) {
+        self.mode = mode
+        self.onSave = onSave
+        
+        switch mode {
+        case .create:
+            _viewModel = StateObject(wrappedValue: SetGoalViewModel())
+            _habitName = State(initialValue: "New Habit")
+        case .edit(let habit):
+            _viewModel = StateObject(wrappedValue: SetGoalViewModel(habit: habit))
+            _habitName = State(initialValue: habit.name)
+        }
+    }
+    
+    var body: some View {
+        NavigationView {
+            Form {
+                Section(header: Text("Habit Name")) {
+                    TextField("Enter habit name", text: $habitName)
+                }
+                
+                Section(header: Text("Goal Settings")) {
+                    VStack(alignment: .leading, spacing: 12) {
+                        Text("CHOOSE GOAL TYPE")
+                            .font(.caption)
+                            .fontWeight(.semibold)
+                            .foregroundColor(.secondary)
+                        
+                        Toggle("Just for Today", isOn: Binding(
+                            get: { viewModel.goalType == .justForToday },
+                            set: { newValue in
+                                if newValue {
+                                    // Toggling to Just for Today
+                                    viewModel.goalType = .justForToday
+                                } else {
+                                    // Toggling from Just for Today to Weekly (default non-today option)
+                                    viewModel.goalType = .weekly
+                                }
+                                viewModel.validateGoal()
+                            }
+                        ))
+                        
+                        if viewModel.goalType != .justForToday {
+                            Picker("Goal Type", selection: $viewModel.goalType) {
+                                ForEach(GoalType.allCases.filter { $0 != .justForToday }) { type in
+                                    Text(type.displayName).tag(type)
+                                }
+                            }
+                            .pickerStyle(.segmented)
+                            .padding(.vertical, 4)
+                            .onChange(of: viewModel.goalType) { _ in
+                                viewModel.validateGoal()
+                            }
+                            
+                            DaySelectorView(
+                                selectedDays: $viewModel.selectedDays,
+                                isDisabled: viewModel.goalType == .justForToday
+                            )
+                            .padding(.top, 4)
+                            
+                            InfoToggleView(
+                                isOn: $viewModel.isLenientTracking,
+                                label: "Lenient Tracking",
+                                infoTitle: "What is lenient tracking?",
+                                infoText: """
+                                With lenient tracking, it doesn't matter which days you do the habit.
+                                As long as you complete it the desired number of times in a week,
+                                it is counted as successful. You can choose the days of week for your own tracking,
+                                but the count is what matters with lenient tracking enabled.
+                                """,
+                                isDisabled: viewModel.goalType == .justForToday
+                            )
+                            .padding(.top, 4)
+                        }
+                    }
+                    .padding(.vertical, 4)
+                }
+                
+                if viewModel.goalType != .justForToday {
+                    Section(header: Text("Duration")) {
+                        Picker("Target Type", selection: $viewModel.targetType) {
+                            ForEach(TargetType.allCases) { type in
+                                Text(type.displayName).tag(type)
+                            }
+                        }
+                        .pickerStyle(.segmented)
+                        .padding(.vertical, 4)
+                        .onChange(of: viewModel.targetType) { _ in
+                            viewModel.validateGoal()
+                        }
+                        
+                        if viewModel.targetType == .timebound {
+                            if viewModel.goalType == .weekly {
+                                TextField("Number of weeks", text: $viewModel.weeklyTargetWeeks)
+                                    .keyboardType(.numberPad)
+                                    .onChange(of: viewModel.weeklyTargetWeeks) { _ in
+                                        viewModel.validateGoal()
+                                    }
+                            } else if viewModel.goalType == .totalDays {
+                                TextField("Total completions", text: $viewModel.totalDaysTarget)
+                                    .keyboardType(.numberPad)
+                                    .onChange(of: viewModel.totalDaysTarget) { _ in
+                                        viewModel.validateGoal()
+                                    }
+                            }
+                        }
+                    }
+                }
+                
+                if !viewModel.isValidGoal && !viewModel.validationMessage.isEmpty {
+                    Section {
+                        Text(viewModel.validationMessage)
+                            .foregroundColor(.red)
+                            .font(.caption)
+                    }
+                }
+                
+                Section {
+                    Button("Set Goal") {
+                        if habitName.isEmpty {
+                            // Don't allow empty habit names
+                            return
+                        }
+                        
+                        if let goal = viewModel.createGoal() {
+                            onSave(goal, habitName)
+                            dismiss()
+                        }
+                    }
+                    .foregroundColor(.blue)
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .disabled(!viewModel.isValidGoal || habitName.isEmpty)
+                    
+                    Button("Clear Goal") {
+                        viewModel.resetToDefaults()
+                    }
+                    .foregroundColor(.red)
+                    .frame(maxWidth: .infinity, alignment: .center)
+                }
+            }
+            .navigationTitle(mode == .create ? "Add Habit" : "Edit Habit")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Cancel") {
+                        dismiss()
+                    }
+                }
+            }
+            .onAppear {
+                viewModel.validateGoal()
+            }
+        }
+    }
+} 
