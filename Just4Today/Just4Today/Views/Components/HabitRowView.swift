@@ -7,7 +7,6 @@ struct HabitRowView: View {
     var onResetStreak: () -> Void
     var onResetRecord: () -> Void
     var onOverrideStreak: (Date) -> Void
-    var onRepeatOptionSelected: (RepeatOption) -> Void
     var onDelete: () -> Void
     
     @State private var showingResetStreakConfirmation = false
@@ -296,7 +295,6 @@ struct HabitRowView_Previews: PreviewProvider {
                 onResetStreak: {},
                 onResetRecord: {},
                 onOverrideStreak: { _ in },
-                onRepeatOptionSelected: { _ in },
                 onDelete: {}
             )
             
@@ -312,7 +310,6 @@ struct HabitRowView_Previews: PreviewProvider {
                 onResetStreak: {},
                 onResetRecord: {},
                 onOverrideStreak: { _ in },
-                onRepeatOptionSelected: { _ in },
                 onDelete: {}
             )
             
@@ -328,7 +325,6 @@ struct HabitRowView_Previews: PreviewProvider {
                 onResetStreak: {},
                 onResetRecord: {},
                 onOverrideStreak: { _ in },
-                onRepeatOptionSelected: { _ in },
                 onDelete: {}
             )
         }

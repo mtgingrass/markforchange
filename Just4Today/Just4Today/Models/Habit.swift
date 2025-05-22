@@ -1,11 +1,5 @@
 import Foundation
 
-enum RepeatOption {
-    case none
-    case tomorrow
-    case forever
-}
-
 struct Habit: Identifiable, Equatable {
     var id = UUID()
     var name: String
@@ -13,7 +7,6 @@ struct Habit: Identifiable, Equatable {
     var recordStreak: Int
     var goal: Goal
     var lastCompletedDate: Date?
-    var repeatOption: RepeatOption = .none
     
     // Add tracking for weekly completions
     var weeklyCompletions: [Date] = []

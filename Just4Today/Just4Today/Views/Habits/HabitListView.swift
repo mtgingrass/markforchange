@@ -17,7 +17,6 @@ struct HabitListView: View {
                     habitListView
                 }
             }
-            .navigationTitle("Your Habits")
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
@@ -25,7 +24,15 @@ struct HabitListView: View {
                     } label: {
                         Image(systemName: isDarkMode ? "sun.max.fill" : "moon.fill")
                             .imageScale(.medium)
+                            .foregroundColor(.primary.opacity(0.8))
                     }
+                }
+                
+                ToolbarItem(placement: .principal) {
+                    Text("Just for Today")
+                        .font(.system(.title2, design: .rounded, weight: .bold))
+                        .foregroundStyle(.primary)
+                        .shadow(color: .primary.opacity(0.1), radius: 1, x: 0, y: 1)
                 }
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -45,6 +52,7 @@ struct HabitListView: View {
                         }) {
                             Image(systemName: "plus")
                                 .imageScale(.medium)
+                                .foregroundColor(.primary.opacity(0.8))
                         }
                     }
                 }
@@ -113,9 +121,6 @@ struct HabitListView: View {
                     },
                     onOverrideStreak: { date in
                         viewModel.overrideStreak(for: habit, startDate: date)
-                    },
-                    onRepeatOptionSelected: { option in
-                        viewModel.setRepeatOption(for: habit, option: option)
                     },
                     onDelete: {
                         viewModel.deleteHabit(habit)
