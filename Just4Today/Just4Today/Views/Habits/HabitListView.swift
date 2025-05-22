@@ -5,6 +5,7 @@ struct HabitListView: View {
     @State private var showingAddSheet = false
     @State private var selectedHabit: Habit?
     @State private var showingTipJar = false
+    @State private var showingStats: Habit?
     @AppStorage("isDarkMode") private var isDarkMode: Bool = false
     
     var body: some View {
@@ -16,8 +17,14 @@ struct HabitListView: View {
                     habitListView
                 }
             }
-            .navigationTitle("Your Habits")
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
+                ToolbarItem(placement: .principal) {
+                    Text("Just for Today")
+                        .font(.system(.title3, design: .rounded, weight: .semibold))
+                        .foregroundStyle(.primary)
+                }
+                
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
                         isDarkMode.toggle()
@@ -120,7 +127,26 @@ struct HabitListView: View {
                         viewModel.deleteHabit(habit)
                     }
                 )
+                .contentShape(Rectangle())
+                .onTapGesture {
+                    showingStats = habit
+                }
             }
+        }
+        .sheet(item: $showingStats) { habit in
+            HabitStatsView(
+                habit: habit,
+                onDelete: {
+                    viewModel.deleteHabit(habit)
+                    showingStats = nil
+                },
+                onResetRecord: {
+                    viewModel.resetRecord(for: habit)
+                },
+                onOverrideStreak: { date in
+                    viewModel.overrideStreak(for: habit, startDate: date)
+                }
+            )
         }
     }
 }

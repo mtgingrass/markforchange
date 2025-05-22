@@ -51,14 +51,14 @@ struct SetGoalView: View {
                             .fontWeight(.semibold)
                             .foregroundColor(.secondary)
                         
-                        Toggle("Just for Today", isOn: Binding(
+                        Toggle("Daily Task", isOn: Binding(
                             get: { viewModel.goalType == .justForToday },
-                            set: { newValue in
-                                if newValue {
-                                    // Toggling to Just for Today
+                            set: { isJustForToday in
+                                if isJustForToday {
+                                    // Toggling to Daily Task
                                     viewModel.goalType = .justForToday
                                 } else {
-                                    // Toggling from Just for Today to Weekly (default non-today option)
+                                    // Toggling from Daily Task to Weekly (default non-today option)
                                     viewModel.goalType = .weekly
                                 }
                                 viewModel.validateGoal()

@@ -15,29 +15,28 @@ struct HabitRowView: View {
     @State private var showingDeleteConfirmation = false
     @State private var showingDatePicker = false
     @State private var selectedDate = Date()
-    @State private var showingCongratulations = false
-    @State private var showingRepeatOptions = false
+    @State private var showingStats = false
     
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
-            HStack(spacing: 12) {
-                VStack(alignment: .leading, spacing: 6) {
+            HStack(spacing: 16) {
+                VStack(alignment: .leading, spacing: 8) {
                     Text(habit.name)
-                        .font(.headline)
+                        .font(.system(.title2, design: .rounded, weight: .bold))
                         .foregroundColor(.primary)
+                        .shadow(color: .primary.opacity(0.1), radius: 1, x: 0, y: 1)
                     
                     HStack(spacing: 4) {
                         Text("\(habit.currentStreak)")
-                            .font(.system(.subheadline, design: .rounded, weight: .semibold))
+                            .font(.system(.title3, design: .rounded, weight: .semibold))
                             .foregroundColor(.blue)
                         Text("\(habit.currentStreak == 1 ? "day" : "days")")
-                            .font(.system(.subheadline, design: .rounded))
+                            .font(.system(.body, design: .rounded))
                             .foregroundColor(.secondary)
                         Text("🔥")
-                            .font(.system(.subheadline))
+                            .font(.system(.body))
                     }
                 }
-                .contentShape(Rectangle())
                 
                 Spacer()
                 
@@ -45,7 +44,7 @@ struct HabitRowView: View {
                     if !habit.isCompletedToday() {
                         onToggleCompletion()
                         if habit.goal.type == .justForToday {
-                            showingCongratulations = true
+                            onRepeatOptionSelected(.forever)
                         }
                     } else {
                         onToggleCompletion()
@@ -53,54 +52,83 @@ struct HabitRowView: View {
                 }) {
                     ZStack {
                         Circle()
-                            .stroke(lineWidth: 2.5)
-                            .frame(width: 32, height: 32)
+                            .stroke(lineWidth: 3)
+                            .frame(width: 44, height: 44)
                             .foregroundColor(habit.isCompletedToday() ? .green : .primary.opacity(0.6))
                             .background(
                                 Circle()
                                     .fill(habit.isCompletedToday() ? Color.green.opacity(0.15) : Color.clear)
                             )
                             
-                        if habit.isCompletedToday() {
-                            Image(systemName: "checkmark")
-                                .font(.system(size: 16, weight: .bold))
-                                .foregroundColor(.green)
-                        } else {
-                            Text(Weekday.today.shortName.prefix(1))
-                                .font(.system(size: 14, weight: .medium))
-                                .foregroundColor(.primary.opacity(0.8))
-                        }
+                        Image(systemName: "checkmark")
+                            .font(.system(size: 22, weight: .bold))
+                            .foregroundColor(habit.isCompletedToday() ? .green : .primary.opacity(0.15))
                     }
                 }
-                .frame(width: 32, height: 32)
+                .frame(width: 44, height: 44)
                 .contentShape(Circle())
                 .buttonStyle(PlainButtonStyle())
             }
             
-            HStack(spacing: 16) {
+            HStack(spacing: 20) {
                 // Progress indicator
-                progressCircle
+                ZStack {
+                    Circle()
+                        .stroke(lineWidth: 5)
+                        .opacity(0.3)
+                        .foregroundColor(progressColor.opacity(0.5))
+                        .frame(width: 50, height: 50)
+                    
+                    Circle()
+                        .trim(from: 0.0, to: min(progressValue, 1.0))
+                        .stroke(style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round))
+                        .foregroundColor(progressColor)
+                        .rotationEffect(Angle(degrees: 270.0))
+                        .frame(width: 50, height: 50)
+                        .animation(.linear, value: progressValue)
+                    
+                    if habit.goal.type == .justForToday {
+                        Image(systemName: habit.isCompletedToday() ? "star.fill" : "star")
+                            .font(.system(size: 18))
+                            .foregroundColor(habit.isCompletedToday() ? .yellow : .gray)
+                    } else {
+                        Text("\(Int(progressValue * 100))%")
+                            .font(.system(size: 14, weight: .bold))
+                            .foregroundColor(progressColor)
+                    }
+                }
                 
-                VStack(alignment: .leading, spacing: 6) {
+                VStack(alignment: .leading, spacing: 8) {
                     // Goal description
-                    goalDescriptionView
+                    Text(goalTitle)
+                        .font(.callout)
+                        .fontWeight(.medium)
+                        .foregroundColor(.primary.opacity(0.7))
+                    
+                    if habit.goal.type == .weekly {
+                        WeeklyProgressView(
+                            selectedDays: habit.goal.selectedDays,
+                            completedDays: habit.completedDaysThisWeek(),
+                            missedDays: habit.missedDaysThisWeek()
+                        )
+                    }
                     
                     HStack(spacing: 4) {
                         Text("Record:")
-                            .font(.system(.caption2, design: .rounded))
+                            .font(.system(.subheadline, design: .rounded))
                             .foregroundColor(.secondary.opacity(0.8))
                         Text("\(habit.recordStreak)")
-                            .font(.system(.caption2, design: .rounded, weight: .semibold))
+                            .font(.system(.subheadline, design: .rounded, weight: .semibold))
                             .foregroundColor(.purple)
                         Text("\(habit.recordStreak == 1 ? "day" : "days")")
-                            .font(.system(.caption2, design: .rounded))
+                            .font(.system(.subheadline, design: .rounded))
                             .foregroundColor(.secondary.opacity(0.8))
                     }
                 }
             }
-            .padding(.top, 2)
+            .padding(.top, 4)
         }
-        .padding(.vertical, 10)
+        .padding(.vertical, 12)
         .swipeActions(edge: .leading) {
             Button {
                 onEdit()
@@ -109,32 +137,8 @@ struct HabitRowView: View {
                     .multilineTextAlignment(.center)
             }
             .tint(.blue)
-            
-            Button {
-                showingDatePicker = true
-            } label: {
-                Text("Set\nStreak")
-                    .multilineTextAlignment(.center)
-            }
-            .tint(.indigo)
         }
         .swipeActions(edge: .trailing) {
-            Button {
-                showingDeleteConfirmation = true
-            } label: {
-                Text("Delete\nHabit")
-                    .multilineTextAlignment(.center)
-            }
-            .tint(.red)
-            
-            Button {
-                showingResetRecordConfirmation = true
-            } label: {
-                Text("Reset\nRecord")
-                    .multilineTextAlignment(.center)
-            }
-            .tint(.orange)
-            
             Button {
                 showingResetStreakConfirmation = true
             } label: {
@@ -143,14 +147,6 @@ struct HabitRowView: View {
             }
             .tint(.yellow)
         }
-        .alert("Delete Habit?", isPresented: $showingDeleteConfirmation) {
-            Button("Cancel", role: .cancel) { }
-            Button("Delete", role: .destructive) {
-                onDelete()
-            }
-        } message: {
-            Text("Are you sure you want to delete '\(habit.name)'? This action cannot be undone.")
-        }
         .alert("Reset Streak?", isPresented: $showingResetStreakConfirmation) {
             Button("Cancel", role: .cancel) { }
             Button("Reset", role: .destructive) {
@@ -158,37 +154,6 @@ struct HabitRowView: View {
             }
         } message: {
             Text("This will reset your current streak to 0. This action cannot be undone.")
-        }
-        .alert("Reset Record?", isPresented: $showingResetRecordConfirmation) {
-            Button("Cancel", role: .cancel) { }
-            Button("Reset", role: .destructive) {
-                onResetRecord()
-            }
-        } message: {
-            Text("This will reset your all-time record to your current streak (\(habit.currentStreak)). This action cannot be undone.")
-        }
-        .alert("Congratulations! 🎉", isPresented: $showingCongratulations) {
-            Button("Choose Repeat Option") {
-                showingRepeatOptions = true
-            }
-            Button("Don't Repeat") {
-                onRepeatOptionSelected(.none)
-            }
-        } message: {
-            Text("You've completed your daily habit: \(habit.name)")
-        }
-        .alert("Repeat Options", isPresented: $showingRepeatOptions) {
-            Button("Repeat Tomorrow") {
-                onRepeatOptionSelected(.tomorrow)
-            }
-            Button("Repeat Forever") {
-                onRepeatOptionSelected(.forever)
-            }
-            Button("Cancel", role: .cancel) {
-                onRepeatOptionSelected(.none)
-            }
-        } message: {
-            Text("Would you like to repeat this habit?")
         }
         .sheet(isPresented: $showingDatePicker) {
             NavigationView {
@@ -217,6 +182,16 @@ struct HabitRowView: View {
                     }
                 }
             }
+        }
+        .sheet(isPresented: $showingStats) {
+            HabitStatsView(
+                habit: habit,
+                onDelete: onDelete,
+                onResetRecord: onResetRecord,
+                onOverrideStreak: { date in
+                    onOverrideStreak(date)
+                }
+            )
         }
     }
     
@@ -305,7 +280,7 @@ struct HabitRowView: View {
     private var goalTitle: String {
         switch habit.goal.type {
         case .justForToday:
-            return "Just for Today"
+            return "Daily Task"
             
         case .weekly:
             return "Weekly Goal"

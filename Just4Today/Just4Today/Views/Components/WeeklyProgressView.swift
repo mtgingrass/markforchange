@@ -23,24 +23,24 @@ struct WeeklyProgressView: View {
         return ZStack {
             Circle()
                 .stroke(isSelected ? Color.blue : Color.gray.opacity(0.3), 
-                        lineWidth: isSelected ? 2 : 1)
+                        lineWidth: isSelected ? 2.5 : 1.5)
                 .background(
                     Circle()
                         .fill(backgroundColor(isSelected: isSelected, isCompleted: isCompleted, isMissed: isMissed))
                 )
-                .frame(width: 20, height: 20)
+                .frame(width: 28, height: 28)
             
             if isCompleted {
                 Image(systemName: "checkmark")
-                    .font(.system(size: 10, weight: .bold))
+                    .font(.system(size: 14, weight: .bold))
                     .foregroundColor(.white)
             } else if isMissed {
                 Image(systemName: "xmark")
-                    .font(.system(size: 10, weight: .bold))
+                    .font(.system(size: 14, weight: .bold))
                     .foregroundColor(.white)
             } else {
                 Text(day.shortName.prefix(1))
-                    .font(.system(size: 8, weight: isSelected ? .bold : .regular))
+                    .font(.system(size: 12, weight: isSelected ? .bold : .regular))
                     .foregroundColor(isSelected ? (isToday ? .blue : .primary) : .secondary)
             }
         }

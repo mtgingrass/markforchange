@@ -9,7 +9,7 @@ enum GoalType: String, Codable, CaseIterable, Identifiable {
     
     var displayName: String {
         switch self {
-        case .justForToday: return "Just for Today"
+        case .justForToday: return "Daily Task"
         case .weekly: return "Weekly Target"
         case .totalDays: return "Total Days Target"
         }

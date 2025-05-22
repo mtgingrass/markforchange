@@ -263,12 +263,13 @@ class HabitListViewModel: ObservableObject {
     
     private func checkAndResetStreaks() {
         let calendar = Calendar.current
+        let now = Date()
         
-        for i in 0..<habits.count {
-            var habit = habits[i]
-            
-            // Skip "Just for Today" goals
-            if habit.goal.type == .justForToday { continue }
+        for (index, habit) in habits.enumerated() {
+            // Skip Daily Task goals
+            if case .justForToday = habit.goal.type {
+                continue
+            }
             
             // Check if the habit is lenient tracking
             if habit.goal.isLenientTracking {
@@ -288,8 +289,9 @@ class HabitListViewModel: ObservableObject {
             
             // If last completion is not yesterday or today, reset streak
             if !isYesterday && !isToday {
-                habit.currentStreak = 0
-                habits[i] = habit
+                var updatedHabit = habit
+                updatedHabit.currentStreak = 0
+                habits[index] = updatedHabit
             }
         }
     }
