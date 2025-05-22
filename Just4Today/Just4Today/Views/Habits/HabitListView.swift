@@ -1,5 +1,12 @@
 import SwiftUI
 
+// Define filter enum
+enum HabitFilter: String, CaseIterable {
+    case all = "All"
+    case daily = "Daily"
+    case weekly = "Weekly"
+}
+
 struct HabitListView: View {
     @StateObject private var viewModel = HabitListViewModel()
     @State private var showingAddSheet = false
@@ -7,14 +14,20 @@ struct HabitListView: View {
     @State private var showingTipJar = false
     @State private var showingStats: Habit?
     @AppStorage("isDarkMode") private var isDarkMode: Bool = false
+    @State private var selectedFilter: HabitFilter = .all
     
     var body: some View {
         NavigationView {
-            Group {
-                if viewModel.habits.isEmpty {
-                    emptyStateView
-                } else {
-                    habitListView
+            VStack(spacing: 0) {
+                // Filter tabs
+                filterTabsView
+                
+                Group {
+                    if viewModel.habits.isEmpty {
+                        emptyStateView
+                    } else {
+                        habitListView
+                    }
                 }
             }
             .toolbar {
@@ -87,6 +100,42 @@ struct HabitListView: View {
         .preferredColorScheme(isDarkMode ? .dark : .light)
     }
     
+    // Filter tabs view
+    private var filterTabsView: some View {
+        HStack(spacing: 0) {
+            ForEach(HabitFilter.allCases, id: \.self) { filter in
+                Button(action: {
+                    selectedFilter = filter
+                }) {
+                    VStack(spacing: 8) {
+                        Text(filter.rawValue)
+                            .font(.system(.headline, design: .rounded))
+                            .fontWeight(selectedFilter == filter ? .bold : .medium)
+                            .foregroundColor(selectedFilter == filter ? .blue : .primary.opacity(0.6))
+                        
+                        // Indicator line
+                        Rectangle()
+                            .fill(selectedFilter == filter ? Color.blue : Color.clear)
+                            .frame(height: 3)
+                            .cornerRadius(1.5)
+                    }
+                    .padding(.horizontal, 8)
+                    .padding(.vertical, 6)
+                }
+                .buttonStyle(PlainButtonStyle())
+                .frame(maxWidth: .infinity)
+            }
+        }
+        .padding(.horizontal)
+        .background(Color(.systemBackground))
+        .overlay(
+            Rectangle()
+                .frame(height: 1)
+                .foregroundColor(.gray.opacity(0.2)),
+            alignment: .bottom
+        )
+    }
+    
     private var emptyStateView: some View {
         VStack(spacing: 20) {
             Image(systemName: "checkmark.circle")
@@ -102,9 +151,21 @@ struct HabitListView: View {
         .background(Color(.systemGroupedBackground))
     }
     
+    // Filter habits based on selected filter
+    private var filteredHabits: [Habit] {
+        switch selectedFilter {
+        case .all:
+            return viewModel.habits
+        case .daily:
+            return viewModel.habits.filter { $0.goal.type == .justForToday }
+        case .weekly:
+            return viewModel.habits.filter { $0.goal.type == .weekly }
+        }
+    }
+    
     private var habitListView: some View {
         List {
-            ForEach(viewModel.habits) { habit in
+            ForEach(filteredHabits) { habit in
                 HabitRowView(
                     habit: habit,
                     onToggleCompletion: {
