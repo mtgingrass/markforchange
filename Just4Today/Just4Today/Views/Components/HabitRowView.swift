@@ -41,14 +41,7 @@ struct HabitRowView: View {
                 Spacer()
                 
                 Button(action: {
-                    if !habit.isCompletedToday() {
-                        onToggleCompletion()
-                        if habit.goal.type == .justForToday {
-                            onRepeatOptionSelected(.forever)
-                        }
-                    } else {
-                        onToggleCompletion()
-                    }
+                    onToggleCompletion()
                 }) {
                     ZStack {
                         Circle()
@@ -154,34 +147,6 @@ struct HabitRowView: View {
             }
         } message: {
             Text("This will reset your current streak to 0. This action cannot be undone.")
-        }
-        .sheet(isPresented: $showingDatePicker) {
-            NavigationView {
-                VStack {
-                    DatePicker(
-                        "Select Start Date",
-                        selection: $selectedDate,
-                        displayedComponents: .date
-                    )
-                    .datePickerStyle(.graphical)
-                    .padding()
-                }
-                .navigationTitle("Override Streak")
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    ToolbarItem(placement: .cancellationAction) {
-                        Button("Cancel") {
-                            showingDatePicker = false
-                        }
-                    }
-                    ToolbarItem(placement: .confirmationAction) {
-                        Button("Set") {
-                            onOverrideStreak(selectedDate)
-                            showingDatePicker = false
-                        }
-                    }
-                }
-            }
         }
         .sheet(isPresented: $showingStats) {
             HabitStatsView(

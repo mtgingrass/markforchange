@@ -17,14 +17,8 @@ struct HabitListView: View {
                     habitListView
                 }
             }
-            .navigationBarTitleDisplayMode(.inline)
+            .navigationTitle("Your Habits")
             .toolbar {
-                ToolbarItem(placement: .principal) {
-                    Text("Just for Today")
-                        .font(.system(.title3, design: .rounded, weight: .semibold))
-                        .foregroundStyle(.primary)
-                }
-                
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
                         isDarkMode.toggle()
