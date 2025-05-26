@@ -96,6 +96,10 @@ enum Weekday: Int, Codable, CaseIterable, Identifiable {
     }
     
     static var today: Weekday {
-        return fromDate(Date())
+        if DateSimulator.shared.isSimulationActive {
+            return fromDate(DateSimulator.shared.currentDate)
+        } else {
+            return fromDate(Date())
+        }
     }
 } 

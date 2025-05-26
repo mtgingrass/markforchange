@@ -81,6 +81,10 @@ class HabitStatsViewModel: ObservableObject {
 
 extension Calendar {
     func isDateInThisWeek(_ date: Date) -> Bool {
-        return isDate(date, equalTo: Date(), toGranularity: .weekOfYear)
+        if DateSimulator.shared.isSimulationActive {
+            return isDate(date, equalTo: DateSimulator.shared.currentDate, toGranularity: .weekOfYear)
+        } else {
+            return isDate(date, equalTo: Date(), toGranularity: .weekOfYear)
+        }
     }
 } 

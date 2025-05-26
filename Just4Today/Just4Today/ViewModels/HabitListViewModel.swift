@@ -5,6 +5,7 @@ import Combine
 class HabitListViewModel: ObservableObject {
     @Published var habits: [Habit] = []
     private var cancellables = Set<AnyCancellable>()
+    @ObservedObject private var dateSimulator = DateSimulator.shared
     
     init() {
         // In a real app, we would load from persistent storage
@@ -17,12 +18,19 @@ class HabitListViewModel: ObservableObject {
                 self?.checkAndResetStreaks()
             }
             .store(in: &cancellables)
+        
+        // Listen for date simulation changes
+        dateSimulator.$simulatedDate
+            .sink { [weak self] _ in
+                self?.checkAndResetStreaks()
+            }
+            .store(in: &cancellables)
     }
     
     func loadDemoData() {
         // Sample data for demonstration
         let calendar = Calendar.current
-        let today = Date()
+        let today = dateSimulator.isSimulationActive ? dateSimulator.currentDate : Date()
         
         // Create some past dates for demo purposes
         let yesterday = calendar.date(byAdding: .day, value: -1, to: today)!
@@ -107,7 +115,7 @@ class HabitListViewModel: ObservableObject {
     // Helper to get a date for a specific weekday in the current week
     private func getDateForWeekday(_ weekday: Weekday) -> Date {
         let calendar = Calendar.current
-        let today = Date()
+        let today = dateSimulator.isSimulationActive ? dateSimulator.currentDate : Date()
         
         // Find the starting Sunday of this week
         guard let startOfWeek = calendar.date(from: calendar.dateComponents([.yearForWeekOfYear, .weekOfYear], from: today)) else {
@@ -122,7 +130,7 @@ class HabitListViewModel: ObservableObject {
         guard let index = habits.firstIndex(where: { $0.id == habit.id }) else { return }
         
         var updatedHabit = habit
-        let today = Date()
+        let today = dateSimulator.isSimulationActive ? dateSimulator.currentDate : Date()
         
         if updatedHabit.isCompletedToday() {
             // Uncheck: Remove today's completion
@@ -187,7 +195,8 @@ class HabitListViewModel: ObservableObject {
         
         var updatedHabit = habit
         let calendar = Calendar.current
-        let components = calendar.dateComponents([.day], from: startDate, to: Date())
+        let today = dateSimulator.isSimulationActive ? dateSimulator.currentDate : Date()
+        let components = calendar.dateComponents([.day], from: startDate, to: today)
         
         if let days = components.day, days >= 0 {
             updatedHabit.currentStreak = days
@@ -217,7 +226,7 @@ class HabitListViewModel: ObservableObject {
     
     private func checkAndResetStreaks() {
         let calendar = Calendar.current
-        let now = Date()
+        let now = dateSimulator.isSimulationActive ? dateSimulator.currentDate : Date()
         
         for (index, habit) in habits.enumerated() {
             // Skip Daily Task goals
@@ -238,8 +247,13 @@ class HabitListViewModel: ObservableObject {
                 continue
             }
             
-            let isYesterday = calendar.isDateInYesterday(lastCompleted)
-            let isToday = calendar.isDateInToday(lastCompleted)
+            let isYesterday = dateSimulator.isSimulationActive ? 
+                calendar.isDateInYesterday_Simulated(lastCompleted) : 
+                calendar.isDateInYesterday(lastCompleted)
+                
+            let isToday = dateSimulator.isSimulationActive ? 
+                calendar.isDateInToday_Simulated(lastCompleted) : 
+                calendar.isDateInToday(lastCompleted)
             
             // If last completion is not yesterday or today, reset streak
             if !isYesterday && !isToday {

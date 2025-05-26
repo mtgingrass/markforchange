@@ -20,13 +20,19 @@ struct Habit: Identifiable, Equatable {
     
     func isCompletedToday() -> Bool {
         guard let lastCompletedDate = lastCompletedDate else { return false }
-        return Calendar.current.isDateInToday(lastCompletedDate)
+        
+        // Use simulated date if active
+        if DateSimulator.shared.isSimulationActive {
+            return Calendar.current.isDate(lastCompletedDate, inSameDayAs: DateSimulator.shared.currentDate)
+        } else {
+            return Calendar.current.isDateInToday(lastCompletedDate)
+        }
     }
     
     // Get completed days for the current week
     func completedDaysThisWeek() -> [Weekday] {
         let calendar = Calendar.current
-        let today = Date()
+        let today = DateSimulator.shared.isSimulationActive ? DateSimulator.shared.currentDate : Date()
         
         // Find the start of the week (Sunday)
         guard let startOfWeek = calendar.date(from: calendar.dateComponents([.yearForWeekOfYear, .weekOfYear], from: today)) else {
@@ -42,7 +48,7 @@ struct Habit: Identifiable, Equatable {
     // Get missed days (selected days that have already passed this week but weren't completed)
     func missedDaysThisWeek() -> [Weekday] {
         let calendar = Calendar.current
-        let today = Date()
+        let today = DateSimulator.shared.isSimulationActive ? DateSimulator.shared.currentDate : Date()
         let todayWeekday = Weekday.fromDate(today).rawValue
         
         // Only consider days that have already passed (excluding today)

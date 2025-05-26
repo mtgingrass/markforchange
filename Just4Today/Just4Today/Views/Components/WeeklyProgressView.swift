@@ -4,7 +4,11 @@ struct WeeklyProgressView: View {
     let selectedDays: [Weekday]
     let completedDays: [Weekday]
     let missedDays: [Weekday]
-    let today: Weekday = Weekday.today
+    
+    // Use computed property to always get the current today
+    var today: Weekday {
+        return Weekday.today
+    }
     
     var body: some View {
         HStack(spacing: 4) {

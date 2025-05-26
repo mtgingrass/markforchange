@@ -13,8 +13,10 @@ struct HabitListView: View {
     @State private var selectedHabit: Habit?
     @State private var showingTipJar = false
     @State private var showingStats: Habit?
+    @State private var showingDateSimulator = false
     @AppStorage("isDarkMode") private var isDarkMode: Bool = false
     @State private var selectedFilter: HabitFilter = .all
+    @ObservedObject private var dateSimulator = DateSimulator.shared
     
     var body: some View {
         NavigationView {
@@ -32,12 +34,30 @@ struct HabitListView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button {
-                        isDarkMode.toggle()
-                    } label: {
-                        Image(systemName: isDarkMode ? "sun.max.fill" : "moon.fill")
-                            .imageScale(.medium)
-                            .foregroundColor(.primary.opacity(0.8))
+                    HStack(spacing: 16) {
+                        Button {
+                            isDarkMode.toggle()
+                        } label: {
+                            Image(systemName: isDarkMode ? "sun.max.fill" : "moon.fill")
+                                .imageScale(.medium)
+                                .foregroundColor(.primary.opacity(0.8))
+                        }
+                        
+                        // Date simulator button
+                        if dateSimulator.isSimulationActive {
+                            Button {
+                                showingDateSimulator = true
+                            } label: {
+                                HStack(spacing: 4) {
+                                    Image(systemName: "calendar.badge.clock")
+                                        .imageScale(.medium)
+                                        .foregroundColor(.blue)
+                                    Text(Weekday.fromDate(dateSimulator.currentDate).shortName)
+                                        .font(.caption)
+                                        .foregroundColor(.blue)
+                                }
+                            }
+                        }
                     }
                 }
                 
@@ -50,6 +70,17 @@ struct HabitListView: View {
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
                     HStack(spacing: 16) {
+                        // Date simulator button (if not active)
+                        if !dateSimulator.isSimulationActive {
+                            Button {
+                                showingDateSimulator = true
+                            } label: {
+                                Image(systemName: "calendar.badge.clock")
+                                    .imageScale(.medium)
+                                    .foregroundColor(.primary.opacity(0.8))
+                            }
+                        }
+                        
                         // Tip jar button
                         Button {
                             showingTipJar = true
@@ -95,6 +126,9 @@ struct HabitListView: View {
             }
             .sheet(isPresented: $showingTipJar) {
                 TipJarView()
+            }
+            .sheet(isPresented: $showingDateSimulator) {
+                DateSimulatorView()
             }
         }
         .preferredColorScheme(isDarkMode ? .dark : .light)
