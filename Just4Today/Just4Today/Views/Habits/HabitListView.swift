@@ -34,30 +34,12 @@ struct HabitListView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    HStack(spacing: 16) {
-                        Button {
-                            isDarkMode.toggle()
-                        } label: {
-                            Image(systemName: isDarkMode ? "sun.max.fill" : "moon.fill")
-                                .imageScale(.medium)
-                                .foregroundColor(.primary.opacity(0.8))
-                        }
-                        
-                        // Date simulator button
-                        if dateSimulator.isSimulationActive {
-                            Button {
-                                showingDateSimulator = true
-                            } label: {
-                                HStack(spacing: 4) {
-                                    Image(systemName: "calendar.badge.clock")
-                                        .imageScale(.medium)
-                                        .foregroundColor(.blue)
-                                    Text(Weekday.fromDate(dateSimulator.currentDate).shortName)
-                                        .font(.caption)
-                                        .foregroundColor(.blue)
-                                }
-                            }
-                        }
+                    Button {
+                        isDarkMode.toggle()
+                    } label: {
+                        Image(systemName: isDarkMode ? "sun.max.fill" : "moon.fill")
+                            .imageScale(.medium)
+                            .foregroundColor(.primary.opacity(0.8))
                     }
                 }
                 
@@ -70,14 +52,21 @@ struct HabitListView: View {
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
                     HStack(spacing: 16) {
-                        // Date simulator button (if not active)
-                        if !dateSimulator.isSimulationActive {
-                            Button {
-                                showingDateSimulator = true
-                            } label: {
+                        // Date simulator button - always in same position
+                        Button {
+                            showingDateSimulator = true
+                        } label: {
+                            HStack(spacing: 4) {
                                 Image(systemName: "calendar.badge.clock")
                                     .imageScale(.medium)
-                                    .foregroundColor(.primary.opacity(0.8))
+                                    .foregroundColor(dateSimulator.isSimulationActive ? .blue : .primary.opacity(0.8))
+                                
+                                // Only show weekday label when simulation is active
+                                if dateSimulator.isSimulationActive {
+                                    Text(Weekday.fromDate(dateSimulator.currentDate).shortName)
+                                        .font(.caption)
+                                        .foregroundColor(.blue)
+                                }
                             }
                         }
                         
@@ -191,7 +180,8 @@ struct HabitListView: View {
         case .all:
             return viewModel.habits
         case .daily:
-            return viewModel.habits.filter { $0.goal.type == .justForToday }
+            // Include both justForToday and totalDays in the Daily tab
+            return viewModel.habits.filter { $0.goal.type == .justForToday || $0.goal.type == .totalDays }
         case .weekly:
             return viewModel.habits.filter { $0.goal.type == .weekly }
         }
