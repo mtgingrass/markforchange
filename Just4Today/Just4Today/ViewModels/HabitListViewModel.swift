@@ -6,6 +6,7 @@ class HabitListViewModel: ObservableObject {
     @Published var habits: [Habit] = []
     private var cancellables = Set<AnyCancellable>()
     @ObservedObject private var dateSimulator = DateSimulator.shared
+    private let calendar = Calendar.current
     
     init() {
         // In a real app, we would load from persistent storage
@@ -33,9 +34,9 @@ class HabitListViewModel: ObservableObject {
         let today = dateSimulator.isSimulationActive ? dateSimulator.currentDate : Date()
         
         // Create some past dates for demo purposes
-        let yesterday = calendar.date(byAdding: .day, value: -1, to: today)!
-        let twoDaysAgo = calendar.date(byAdding: .day, value: -2, to: today)!
-        let threeDaysAgo = calendar.date(byAdding: .day, value: -3, to: today)!
+        _ = calendar.date(byAdding: .day, value: -1, to: today)!
+        _ = calendar.date(byAdding: .day, value: -2, to: today)!
+        _ = calendar.date(byAdding: .day, value: -3, to: today)!
         
         var waterHabit = Habit(
             name: "Drink Water", 
@@ -66,7 +67,7 @@ class HabitListViewModel: ObservableObject {
             previousRecord: nil
         )
         
-        var meditateHabit = Habit(
+        let meditateHabit = Habit(
             name: "Meditate", 
             currentStreak: 0, 
             recordStreak: 5,
@@ -88,7 +89,6 @@ class HabitListViewModel: ObservableObject {
         
         // Determine if we've passed Monday in the current week
         let todayWeekday = calendar.component(.weekday, from: today)
-        let mondayHasPassed = todayWeekday > 2 // 2 is Monday
         let wednesdayHasPassed = todayWeekday > 4 // 4 is Wednesday
         
         // If we've passed Monday in this week, mark it as missed
@@ -137,9 +137,18 @@ class HabitListViewModel: ObservableObject {
             updatedHabit.lastCompletedDate = nil
             
             // Remove today from weekly completions
-            let calendar = Calendar.current
             updatedHabit.weeklyCompletions.removeAll { completion in
                 return calendar.isDate(completion, inSameDayAs: today)
+            }
+            
+            // For weekly goals, check if this affects the current week's completion
+            if updatedHabit.goal.type == .weekly {
+                if let weekStart = updatedHabit.getCurrentWeekStart() {
+                    // If the week was previously completed and now isn't, remove it from completed weeks
+                    if !updatedHabit.isWeekCompleted(weekStart) {
+                        updatedHabit.completedWeeks.removeAll { calendar.isDate($0, equalTo: weekStart, toGranularity: .weekOfYear) }
+                    }
+                }
             }
             
             // Decrement streak if this was the only streak day
@@ -160,13 +169,34 @@ class HabitListViewModel: ObservableObject {
             // Add today to weekly completions
             updatedHabit.weeklyCompletions.append(today)
             
-            updatedHabit.currentStreak += 1
-            
-            // Update record if needed
-            if updatedHabit.currentStreak > updatedHabit.recordStreak {
-                // Save the previous record before updating
-                updatedHabit.previousRecord = updatedHabit.recordStreak
-                updatedHabit.recordStreak = updatedHabit.currentStreak
+            // For weekly goals, check if this completes the current week
+            if updatedHabit.goal.type == .weekly {
+                if let weekStart = updatedHabit.getCurrentWeekStart() {
+                    if updatedHabit.isWeekCompleted(weekStart) {
+                        // Add the week to completed weeks if not already there
+                        if !updatedHabit.completedWeeks.contains(where: { calendar.isDate($0, equalTo: weekStart, toGranularity: .weekOfYear) }) {
+                            updatedHabit.completedWeeks.append(weekStart)
+                            
+                            // Update record streak for weekly goals
+                            let completedWeeksCount = updatedHabit.completedWeeks.count
+                            if completedWeeksCount > updatedHabit.recordStreak {
+                                // Save the previous record before updating
+                                updatedHabit.previousRecord = updatedHabit.recordStreak
+                                updatedHabit.recordStreak = completedWeeksCount
+                            }
+                        }
+                    }
+                }
+            } else {
+                // For non-weekly goals, increment streak as before
+                updatedHabit.currentStreak += 1
+                
+                // Update record if needed
+                if updatedHabit.currentStreak > updatedHabit.recordStreak {
+                    // Save the previous record before updating
+                    updatedHabit.previousRecord = updatedHabit.recordStreak
+                    updatedHabit.recordStreak = updatedHabit.currentStreak
+                }
             }
         }
         
@@ -194,7 +224,6 @@ class HabitListViewModel: ObservableObject {
         guard let index = habits.firstIndex(where: { $0.id == habit.id }) else { return }
         
         var updatedHabit = habit
-        let calendar = Calendar.current
         let today = dateSimulator.isSimulationActive ? dateSimulator.currentDate : Date()
         let components = calendar.dateComponents([.day], from: startDate, to: today)
         
@@ -225,8 +254,7 @@ class HabitListViewModel: ObservableObject {
     }
     
     private func checkAndResetStreaks() {
-        let calendar = Calendar.current
-        let now = dateSimulator.isSimulationActive ? dateSimulator.currentDate : Date()
+        _ = dateSimulator.isSimulationActive ? dateSimulator.currentDate : Date()
         
         for (index, habit) in habits.enumerated() {
             // Skip Daily Task goals

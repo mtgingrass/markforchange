@@ -11,6 +11,9 @@ struct Habit: Identifiable, Equatable {
     // Add tracking for weekly completions
     var weeklyCompletions: [Date] = []
     
+    // Track completed weeks for weekly goals
+    var completedWeeks: [Date] = []
+    
     // To track the previous record before today's completion
     var previousRecord: Int?
     
@@ -41,24 +44,69 @@ struct Habit: Identifiable, Equatable {
         
         // Get all completions within this week
         return weeklyCompletions
-            .filter { calendar.isDate($0, equalTo: today, toGranularity: .weekOfYear) }
+            .filter { calendar.isDate($0, equalTo: startOfWeek, toGranularity: .weekOfYear) }
             .map { Weekday.fromDate($0) }
+    }
+    
+    // Check if a week was completed successfully
+    func isWeekCompleted(_ weekStartDate: Date) -> Bool {
+        guard goal.type == .weekly else { return false }
+        
+        let calendar = Calendar.current
+        let weekEndDate = calendar.date(byAdding: .day, value: 6, to: weekStartDate)!
+        
+        // Get all completions for this week
+        let weekCompletions = weeklyCompletions.filter { completion in
+            completion >= weekStartDate && completion <= weekEndDate
+        }
+        
+        if goal.isLenientTracking {
+            // For lenient tracking, just need to meet the target number of completions
+            return weekCompletions.count >= goal.selectedDays.count
+        } else {
+            // For strict tracking, need to complete all selected days
+            let completedDays = Set(weekCompletions.map { Weekday.fromDate($0) })
+            let selectedDays = Set(goal.selectedDays)
+            return selectedDays.isSubset(of: completedDays)
+        }
+    }
+    
+    // Get the start date of the current week
+    func getCurrentWeekStart() -> Date? {
+        let calendar = Calendar.current
+        let today = DateSimulator.shared.isSimulationActive ? DateSimulator.shared.currentDate : Date()
+        
+        return calendar.date(from: calendar.dateComponents([.yearForWeekOfYear, .weekOfYear], from: today))
+    }
+    
+    // Get the start date of a specific week
+    func getWeekStart(for date: Date) -> Date? {
+        let calendar = Calendar.current
+        return calendar.date(from: calendar.dateComponents([.yearForWeekOfYear, .weekOfYear], from: date))
     }
     
     // Get missed days (selected days that have already passed this week but weren't completed)
     func missedDaysThisWeek() -> [Weekday] {
         let calendar = Calendar.current
         let today = DateSimulator.shared.isSimulationActive ? DateSimulator.shared.currentDate : Date()
-        let todayWeekday = Weekday.fromDate(today).rawValue
         
-        // Only consider days that have already passed (excluding today)
-        // This ensures we don't show today as "missed" until the day is over
-        let pastDays = Weekday.allCases.filter { $0.rawValue < todayWeekday }
+        // Find the start of the week (Sunday)
+        guard let startOfWeek = calendar.date(from: calendar.dateComponents([.yearForWeekOfYear, .weekOfYear], from: today)) else {
+            return []
+        }
         
-        // Of the selected days that have passed, which ones weren't completed?
-        let completedWeekdays = completedDaysThisWeek()
-        return goal.selectedDays
-            .filter { pastDays.contains($0) }
-            .filter { !completedWeekdays.contains($0) }
+        // Get all selected days that have already passed this week
+        let passedSelectedDays = goal.selectedDays.filter { weekday in
+            let weekdayDate = calendar.date(byAdding: .day, value: weekday.rawValue - 1, to: startOfWeek)!
+            return weekdayDate <= today
+        }
+        
+        // Get all completions within this week
+        let completedDays = weeklyCompletions
+            .filter { calendar.isDate($0, equalTo: today, toGranularity: .weekOfYear) }
+            .map { Weekday.fromDate($0) }
+        
+        // Return selected days that have passed but weren't completed
+        return passedSelectedDays.filter { !completedDays.contains($0) }
     }
 } 

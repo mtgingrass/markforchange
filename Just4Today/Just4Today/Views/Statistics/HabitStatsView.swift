@@ -25,8 +25,13 @@ struct HabitStatsView: View {
             List {
                 // Basic Stats Section
                 Section("Current Stats") {
-                    StatRow(title: "Current Streak", value: "\(viewModel.habit.currentStreak) \(viewModel.habit.currentStreak == 1 ? "day" : "days")")
-                    StatRow(title: "All-Time Record", value: "\(viewModel.habit.recordStreak) \(viewModel.habit.recordStreak == 1 ? "day" : "days")")
+                    if viewModel.habit.goal.type == .weekly {
+                        StatRow(title: "Completed Weeks", value: "\(viewModel.habit.completedWeeks.count) weeks")
+                        StatRow(title: "All-Time Record", value: "\(viewModel.habit.recordStreak) weeks")
+                    } else {
+                        StatRow(title: "Current Streak", value: "\(viewModel.habit.currentStreak) \(viewModel.habit.currentStreak == 1 ? "day" : "days")")
+                        StatRow(title: "All-Time Record", value: "\(viewModel.habit.recordStreak) \(viewModel.habit.recordStreak == 1 ? "day" : "days")")
+                    }
                 }
                 
                 // Weekly Stats Section (for weekly habits)

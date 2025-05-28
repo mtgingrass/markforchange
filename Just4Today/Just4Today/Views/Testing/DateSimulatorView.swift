@@ -10,7 +10,7 @@ struct DateSimulatorView: View {
             Form {
                 Section(header: Text("Date Simulation")) {
                     Toggle("Enable Date Simulation", isOn: $simulator.isSimulationActive)
-                        .onChange(of: simulator.isSimulationActive) { newValue in
+                        .onChange(of: simulator.isSimulationActive) { oldValue, newValue in
                             if newValue {
                                 simulator.setSimulatedDate(to: selectedDate)
                             } else {
@@ -25,7 +25,7 @@ struct DateSimulatorView: View {
                             displayedComponents: [.date]
                         )
                         .datePickerStyle(.graphical)
-                        .onChange(of: selectedDate) { newValue in
+                        .onChange(of: selectedDate) { oldValue, newValue in
                             simulator.setSimulatedDate(to: newValue)
                         }
                         

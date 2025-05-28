@@ -112,7 +112,9 @@ struct HabitRowView: View {
                         Text("\(habit.recordStreak)")
                             .font(.system(.subheadline, design: .rounded, weight: .semibold))
                             .foregroundColor(.purple)
-                        Text("\(habit.recordStreak == 1 ? "day" : "days")")
+                        Text(habit.goal.type == .weekly ? 
+                            "\(habit.recordStreak == 1 ? "week" : "weeks")" :
+                            "\(habit.recordStreak == 1 ? "day" : "days")")
                             .font(.system(.subheadline, design: .rounded))
                             .foregroundColor(.secondary.opacity(0.8))
                     }
