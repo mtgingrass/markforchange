@@ -30,7 +30,7 @@ struct SetGoalView: View {
         switch mode {
         case .create:
             _viewModel = StateObject(wrappedValue: SetGoalViewModel())
-            _habitName = State(initialValue: "New Habit")
+            _habitName = State(initialValue: "")
         case .edit(let habit):
             _viewModel = StateObject(wrappedValue: SetGoalViewModel(habit: habit))
             _habitName = State(initialValue: habit.name)
@@ -41,7 +41,7 @@ struct SetGoalView: View {
         NavigationView {
             Form {
                 Section(header: Text("Habit Name")) {
-                    TextField("Enter habit name", text: $habitName)
+                    TextField("New Habit", text: $habitName)
                 }
                 
                 Section(header: Text("Goal Settings")) {
