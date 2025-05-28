@@ -187,4 +187,32 @@ struct SetGoalView: View {
             }
         }
     }
+}
+
+#Preview("Create Mode") {
+    SetGoalView(mode: .create) { goal, name in
+        print("Created goal: \(String(describing: goal)) with name: \(name)")
+    }
+}
+
+#Preview("Edit Mode") {
+    SetGoalView(mode: .edit(Habit(
+        id: UUID(),
+        name: "Sample Habit",
+        currentStreak: 2,
+        recordStreak: 5,
+        goal: Goal(
+            type: .weekly,
+            targetType: .timebound,
+            selectedDays: [.monday, .wednesday, .friday],
+            isLenientTracking: true,
+            weeklyTargetWeeks: 4,
+            totalDaysTarget: nil
+        ),
+        lastCompletedDate: nil,
+        weeklyCompletions: [],
+        previousRecord: nil
+    ))) { goal, name in
+        print("Updated goal: \(String(describing: goal)) with name: \(name)")
+    }
 } 
