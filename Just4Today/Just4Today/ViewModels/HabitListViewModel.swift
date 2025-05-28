@@ -61,7 +61,7 @@ class HabitListViewModel: ObservableObject {
             name: "Read 10 Pages", 
             currentStreak: 0,
             recordStreak: 0,
-            goal: Goal(type: .justForToday),
+            goal: Goal(type: .justForToday, targetType: .forever),
             previousRecord: nil
         )
         
