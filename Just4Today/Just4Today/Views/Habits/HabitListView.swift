@@ -2,7 +2,7 @@ import SwiftUI
 
 // Define filter enum
 enum HabitFilter: String, CaseIterable {
-    case all = "All"
+    case all = "Today"
     case daily = "Daily"
     case weekly = "Weekly"
 }
@@ -21,74 +21,11 @@ struct HabitListView: View {
     var body: some View {
         NavigationView {
             VStack(spacing: 0) {
-                // Filter tabs
                 filterTabsView
-                
-                Group {
-                    if viewModel.habits.isEmpty {
-                        emptyStateView
-                    } else {
-                        habitListView
-                    }
-                }
+                habitListContent
             }
             .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button {
-                        isDarkMode.toggle()
-                    } label: {
-                        Image(systemName: isDarkMode ? "sun.max.fill" : "moon.fill")
-                            .imageScale(.medium)
-                            .foregroundColor(.primary.opacity(0.8))
-                    }
-                }
-                
-                ToolbarItem(placement: .principal) {
-                    Text("Just for Today")
-                        .font(.system(.title2, design: .rounded, weight: .bold))
-                        .foregroundStyle(.primary)
-                        .shadow(color: .primary.opacity(0.1), radius: 1, x: 0, y: 1)
-                }
-                
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    HStack(spacing: 16) {
-                        // Date simulator button - always in same position
-                        Button {
-                            showingDateSimulator = true
-                        } label: {
-                            HStack(spacing: 4) {
-                                Image(systemName: "calendar.badge.clock")
-                                    .imageScale(.medium)
-                                    .foregroundColor(dateSimulator.isSimulationActive ? .blue : .primary.opacity(0.8))
-                                
-                                // Only show weekday label when simulation is active
-                                if dateSimulator.isSimulationActive {
-                                    Text(Weekday.fromDate(dateSimulator.currentDate).shortName)
-                                        .font(.caption)
-                                        .foregroundColor(.blue)
-                                }
-                            }
-                        }
-                        
-                        // Tip jar button
-                        Button {
-                            showingTipJar = true
-                        } label: {
-                            Image(systemName: "heart.fill")
-                                .imageScale(.medium)
-                                .foregroundColor(.pink)
-                        }
-                        
-                        // Add button
-                        Button(action: {
-                            showingAddSheet = true
-                        }) {
-                            Image(systemName: "plus")
-                                .imageScale(.medium)
-                                .foregroundColor(.primary.opacity(0.8))
-                        }
-                    }
-                }
+                toolbarContent
             }
             .sheet(isPresented: $showingAddSheet) {
                 SetGoalView(mode: .create) { goal, name in
@@ -123,7 +60,8 @@ struct HabitListView: View {
         .preferredColorScheme(isDarkMode ? .dark : .light)
     }
     
-    // Filter tabs view
+    // MARK: - Subviews
+    
     private var filterTabsView: some View {
         HStack(spacing: 0) {
             ForEach(HabitFilter.allCases, id: \.self) { filter in
@@ -159,6 +97,16 @@ struct HabitListView: View {
         )
     }
     
+    private var habitListContent: some View {
+        Group {
+            if viewModel.habits.isEmpty {
+                emptyStateView
+            } else {
+                habitListView
+            }
+        }
+    }
+    
     private var emptyStateView: some View {
         VStack(spacing: 20) {
             Image(systemName: "checkmark.circle")
@@ -172,19 +120,6 @@ struct HabitListView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color(.systemGroupedBackground))
-    }
-    
-    // Filter habits based on selected filter
-    private var filteredHabits: [Habit] {
-        switch selectedFilter {
-        case .all:
-            return viewModel.habits
-        case .daily:
-            // Include both justForToday and totalDays in the Daily tab
-            return viewModel.habits.filter { $0.goal.type == .justForToday || $0.goal.type == .totalDays }
-        case .weekly:
-            return viewModel.habits.filter { $0.goal.type == .weekly }
-        }
     }
     
     private var habitListView: some View {
@@ -231,6 +166,102 @@ struct HabitListView: View {
                     viewModel.overrideStreak(for: habit, startDate: date)
                 }
             )
+        }
+    }
+    
+    private var toolbarContent: some ToolbarContent {
+        Group {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button {
+                    isDarkMode.toggle()
+                } label: {
+                    Image(systemName: isDarkMode ? "sun.max.fill" : "moon.fill")
+                        .imageScale(.medium)
+                        .foregroundColor(.primary.opacity(0.8))
+                }
+            }
+            
+            ToolbarItem(placement: .principal) {
+                Text("Just for Today")
+                    .font(.system(.title2, design: .rounded, weight: .bold))
+                    .foregroundStyle(.primary)
+                    .shadow(color: .primary.opacity(0.1), radius: 1, x: 0, y: 1)
+            }
+            
+            ToolbarItem(placement: .navigationBarTrailing) {
+                HStack(spacing: 16) {
+                    dateSimulatorButton
+                    tipJarButton
+                    addButton
+                }
+            }
+        }
+    }
+    
+    private var dateSimulatorButton: some View {
+        Button {
+            showingDateSimulator = true
+        } label: {
+            HStack(spacing: 4) {
+                Image(systemName: "calendar.badge.clock")
+                    .imageScale(.medium)
+                    .foregroundColor(dateSimulator.isSimulationActive ? .blue : .primary.opacity(0.8))
+                
+                if dateSimulator.isSimulationActive {
+                    Text(Weekday.fromDate(dateSimulator.currentDate).shortName)
+                        .font(.caption)
+                        .foregroundColor(.blue)
+                }
+            }
+        }
+    }
+    
+    private var tipJarButton: some View {
+        Button {
+            showingTipJar = true
+        } label: {
+            Image(systemName: "heart.fill")
+                .imageScale(.medium)
+                .foregroundColor(.pink)
+        }
+    }
+    
+    private var addButton: some View {
+        Button {
+            showingAddSheet = true
+        } label: {
+            Image(systemName: "plus")
+                .imageScale(.medium)
+                .foregroundColor(.primary.opacity(0.8))
+        }
+    }
+    
+    // MARK: - Filtered Habits
+    
+    private var filteredHabits: [Habit] {
+        let today = Calendar.current.startOfDay(for: Date())
+        let currentWeekday = Calendar.current.component(.weekday, from: today)
+        
+        switch selectedFilter {
+        case .all:
+            return viewModel.habits.filter { habit in
+                if habit.isCompletedToday() {
+                    return false
+                }
+                
+                switch habit.goal.type {
+                case .justForToday:
+                    return true
+                case .weekly:
+                    return habit.goal.selectedDays.contains(Weekday(rawValue: currentWeekday) ?? .monday)
+                case .totalDays:
+                    return true
+                }
+            }
+        case .daily:
+            return viewModel.habits.filter { $0.goal.type == .justForToday }
+        case .weekly:
+            return viewModel.habits.filter { $0.goal.type == .weekly }
         }
     }
 }
