@@ -26,14 +26,34 @@ struct HabitRowView: View {
                         .shadow(color: .primary.opacity(0.1), radius: 1, x: 0, y: 1)
                     
                     HStack(spacing: 4) {
-                        Text("\(habit.currentStreak)")
-                            .font(.system(.title3, design: .rounded, weight: .semibold))
-                            .foregroundColor(.blue)
-                        Text("\(habit.currentStreak == 1 ? "day" : "days")")
-                            .font(.system(.body, design: .rounded))
-                            .foregroundColor(.secondary)
-                        Text("🔥")
-                            .font(.system(.body))
+                        if habit.goal.type == .weekly {
+                            // Weekly streak
+                            Text("\(habit.completedWeeks.count)")
+                                .font(.system(.title3, design: .rounded, weight: .semibold))
+                                .foregroundColor(.blue)
+                            Text("\(habit.completedWeeks.count == 1 ? "week" : "weeks")")
+                                .font(.system(.body, design: .rounded))
+                                .foregroundColor(.secondary)
+                            
+                            Text("•")
+                                .foregroundColor(.secondary)
+                            
+                            // Daily streak
+                            Text("\(habit.currentStreak)")
+                                .font(.system(.title3, design: .rounded, weight: .semibold))
+                                .foregroundColor(.blue)
+                            Text("\(habit.currentStreak == 1 ? "day" : "days")")
+                                .font(.system(.body, design: .rounded))
+                                .foregroundColor(.secondary)
+                        } else {
+                            // Regular streak display for non-weekly goals
+                            Text("\(habit.currentStreak)")
+                                .font(.system(.title3, design: .rounded, weight: .semibold))
+                                .foregroundColor(.blue)
+                            Text("\(habit.currentStreak == 1 ? "day" : "days")")
+                                .font(.system(.body, design: .rounded))
+                                .foregroundColor(.secondary)
+                        }
                     }
                 }
                 

@@ -38,10 +38,11 @@ class HabitListViewModel: ObservableObject {
         _ = calendar.date(byAdding: .day, value: -2, to: today)!
         _ = calendar.date(byAdding: .day, value: -3, to: today)!
         
+        // Water habit - strict tracking
         var waterHabit = Habit(
             name: "Drink Water", 
-            currentStreak: 5, 
-            recordStreak: 12, 
+            currentStreak: 0, // Start with 0 to ensure proper counting
+            recordStreak: 0, 
             goal: Goal(type: .weekly, targetType: .timebound, 
                        selectedDays: [.monday, .wednesday, .friday], 
                        isLenientTracking: false, 
@@ -50,63 +51,59 @@ class HabitListViewModel: ObservableObject {
         )
         
         // Add demo completions for the current week
-        // We'll add completions for Monday (and Wednesday if today is after Wednesday)
         if calendar.component(.weekday, from: today) > 1 { // If today is after Sunday
             waterHabit.weeklyCompletions.append(getDateForWeekday(.monday))
+            waterHabit.currentStreak = 1 // Set streak to match completions
         }
         
-        if calendar.component(.weekday, from: today) > 3 { // If today is after Tuesday
-            // Missed Wednesday in this example
-        }
-        
+        // Reading habit - daily task
         var readingHabit = Habit(
             name: "Read 10 Pages", 
-            currentStreak: 2, 
-            recordStreak: 8,
+            currentStreak: 0,
+            recordStreak: 0,
             goal: Goal(type: .justForToday),
             previousRecord: nil
         )
         
+        // Meditation habit - total days
         let meditateHabit = Habit(
             name: "Meditate", 
-            currentStreak: 0, 
-            recordStreak: 5,
+            currentStreak: 0,
+            recordStreak: 0,
             goal: Goal(type: .totalDays, targetType: .timebound, 
                        isLenientTracking: true, totalDaysTarget: 100),
             previousRecord: nil
         )
         
-        // Create an exercise habit that clearly shows missed days
+        // Exercise habit - lenient tracking
         var exerciseHabit = Habit(
             name: "Exercise", 
-            currentStreak: 3, 
-            recordStreak: 15,
+            currentStreak: 0, // Start with 0 to ensure proper counting
+            recordStreak: 0,
             goal: Goal(type: .weekly, targetType: .forever, 
                        selectedDays: [.monday, .wednesday, .friday, .saturday], 
                        isLenientTracking: true),
             previousRecord: nil
         )
         
-        // Determine if we've passed Monday in the current week
+        // Add completions for exercise habit
         let todayWeekday = calendar.component(.weekday, from: today)
-        let wednesdayHasPassed = todayWeekday > 4 // 4 is Wednesday
-        
-        // If we've passed Monday in this week, mark it as missed
-        // (by not adding it to weeklyCompletions while it's in selectedDays)
         
         // Add completion for Tuesday (non-selected day, demonstrates lenient tracking)
         if todayWeekday > 3 { // If we've passed Tuesday
             exerciseHabit.weeklyCompletions.append(getDateForWeekday(.tuesday))
         }
         
-        // If we've passed Wednesday, add it as completed (to show contrast with missed Monday)
-        if wednesdayHasPassed {
+        // If we've passed Wednesday, add it as completed
+        if todayWeekday > 4 { // If we've passed Wednesday
             exerciseHabit.weeklyCompletions.append(getDateForWeekday(.wednesday))
+            exerciseHabit.currentStreak = 1 // Set streak to match completions
         }
         
-        // Set completion for reading habit
+        // Set completion for reading habit if today is Tuesday
         if calendar.component(.weekday, from: today) == 3 { // If today is Tuesday
             readingHabit.lastCompletedDate = today
+            readingHabit.currentStreak = 1
         }
         
         habits = [waterHabit, readingHabit, meditateHabit, exerciseHabit]
@@ -186,10 +183,36 @@ class HabitListViewModel: ObservableObject {
                             }
                         }
                     }
+                    
+                    // Update current streak for weekly goals
+                    let weekday = calendar.component(.weekday, from: today)
+                    if let currentWeekday = Weekday(rawValue: weekday) {
+                        if updatedHabit.goal.isLenientTracking {
+                            // For lenient tracking, simply increment/decrement based on completion
+                            if updatedHabit.isCompletedToday() {
+                                updatedHabit.currentStreak += 1
+                            } else if updatedHabit.currentStreak > 0 {
+                                updatedHabit.currentStreak -= 1
+                            }
+                        } else {
+                            // For strict tracking, only increment if it's a selected day
+                            if updatedHabit.goal.selectedDays.contains(currentWeekday) {
+                                if updatedHabit.isCompletedToday() {
+                                    updatedHabit.currentStreak += 1
+                                } else if updatedHabit.currentStreak > 0 {
+                                    updatedHabit.currentStreak -= 1
+                                }
+                            }
+                        }
+                    }
                 }
             } else {
                 // For non-weekly goals, increment streak as before
-                updatedHabit.currentStreak += 1
+                if updatedHabit.isCompletedToday() {
+                    updatedHabit.currentStreak += 1
+                } else if updatedHabit.currentStreak > 0 {
+                    updatedHabit.currentStreak -= 1
+                }
                 
                 // Update record if needed
                 if updatedHabit.currentStreak > updatedHabit.recordStreak {
