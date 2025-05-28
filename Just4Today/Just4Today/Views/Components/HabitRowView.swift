@@ -118,6 +118,13 @@ struct HabitRowView: View {
                         .foregroundColor(.primary.opacity(0.7))
                     
                     if habit.goal.type == .weekly {
+                        HStack {
+                            Text(habit.goal.isLenientTracking ? "Lenient Tracking" : "Strict Tracking")
+                                .font(.system(.subheadline, design: .rounded))
+                                .foregroundColor(.secondary)
+                            Spacer()
+                        }
+                        
                         WeeklyProgressView(
                             selectedDays: habit.goal.selectedDays,
                             completedDays: habit.completedDaysThisWeek(),
@@ -274,7 +281,7 @@ struct HabitRowView: View {
             return "Daily Task"
             
         case .weekly:
-            return "Weekly Goal"
+            return ""
             
         case .totalDays:
             if habit.goal.targetType == .timebound, let target = habit.goal.totalDaysTarget {
