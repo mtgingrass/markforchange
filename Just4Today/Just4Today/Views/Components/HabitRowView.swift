@@ -17,13 +17,21 @@ struct HabitRowView: View {
     @State private var showingStats = false
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            HStack(spacing: 16) {
-                VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: 8) {
+            HStack(spacing: 12) {
+                VStack(alignment: .leading, spacing: 4) {
                     Text(habit.name)
                         .font(.system(.title2, design: .rounded, weight: .bold))
                         .foregroundColor(.primary)
                         .shadow(color: .primary.opacity(0.1), radius: 1, x: 0, y: 1)
+                    
+                    // Goal description - only for non-weekly goals
+                    if habit.goal.type != .weekly {
+                        Text(goalTitle)
+                            .font(.callout)
+                            .fontWeight(.medium)
+                            .foregroundColor(.primary.opacity(0.7))
+                    }
                     
                     HStack(spacing: 4) {
                         if habit.goal.type == .weekly {
@@ -45,6 +53,14 @@ struct HabitRowView: View {
                             Text("\(habit.currentStreak == 1 ? "day" : "days")")
                                 .font(.system(.body, design: .rounded))
                                 .foregroundColor(.secondary)
+                            
+                            Text("•")
+                                .foregroundColor(.secondary)
+                            
+                            // Record
+                            Text("Record: \(habit.recordStreak)")
+                                .font(.system(.body, design: .rounded))
+                                .foregroundColor(.purple)
                         } else {
                             // Regular streak display for non-weekly goals
                             Text("\(habit.currentStreak)")
@@ -53,96 +69,90 @@ struct HabitRowView: View {
                             Text("\(habit.currentStreak == 1 ? "day" : "days")")
                                 .font(.system(.body, design: .rounded))
                                 .foregroundColor(.secondary)
+                            
+                            Text("•")
+                                .foregroundColor(.secondary)
+                            
+                            // Record
+                            Text("Record: \(habit.recordStreak)")
+                                .font(.system(.body, design: .rounded))
+                                .foregroundColor(.purple)
                         }
                     }
                 }
                 
                 Spacer()
                 
-                Button(action: {
-                    onToggleCompletion()
-                }) {
-                    ZStack {
-                        Circle()
-                            .stroke(lineWidth: 3)
-                            .frame(width: 44, height: 44)
-                            .foregroundColor(habit.isCompletedToday() ? .green : .primary.opacity(0.6))
-                            .background(
-                                Circle()
-                                    .fill(habit.isCompletedToday() ? Color.green.opacity(0.15) : Color.clear)
-                            )
-                            
-                        Image(systemName: "checkmark")
-                            .font(.system(size: 22, weight: .bold))
-                            .foregroundColor(habit.isCompletedToday() ? .green : .primary.opacity(0.15))
+                VStack(spacing: 4) {
+                    if habit.goal.type == .weekly {
+                        Text(habit.goal.isLenientTracking ? "Lenient" : "Strict")
+                            .font(.system(.subheadline, design: .rounded))
+                            .foregroundColor(.secondary)
                     }
+                    
+                    Button(action: {
+                        onToggleCompletion()
+                    }) {
+                        ZStack {
+                            Circle()
+                                .stroke(lineWidth: 2.5)
+                                .frame(width: 40, height: 40)
+                                .foregroundColor(habit.isCompletedToday() ? .green : .primary.opacity(0.6))
+                                .background(
+                                    Circle()
+                                        .fill(habit.isCompletedToday() ? Color.green.opacity(0.15) : Color.clear)
+                                )
+                                
+                            Image(systemName: "checkmark")
+                                .font(.system(size: 20, weight: .bold))
+                                .foregroundColor(habit.isCompletedToday() ? .green : .primary.opacity(0.15))
+                        }
+                    }
+                    .frame(width: 40, height: 40)
+                    .contentShape(Circle())
+                    .buttonStyle(PlainButtonStyle())
                 }
-                .frame(width: 44, height: 44)
-                .contentShape(Circle())
-                .buttonStyle(PlainButtonStyle())
             }
             
-            HStack(spacing: 20) {
+            HStack(spacing: 16) {
                 // Progress indicator
                 ZStack {
                     Circle()
-                        .stroke(lineWidth: 5)
+                        .stroke(lineWidth: 4)
                         .opacity(0.3)
                         .foregroundColor(progressColor.opacity(0.5))
-                        .frame(width: 50, height: 50)
+                        .frame(width: 44, height: 44)
                     
                     Circle()
                         .trim(from: 0.0, to: min(progressValue, 1.0))
-                        .stroke(style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round))
+                        .stroke(style: StrokeStyle(lineWidth: 4, lineCap: .round, lineJoin: .round))
                         .foregroundColor(progressColor)
                         .rotationEffect(Angle(degrees: 270.0))
-                        .frame(width: 50, height: 50)
+                        .frame(width: 44, height: 44)
                         .animation(.linear, value: progressValue)
                     
                     if habit.goal.type == .justForToday {
                         Image(systemName: habit.isCompletedToday() ? "star.fill" : "star")
-                            .font(.system(size: 18))
+                            .font(.system(size: 16))
                             .foregroundColor(habit.isCompletedToday() ? .yellow : .gray)
                     } else {
                         Text("\(Int(progressValue * 100))%")
-                            .font(.system(size: 14, weight: .bold))
+                            .font(.system(size: 12, weight: .bold))
                             .foregroundColor(progressColor)
                     }
                 }
                 
-                VStack(alignment: .leading, spacing: 8) {
-                    // Goal description
-                    Text(goalTitle)
-                        .font(.callout)
-                        .fontWeight(.medium)
-                        .foregroundColor(.primary.opacity(0.7))
-                    
-                    if habit.goal.type == .weekly {
-                        WeeklyProgressView(
-                            selectedDays: habit.goal.selectedDays,
-                            completedDays: habit.completedDaysThisWeek(),
-                            missedDays: habit.missedDaysThisWeek()
-                        )
-                    }
-                    
-                    HStack(spacing: 4) {
-                        Text("Record:")
-                            .font(.system(.subheadline, design: .rounded))
-                            .foregroundColor(.secondary.opacity(0.8))
-                        Text("\(habit.recordStreak)")
-                            .font(.system(.subheadline, design: .rounded, weight: .semibold))
-                            .foregroundColor(.purple)
-                        Text(habit.goal.type == .weekly ? 
-                            "\(habit.recordStreak == 1 ? "week" : "weeks")" :
-                            "\(habit.recordStreak == 1 ? "day" : "days")")
-                            .font(.system(.subheadline, design: .rounded))
-                            .foregroundColor(.secondary.opacity(0.8))
-                    }
+                if habit.goal.type == .weekly {
+                    Spacer()
+                    WeeklyProgressView(
+                        selectedDays: habit.goal.selectedDays,
+                        completedDays: habit.completedDaysThisWeek(),
+                        missedDays: habit.missedDaysThisWeek()
+                    )
                 }
             }
-            .padding(.top, 4)
         }
-        .padding(.vertical, 12)
+        .padding(.vertical, 8)
         .swipeActions(edge: .leading) {
             Button {
                 onEdit()
