@@ -40,7 +40,7 @@ class HabitListViewModel: ObservableObject {
         
         // Water habit - strict tracking
         var waterHabit = Habit(
-            name: "Drink Water", 
+            name: "Call Dad", 
             currentStreak: 0, // Start with 0 to ensure proper counting
             recordStreak: 0, 
             goal: Goal(type: .weekly, targetType: .timebound, 
