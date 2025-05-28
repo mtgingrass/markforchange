@@ -45,11 +45,13 @@ struct HabitStatsView: View {
                     if viewModel.habit.goal.type == .weekly {
                         StatRow(title: "Tracking Mode", value: viewModel.habit.goal.isLenientTracking ? "Lenient" : "Strict")
                     }
-                    if case .totalDays = viewModel.habit.goal.type {
-                        if let target = viewModel.habit.goal.totalDaysTarget {
-                            StatRow(title: "Target", value: "\(target) days")
-                            StatRow(title: "Progress", value: "\(Int((Double(viewModel.habit.currentStreak) / Double(target)) * 100))%")
-                        }
+                    if case .totalDays = viewModel.habit.goal.type, let target = viewModel.habit.goal.totalDaysTarget {
+                        StatRow(title: "Target", value: "\(target) days")
+                        StatRow(title: "Progress", value: "\(Int((Double(viewModel.habit.currentStreak) / Double(target)) * 100))%")
+                    }
+                    if case .justForToday = viewModel.habit.goal.type, viewModel.habit.goal.targetType == .timebound, let target = viewModel.habit.goal.totalDaysTarget {
+                        StatRow(title: "Target", value: "\(target) days")
+                        StatRow(title: "Progress", value: "\(Int((Double(viewModel.habit.currentStreak) / Double(target)) * 100))%")
                     }
                 }
                 

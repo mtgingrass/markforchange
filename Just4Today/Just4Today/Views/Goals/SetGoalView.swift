@@ -104,7 +104,8 @@ struct SetGoalView: View {
                     .padding(.vertical, 4)
                 }
                 
-                if viewModel.goalType != .justForToday {
+                // Show Duration section for all goal types except when it's a daily task with no target
+                if viewModel.goalType != .justForToday || viewModel.targetType == .timebound || viewModel.targetType == .forever {
                     Section(header: Text("Duration")) {
                         Picker("Target Type", selection: $viewModel.targetType) {
                             ForEach(TargetType.allCases) { type in
@@ -130,7 +131,7 @@ struct SetGoalView: View {
                                     .onChange(of: viewModel.weeklyTargetWeeks) { oldValue, newValue in
                                         viewModel.validateGoal()
                                     }
-                            } else if viewModel.goalType == .totalDays {
+                            } else if viewModel.goalType == .totalDays || viewModel.goalType == .justForToday {
                                 TextField("Total completions", text: $viewModel.totalDaysTarget)
                                     .keyboardType(.numberPad)
                                     .onChange(of: viewModel.totalDaysTarget) { oldValue, newValue in

@@ -64,10 +64,23 @@ class SetGoalViewModel: ObservableObject {
     }
     
     func validateGoal() {
-        // Just for Today is always valid
-        if goalType == .justForToday {
+        // Just for Today is always valid if target type is forever
+        if goalType == .justForToday && targetType == .forever {
             isValidGoal = true
             validationMessage = ""
+            return
+        }
+        
+        // Just for Today with timebound target needs total days
+        if goalType == .justForToday && targetType == .timebound {
+            let hasTotalDays = !totalDaysTarget.isEmpty && Int(totalDaysTarget) != nil
+            isValidGoal = hasTotalDays
+            
+            if !hasTotalDays {
+                validationMessage = "Please enter the total number of days"
+            } else {
+                validationMessage = ""
+            }
             return
         }
         
@@ -123,7 +136,7 @@ class SetGoalViewModel: ObservableObject {
         
         // Only set numeric values if target type is timebound and relevant to the goal type
         let weeklyWeeks = targetType == .timebound && goalType == .weekly ? Int(weeklyTargetWeeks) : nil
-        let totalDays = targetType == .timebound && goalType == .totalDays ? Int(totalDaysTarget) : nil
+        let totalDays = targetType == .timebound && (goalType == .totalDays || goalType == .justForToday) ? Int(totalDaysTarget) : nil
         
         // For total days goal type, don't require day selection
         let days = goalType == .weekly ? Array(selectedDays) : []

@@ -244,14 +244,21 @@ struct HabitRowView: View {
     private var goalTitle: String {
         switch habit.goal.type {
         case .justForToday:
+            if habit.goal.targetType == .timebound, let target = habit.goal.totalDaysTarget {
+                return "Total Days: \(habit.currentStreak)/\(target)"
+            } else if habit.goal.targetType == .forever {
+                return "Total Days: \(habit.currentStreak)/∞"
+            }
             return "Daily Task"
             
         case .weekly:
             return "Weekly Goal"
             
         case .totalDays:
-            if let target = habit.goal.totalDaysTarget {
+            if habit.goal.targetType == .timebound, let target = habit.goal.totalDaysTarget {
                 return "Total Days: \(habit.currentStreak)/\(target)"
+            } else if habit.goal.targetType == .forever {
+                return "Total Days: \(habit.currentStreak)/∞"
             }
             return "Total Days Progress"
         }
@@ -261,6 +268,12 @@ struct HabitRowView: View {
     private var goalDetail: String {
         switch habit.goal.type {
         case .justForToday:
+            if habit.goal.targetType == .timebound, let target = habit.goal.totalDaysTarget {
+                let remaining = max(0, target - habit.currentStreak)
+                return "\(remaining) days remaining to goal"
+            } else if habit.goal.targetType == .forever {
+                return "Track your progress over time"
+            }
             return "Complete this once today"
             
         case .weekly:
@@ -271,9 +284,11 @@ struct HabitRowView: View {
             }
             
         case .totalDays:
-            if let target = habit.goal.totalDaysTarget {
+            if habit.goal.targetType == .timebound, let target = habit.goal.totalDaysTarget {
                 let remaining = max(0, target - habit.currentStreak)
                 return "\(remaining) days remaining to goal"
+            } else if habit.goal.targetType == .forever {
+                return "Track your progress over time"
             }
             return "Track your progress over time"
         }
