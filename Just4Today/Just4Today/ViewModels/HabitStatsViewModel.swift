@@ -71,10 +71,29 @@ class HabitStatsViewModel: ObservableObject {
     }
     
     func resetRecord() {
+        // Update the local habit property immediately
+        habit.recordStreak = habit.currentStreak
+        
+        // Call the closure to update the parent view model
         onResetRecord()
     }
     
     func overrideStreak(_ date: Date) {
+        // Update the local habit property
+        let calendar = Calendar.current
+        let today = DateSimulator.shared.isSimulationActive ? DateSimulator.shared.currentDate : Date()
+        let components = calendar.dateComponents([.day], from: date, to: today)
+        
+        if let days = components.day, days >= 0 {
+            habit.currentStreak = days
+            
+            // Update record if needed
+            if habit.currentStreak > habit.recordStreak {
+                habit.recordStreak = habit.currentStreak
+            }
+        }
+        
+        // Call the closure to update the parent view model
         onOverrideStreak(date)
     }
 }
