@@ -239,7 +239,9 @@ struct HabitListView: View {
     // MARK: - Filtered Habits
     
     private var filteredHabits: [Habit] {
-        let today = Calendar.current.startOfDay(for: Date())
+        let today = dateSimulator.isSimulationActive ? 
+            Calendar.current.startOfDay(for: dateSimulator.currentDate) :
+            Calendar.current.startOfDay(for: Date())
         let currentWeekday = Calendar.current.component(.weekday, from: today)
         
         switch selectedFilter {

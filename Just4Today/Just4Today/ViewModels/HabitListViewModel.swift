@@ -32,16 +32,17 @@ class HabitListViewModel: ObservableObject {
         // Sample data for demonstration
         let calendar = Calendar.current
         let today = dateSimulator.isSimulationActive ? dateSimulator.currentDate : Date()
+        let todayWeekday = calendar.component(.weekday, from: today)
         
         // Create some past dates for demo purposes
         _ = calendar.date(byAdding: .day, value: -1, to: today)!
         _ = calendar.date(byAdding: .day, value: -2, to: today)!
         _ = calendar.date(byAdding: .day, value: -3, to: today)!
         
-        // Water habit - strict tracking
+        // Call Dad habit - strict tracking
         var waterHabit = Habit(
             name: "Call Dad", 
-            currentStreak: 0, // Start with 0 to ensure proper counting
+            currentStreak: 0,
             recordStreak: 0, 
             goal: Goal(type: .weekly, targetType: .timebound, 
                        selectedDays: [.monday, .wednesday, .friday], 
@@ -51,9 +52,9 @@ class HabitListViewModel: ObservableObject {
         )
         
         // Add demo completions for the current week
-        if calendar.component(.weekday, from: today) > 1 { // If today is after Sunday
+        if todayWeekday > 1 { // If today is after Sunday
             waterHabit.weeklyCompletions.append(getDateForWeekday(.monday))
-            waterHabit.currentStreak = 1 // Set streak to match completions
+            waterHabit.currentStreak = 1
         }
         
         // Reading habit - daily task
@@ -78,7 +79,7 @@ class HabitListViewModel: ObservableObject {
         // Exercise habit - lenient tracking
         var exerciseHabit = Habit(
             name: "Exercise", 
-            currentStreak: 0, // Start with 0 to ensure proper counting
+            currentStreak: 0,
             recordStreak: 0,
             goal: Goal(type: .weekly, targetType: .forever, 
                        selectedDays: [.monday, .wednesday, .friday, .saturday], 
@@ -87,23 +88,32 @@ class HabitListViewModel: ObservableObject {
         )
         
         // Add completions for exercise habit
-        let todayWeekday = calendar.component(.weekday, from: today)
-        
-        // Add completion for Tuesday (non-selected day, demonstrates lenient tracking)
         if todayWeekday > 3 { // If we've passed Tuesday
             exerciseHabit.weeklyCompletions.append(getDateForWeekday(.tuesday))
         }
         
-        // If we've passed Wednesday, add it as completed
         if todayWeekday > 4 { // If we've passed Wednesday
             exerciseHabit.weeklyCompletions.append(getDateForWeekday(.wednesday))
-            exerciseHabit.currentStreak = 1 // Set streak to match completions
+            exerciseHabit.currentStreak = 1
         }
         
         // Set completion for reading habit if today is Tuesday
-        if calendar.component(.weekday, from: today) == 3 { // If today is Tuesday
+        if todayWeekday == 3 { // If today is Tuesday
             readingHabit.lastCompletedDate = today
             readingHabit.currentStreak = 1
+        }
+        
+        // Set up weekly habits to show up on their scheduled days
+        if let currentWeekday = Weekday(rawValue: todayWeekday) {
+            // For Call Dad (strict tracking)
+            if waterHabit.goal.selectedDays.contains(currentWeekday) {
+                waterHabit.lastCompletedDate = nil // Ensure it shows up in Today tab
+            }
+            
+            // For Exercise (lenient tracking)
+            if exerciseHabit.goal.selectedDays.contains(currentWeekday) {
+                exerciseHabit.lastCompletedDate = nil // Ensure it shows up in Today tab
+            }
         }
         
         habits = [waterHabit, readingHabit, meditateHabit, exerciseHabit]

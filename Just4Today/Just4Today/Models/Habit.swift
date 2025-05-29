@@ -22,14 +22,18 @@ struct Habit: Identifiable, Equatable {
     }
     
     func isCompletedToday() -> Bool {
-        guard let lastCompletedDate = lastCompletedDate else { return false }
+        let calendar = Calendar.current
+        let today = DateSimulator.shared.isSimulationActive ? DateSimulator.shared.currentDate : Date()
         
-        // Use simulated date if active
-        if DateSimulator.shared.isSimulationActive {
-            return Calendar.current.isDate(lastCompletedDate, inSameDayAs: DateSimulator.shared.currentDate)
-        } else {
-            return Calendar.current.isDateInToday(lastCompletedDate)
+        // Check lastCompletedDate
+        if let lastCompletedDate = lastCompletedDate {
+            if calendar.isDate(lastCompletedDate, inSameDayAs: today) {
+                return true
+            }
         }
+        
+        // Check weeklyCompletions
+        return weeklyCompletions.contains { calendar.isDate($0, inSameDayAs: today) }
     }
     
     // Get completed days for the current week
