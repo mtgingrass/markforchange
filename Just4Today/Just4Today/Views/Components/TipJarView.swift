@@ -9,6 +9,14 @@ struct TipJarView: View {
         TipOption(amount: 9.99, description: "Large Tip", emoji: "🚀")
     ]
     
+    private var appVersion: String {
+        Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "Unknown"
+    }
+    
+    private var buildNumber: String {
+        Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "Unknown"
+    }
+    
     var body: some View {
         NavigationView {
             VStack(spacing: 30) {
@@ -69,6 +77,11 @@ struct TipJarView: View {
                 
                 Spacer()
                 
+                // Version info
+                Text("Version \(appVersion) (\(buildNumber))")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                
                 // Thank you note
                 Text("Thank you for your support! ❤️")
                     .font(.callout)
@@ -87,4 +100,9 @@ struct TipJarView: View {
             }
         }
     }
-} 
+}
+
+
+#Preview {
+    TipJarView()
+}
