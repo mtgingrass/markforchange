@@ -250,16 +250,16 @@ struct HabitListView: View {
                 }
                 
                 switch habit.goal.type {
-                case .justForToday:
+                case .justForToday, .totalDays:
                     return true
                 case .weekly:
                     return habit.goal.selectedDays.contains(Weekday(rawValue: currentWeekday) ?? .monday)
-                case .totalDays:
-                    return true
                 }
             }
         case .daily:
-            return viewModel.habits.filter { $0.goal.type == .justForToday }
+            return viewModel.habits.filter { habit in
+                habit.goal.type == .justForToday || habit.goal.type == .totalDays
+            }
         case .weekly:
             return viewModel.habits.filter { $0.goal.type == .weekly }
         }
