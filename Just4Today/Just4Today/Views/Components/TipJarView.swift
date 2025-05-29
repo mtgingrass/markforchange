@@ -31,7 +31,7 @@ struct TipJarView: View {
                         .font(.title)
                         .bold()
                     
-                    Text("Your support helps keep the app ad-free and enables future development.")
+                    Text("Your support helps enable future development.")
                         .font(.subheadline)
                         .multilineTextAlignment(.center)
                         .padding(.horizontal)
