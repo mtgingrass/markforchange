@@ -230,9 +230,12 @@ struct HabitListView: View {
         Button {
             showingAddSheet = true
         } label: {
-            Image(systemName: "plus")
-                .imageScale(.medium)
-                .foregroundColor(.primary.opacity(0.8))
+            Image(systemName: "plus.circle.fill")
+                .imageScale(.large)
+                .font(.system(size: 24))
+                .foregroundColor(.blue)
+                .frame(width: 44, height: 44)
+                .contentShape(Rectangle())
         }
     }
     

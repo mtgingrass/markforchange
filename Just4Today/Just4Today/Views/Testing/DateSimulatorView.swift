@@ -4,6 +4,7 @@ struct DateSimulatorView: View {
     @StateObject private var simulator = DateSimulator.shared
     @State private var selectedDate = Date()
     @Environment(\.dismiss) private var dismiss
+    @StateObject private var habitListViewModel = HabitListViewModel()
     
     var body: some View {
         NavigationView {
@@ -60,6 +61,13 @@ struct DateSimulatorView: View {
                         }
                         .padding(.vertical, 8)
                     }
+                }
+                
+                Section(header: Text("Demo Data")) {
+                    Button("Reset to Demo Data Now") {
+                        habitListViewModel.loadDemoData()
+                    }
+                    .foregroundColor(.red)
                 }
                 
                 Section(header: Text("Current Date Information")) {

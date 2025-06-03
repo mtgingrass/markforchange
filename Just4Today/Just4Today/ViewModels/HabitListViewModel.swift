@@ -3,14 +3,17 @@ import SwiftUI
 import Combine
 
 class HabitListViewModel: ObservableObject {
-    @Published var habits: [Habit] = []
+    @Published var habits: [Habit] = [] {
+        didSet {
+            saveHabits()
+        }
+    }
     private var cancellables = Set<AnyCancellable>()
     @ObservedObject private var dateSimulator = DateSimulator.shared
     private let calendar = Calendar.current
     
     init() {
-        // In a real app, we would load from persistent storage
-        loadDemoData()
+        loadHabits()
         
         // Check for streak resets at midnight
         Timer.publish(every: 60, on: .main, in: .common)
@@ -26,6 +29,22 @@ class HabitListViewModel: ObservableObject {
                 self?.checkAndResetStreaks()
             }
             .store(in: &cancellables)
+    }
+    
+    private func saveHabits() {
+        if let encoded = try? JSONEncoder().encode(habits) {
+            UserDefaults.standard.set(encoded, forKey: "savedHabits")
+        }
+    }
+    
+    private func loadHabits() {
+        if let savedHabits = UserDefaults.standard.data(forKey: "savedHabits"),
+           let decodedHabits = try? JSONDecoder().decode([Habit].self, from: savedHabits) {
+            habits = decodedHabits
+        } else {
+            // If no saved habits exist, load demo data
+            loadDemoData()
+        }
     }
     
     func loadDemoData() {
