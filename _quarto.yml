@@ -1,5 +1,7 @@
 project:
   type: website
+  post-render: 
+    - "python3 create_posts_json.py"
 
 website:
   title: "Mark For Change"
@@ -32,6 +34,10 @@ format:
       sidebar-width: 150px   # Adjust sidebar width (default ~250px)
       body-width: 1200px      # Change main content width
       margin-width: 200px    # Adjust the margins
+
+resources:
+  - "images/*"
+  - "posts.json"
 
 editor: visual
 
