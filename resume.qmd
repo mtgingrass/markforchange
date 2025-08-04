@@ -1,37 +1,507 @@
 ---
-title: "Mark's Experience"
-about:
-  template: trestles
+title: "Experience"
+format:
+  html:
+    page-layout: custom
+    include-in-header:
+      text: |
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
 ---
 
-# **From Enlisted to the Hill, to SC District 3**
+```{=html}
+<!-- Hero Section -->
+<section class="resume-hero">
+  <div class="container">
+    <div class="text-center">
+      <h1 class="resume-title">
+        From <span class="text-gradient">Enlisted Service</span> to <span class="text-gradient">Senior Leadership</span>
+      </h1>
+      <p class="resume-subtitle">
+        A career built on solving complex problems, leading teams, and delivering results that matter.
+      </p>
+    </div>
+  </div>
+</section>
 
-**1. Strategic Defense with Operational Depth**
+<!-- Overview Section -->
+<section class="overview-section">
+  <div class="container">
+    <div class="overview-grid">
+      <div class="overview-stat">
+        <div class="stat-number">20+</div>
+        <div class="stat-label">Years of Federal Service</div>
+      </div>
+      <div class="overview-stat">
+        <div class="stat-number">$2B+</div>
+        <div class="stat-label">Programs Managed</div>
+      </div>
+      <div class="overview-stat">
+        <div class="stat-number">100+</div>
+        <div class="stat-label">Team Members Led</div>
+      </div>
+      <div class="overview-stat">
+        <div class="stat-number">5</div>
+        <div class="stat-label">Federal Agencies Served</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-Four years in the **U.S. Air Force** working on **B-1 bombers** taught Mark more than electronics, it taught him **systems thinking**, national security priorities, and how global force projection works from the ground up. He learned how mission success depends on aligning parts, people, and purpose.
+<!-- Experience Timeline -->
+<section class="experience-timeline">
+  <div class="container">
+    <h2 class="section-title text-center">Professional Journey</h2>
+    
+    <div class="experience-item">
+      <div class="experience-header">
+        <div class="experience-logo">
+          <i class="bi bi-shield-fill"></i>
+        </div>
+        <div class="experience-meta">
+          <h3>Strategic Defense & Operational Excellence</h3>
+          <p class="experience-org">U.S. Air Force</p>
+        </div>
+      </div>
+      <div class="experience-content">
+        <p class="lead">Four years working on B-1 bombers taught more than electronics—it taught systems thinking, national security priorities, and how global force projection works from the ground up.</p>
+        <ul class="achievements">
+          <li>Maintained critical defense systems ensuring mission readiness</li>
+          <li>Learned how mission success depends on aligning parts, people, and purpose</li>
+          <li>Gained firsthand understanding of frontline readiness and strategic defense</li>
+        </ul>
+        <div class="skills-tags">
+          <span class="skill-tag">Systems Thinking</span>
+          <span class="skill-tag">National Security</span>
+          <span class="skill-tag">Mission Critical Operations</span>
+        </div>
+      </div>
+    </div>
 
-> *He knows what it means to work at the intersection of frontline readiness and strategic defense.*
+    <div class="experience-item">
+      <div class="experience-header">
+        <div class="experience-logo">
+          <i class="bi bi-gear-wide-connected"></i>
+        </div>
+        <div class="experience-meta">
+          <h3>Supply Chain & Logistics Leadership</h3>
+          <p class="experience-org">Tinker Air Force Base</p>
+        </div>
+      </div>
+      <div class="experience-content">
+        <p class="lead">Advanced from component-level work to enterprise-level logistics and depot operations, managing multi-billion-dollar programs.</p>
+        <ul class="achievements">
+          <li>Managed procurement, asset visibility, and lifecycle management</li>
+          <li>Optimized broken systems and guided teams through major transitions</li>
+          <li>Delivered enterprise solutions impacting thousands of personnel</li>
+        </ul>
+        <div class="skills-tags">
+          <span class="skill-tag">Enterprise Logistics</span>
+          <span class="skill-tag">Budget Management</span>
+          <span class="skill-tag">Process Optimization</span>
+        </div>
+      </div>
+    </div>
 
-**2. Supply Chain and Logistics Expertise**
+    <div class="experience-item">
+      <div class="experience-header">
+        <div class="experience-logo">
+          <i class="bi bi-people-fill"></i>
+        </div>
+        <div class="experience-meta">
+          <h3>Organizational Transformation</h3>
+          <p class="experience-org">Cross-Functional Leadership</p>
+        </div>
+      </div>
+      <div class="experience-content">
+        <p class="lead">Led diverse teams of specialists, engineers, and analysts through major organizational changes.</p>
+        <ul class="achievements">
+          <li>Reorganized processes and aligned workflows across departments</li>
+          <li>Built trust and drove change in complex environments</li>
+          <li>Delivered measurable performance improvements</li>
+        </ul>
+        <div class="skills-tags">
+          <span class="skill-tag">Team Leadership</span>
+          <span class="skill-tag">Change Management</span>
+          <span class="skill-tag">Strategic Planning</span>
+        </div>
+      </div>
+    </div>
 
-At **Tinker Air Force Base**, Mark moved from component-level work to **enterprise-level logistics and depot operations**. He gained a top-down understanding of how government sustains readiness: procurement, asset visibility, lifecycle management, and compliance with DoD directives and the Art of the Possible. Mark managed **multi-billion-dollar programs** and enterprise systems.
+    <div class="experience-item">
+      <div class="experience-header">
+        <div class="experience-logo">
+          <i class="bi bi-cpu"></i>
+        </div>
+        <div class="experience-meta">
+          <h3>Data, AI & Modernization</h3>
+          <p class="experience-org">FDA & Federal Innovation</p>
+        </div>
+      </div>
+      <div class="experience-content">
+        <p class="lead">Led projects at the intersection of data, policy, and innovation, bringing modern tools into government workflows.</p>
+        <ul class="achievements">
+          <li>Implemented AI solutions while navigating federal regulations</li>
+          <li>Managed complex contractor relationships and FAR compliance</li>
+          <li>Modernized agency operations from the inside out</li>
+        </ul>
+        <div class="skills-tags">
+          <span class="skill-tag">AI Implementation</span>
+          <span class="skill-tag">Federal Acquisition</span>
+          <span class="skill-tag">Digital Transformation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-> *That’s the kind of thinking Congress desperately needs when talking about budgets, military spending, and efficiency. He didn’t inherit leadership; he earned it by optimizing broken systems and guiding teams through change.*
+<!-- Skills & Expertise -->
+<section class="skills-section">
+  <div class="container">
+    <h2 class="section-title text-center">Core Competencies</h2>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h3><i class="bi bi-briefcase"></i> Leadership</h3>
+        <ul>
+          <li>Team Building & Development</li>
+          <li>Strategic Planning</li>
+          <li>Change Management</li>
+          <li>Cross-Functional Coordination</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3><i class="bi bi-graph-up-arrow"></i> Business</h3>
+        <ul>
+          <li>Budget Management ($2B+)</li>
+          <li>Contract Negotiation</li>
+          <li>Process Optimization</li>
+          <li>Performance Metrics</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3><i class="bi bi-cpu-fill"></i> Technology</h3>
+        <ul>
+          <li>Enterprise Systems</li>
+          <li>AI/ML Implementation</li>
+          <li>Data Analytics</li>
+          <li>Digital Transformation</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3><i class="bi bi-bank"></i> Government</h3>
+        <ul>
+          <li>Federal Acquisition (FAR)</li>
+          <li>Policy Development</li>
+          <li>Regulatory Compliance</li>
+          <li>Multi-Agency Operations</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-**3. Leading Teams & Restructuring Organizations**
+<!-- Why This Matters -->
+<section class="why-section">
+  <div class="container">
+    <div class="why-card">
+      <h2 class="text-center">Why This Experience Matters for District 3</h2>
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <div class="why-item">
+            <i class="bi bi-check-circle-fill"></i>
+            <p><strong>Budget Expertise:</strong> Managed billions in federal programs - knows how to stretch every dollar and cut waste.</p>
+          </div>
+          <div class="why-item">
+            <i class="bi bi-check-circle-fill"></i>
+            <p><strong>Real Leadership:</strong> Led teams through complex changes, not from behind a desk but on the ground.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="why-item">
+            <i class="bi bi-check-circle-fill"></i>
+            <p><strong>Innovation Focus:</strong> Brought modern solutions to government - understands how to make systems work better.</p>
+          </div>
+          <div class="why-item">
+            <i class="bi bi-check-circle-fill"></i>
+            <p><strong>Service First:</strong> From enlisted airman to senior leader - never forgot who government serves.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-Whether in uniform or in a suit, Mark has **led cross-functional teams** of specialists, engineers, and analysts - **reorganizing processes, aligning workflows**, and unlocking performance. He’s managed technical staff, engineers, scientists, contractors, and brought clarity where confusion reigned.
+<!-- CTA Section -->
+<section class="resume-cta">
+  <div class="container">
+    <div class="text-center">
+      <h2>Experience That Delivers Results</h2>
+      <p class="lead">
+        Whether supporting another Democrat or stepping up myself, I'm ready to bring this experience to work for District 3.
+      </p>
+      <div class="cta-buttons">
+        <a href="about.html" class="btn btn-light btn-lg">Learn More About Mark</a>
+        <a href="contact.html" class="btn btn-outline-light btn-lg">Get in Touch</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-> *Leadership isn’t about command, it’s about building trust, driving change, and getting results.*
+<style>
+/* Resume Page Styles */
+.resume-hero {
+  padding: 120px 0 60px;
+  background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+  color: var(--white);
+}
 
-**4. Data, Procurement & AI Policy at the FDA**
+.resume-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
 
-Mark led projects at the **intersection of data, policy, and innovation**, bringing modern tools like **AI** into government workflows, managing contractors, navigating **federal acquisition regulations (FAR)**, and **compliance without bureaucracy getting in the way of progress**.
+.resume-subtitle {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  max-width: 700px;
+  margin: 0 auto;
+}
 
-> *He knows how to modernize agencies from the inside out.*
+/* Overview Section */
+.overview-section {
+  padding: 60px 0;
+  background: var(--white);
+  border-bottom: 1px solid #e2e8f0;
+}
 
-**5. Holistic Governance Experience**
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
 
-From Air Force logistics to FDA acquisitions, Mark’s worked across **multiple federal agencies**, understanding both the **front lines** and the **systems that support them**. He’s used to **reading policy, writing directives**, and holding vendors accountable—all skills of a great legislator.
+.overview-stat {
+  text-align: center;
+}
 
-------------------------------------------------------------------------
+.stat-number {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--primary-blue);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: var(--text-gray);
+}
+
+/* Experience Timeline */
+.experience-timeline {
+  padding: 80px 0;
+  background: var(--bg-light);
+}
+
+.experience-item {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.experience-item:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.experience-header {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+
+.experience-logo {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-purple) 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--white);
+  flex-shrink: 0;
+}
+
+.experience-meta h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.experience-org {
+  color: var(--text-gray);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.experience-content .lead {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+}
+
+.achievements {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.achievements li {
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.75rem;
+  color: var(--text-gray);
+}
+
+.achievements li:before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--primary-blue);
+  font-weight: bold;
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.skill-tag {
+  background: var(--light-blue);
+  color: var(--primary-blue);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Skills Section */
+.skills-section {
+  padding: 80px 0;
+  background: var(--white);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.skill-category {
+  background: var(--bg-light);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.skill-category h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.skill-category h3 i {
+  color: var(--primary-blue);
+}
+
+.skill-category ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-category li {
+  padding: 0.5rem 0;
+  color: var(--text-gray);
+}
+
+/* Why Section */
+.why-section {
+  padding: 80px 0;
+  background: var(--bg-light);
+}
+
+.why-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 3rem;
+  box-shadow: var(--shadow-md);
+}
+
+.why-item {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  align-items: flex-start;
+}
+
+.why-item i {
+  font-size: 1.5rem;
+  color: var(--primary-blue);
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.why-item p {
+  margin: 0;
+  color: var(--text-gray);
+}
+
+/* CTA Section */
+.resume-cta {
+  padding: 80px 0;
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--deep-blue) 100%);
+  color: var(--white);
+}
+
+.resume-cta h2 {
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.resume-cta .lead {
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .resume-title {
+    font-size: 2rem;
+  }
+  
+  .stat-number {
+    font-size: 2.5rem;
+  }
+  
+  .experience-header {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+</style>
+```
