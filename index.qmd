@@ -151,8 +151,8 @@ website:
         Change doesn't happen alone. Join our grassroots movement to bring real leadership to District 3.
       </p>
       <div class="cta-buttons">
-        <a href="volunteerlist.html" class="btn btn-light btn-lg">Volunteer</a>
-        <a href="contact.html" class="btn btn-outline-light btn-lg">Get in Touch</a>
+        <a href="contact.html" class="btn btn-light btn-lg">Get in Touch</a>
+        <a href="#platform" class="btn btn-outline-light btn-lg">Learn More</a>
       </div>
     </div>
   </div>

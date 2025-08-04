@@ -34,14 +34,29 @@ def get_first_paragraph(content):
     """Extract first paragraph of content for description"""
     lines = content.strip().split('\n')
     paragraph = []
+    skip_callout = False
+    
     for line in lines:
         line = line.strip()
-        if line and not line.startswith('#'):
+        
+        # Skip callout blocks
+        if line.startswith(':::') and '{.callout' in line:
+            skip_callout = True
+            continue
+        if skip_callout and line == ':::':
+            skip_callout = False
+            continue
+        if skip_callout:
+            continue
+            
+        # Skip headers and empty lines
+        if line and not line.startswith('#') and not line.startswith('!['):
             paragraph.append(line)
             if len(' '.join(paragraph)) > 150:
                 break
         elif paragraph:
             break
+    
     return ' '.join(paragraph)[:150] + '...' if paragraph else ''
 
 def process_posts():
@@ -72,6 +87,8 @@ def process_posts():
                     # Add description
                     if 'description' in metadata:
                         post_info['description'] = metadata['description']
+                    elif 'summary' in metadata:
+                        post_info['description'] = metadata['summary']
                     else:
                         post_info['description'] = get_first_paragraph(body)
                     
