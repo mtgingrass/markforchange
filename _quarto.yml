@@ -8,19 +8,15 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - text: Meet Mark
-        menu:
-          - href: about.qmd
-            text: About
-          - href: resume.qmd
-            text: Experience
+      - href: about.qmd
+        text: About
+      - href: resume.qmd
+        text: Experience
       - href: posts.qmd
-        text: Thoughts & Updates
+        text: Blog
     right:
-      - text: Engage
-        menu:
-          - href: booklist.qmd
-            text: Recommended Reading
+      # - href: booklist.qmd
+      #   text: Reading List
       - icon: youtube
         href: https://www.youtube.com/@markforchange
       - icon: envelope-arrow-up-fill
