@@ -4,7 +4,7 @@ project:
     - "python3 create_posts_json.py"
 
 website:
-  title: "Mark For Change"
+  title: "Mark For Change - District 3 Democrats"
   google-analytics: "G-FY061TKBSB"
   navbar:
     left:

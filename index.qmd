@@ -1,5 +1,5 @@
 ---
-title: "Mark for Change - Progressive Leadership for South Carolina"
+title: "Mark for Change - Building a Democratic Future in South Carolina"
 format:
   html:
     page-layout: custom
@@ -21,19 +21,19 @@ website:
     <div class="row align-items-center min-vh-100">
       <div class="col-lg-7">
         <h1 class="hero-title">
-          Real Leadership.<br>
-          <span class="text-gradient">Real Change.</span><br>
-          Real Results.
+          Ready for<br>
+          <span class="text-gradient">Real Change?</span><br>
+          So Are We.
         </h1>
         <p class="hero-subtitle">
-          It's time for South Carolina's District 3 to have a representative who listens, learns, and leads with integrity.
+          Whether it's me or another strong Democrat, District 3 deserves leadership that puts people first. Let's build a movement together.
         </p>
         <div class="hero-buttons">
-          <a href="#platform" class="btn btn-primary btn-lg">Our Platform</a>
+          <a href="#platform" class="btn btn-primary btn-lg">The Vision</a>
           <a href="#volunteer" class="btn btn-outline-light btn-lg">Join the Movement</a>
         </div>
         <div class="countdown-container mt-4">
-          <p class="countdown-label">Days until we can make change:</p>
+          <p class="countdown-label">Days until District 3 can choose change:</p>
           <div id="countdown-timer" class="countdown-display"></div>
         </div>
       </div>
@@ -48,10 +48,10 @@ website:
 <section class="message-section">
   <div class="container">
     <div class="message-card">
-      <h2 class="section-title text-center">Tired of Copy-Paste Politics?</h2>
+      <h2 class="section-title text-center">Time for a Democratic Voice in District 3</h2>
       <p class="lead text-center">
-        When constituents reach out with real concerns, they deserve real answers—not pre-written party scripts. 
-        It's time for leadership that thinks independently and acts boldly.
+        Our district needs representation that listens to real concerns and delivers real solutions. 
+        I'm ready to support any Democrat who will fight for working families and bring change to South Carolina.
       </p>
     </div>
   </div>
@@ -80,7 +80,7 @@ website:
 <!-- Platform Section -->
 <section id="platform" class="platform-section">
   <div class="container">
-    <h2 class="section-title text-center">Fighting for What Matters</h2>
+    <h2 class="section-title text-center">What Democrats Should Fight For</h2>
     <div class="row g-4">
       <div class="col-md-4">
         <div class="platform-card">
@@ -118,9 +118,9 @@ website:
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-6">
-        <h2 class="section-title">From Service to Leadership</h2>
+        <h2 class="section-title">Ready to Serve</h2>
         <p class="lead">
-          Mark Gingrass isn't a career politician. He's a veteran, a business leader, and a problem solver who understands what it takes to get results.
+          Whether as a candidate or supporting another Democrat, I bring real-world experience: veteran, business leader, and problem solver ready to help transform District 3.
         </p>
         <ul class="experience-list">
           <li>U.S. Air Force Veteran</li>
@@ -128,12 +128,12 @@ website:
           <li>Senior Management Experience</li>
           <li>Community Advocate</li>
         </ul>
-        <a href="about.html" class="btn btn-primary">Learn More About Mark</a>
+        <a href="about.html" class="btn btn-primary">Learn More</a>
       </div>
       <div class="col-lg-6">
         <div class="quote-card">
           <blockquote>
-            "We don't need more politicians reading from scripts. We need leaders who listen, learn, and act with courage."
+            "District 3 deserves a Democrat who will listen, learn, and act with courage—whether that's me or someone else ready to lead."
           </blockquote>
           <cite>- Mark Gingrass</cite>
         </div>
@@ -146,9 +146,9 @@ website:
 <section id="volunteer" class="cta-section">
   <div class="container">
     <div class="cta-card">
-      <h2 class="cta-title">Ready to Make a Difference?</h2>
+      <h2 class="cta-title">Ready to Turn District 3 Blue?</h2>
       <p class="cta-subtitle">
-        Change doesn't happen alone. Join our grassroots movement to bring real leadership to District 3.
+        Whether I run or support another Democrat, we need your help to build a movement that puts people first.
       </p>
       <div class="cta-buttons">
         <a href="contact.html" class="btn btn-light btn-lg">Get in Touch</a>
