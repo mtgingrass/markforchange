@@ -142,7 +142,7 @@ format:
         <div class="timeline-marker"></div>
         <div class="timeline-content">
           <h3>Education & Growth</h3>
-          <p>Earned degrees in Computer Science and Business Administration while working full-time.</p>
+          <p>Earned degrees in Computer Science and MBA in Business Administration while working full-time.</p>
         </div>
       </div>
       <div class="timeline-item">
