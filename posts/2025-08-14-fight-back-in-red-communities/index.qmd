@@ -2,6 +2,7 @@
 title: "Fight Back: Why Democrats Must Take the Fight to Red Territory"
 date: "2025-08-14"
 categories: [politics, local-elections, strategy]
+image: "images/voting-democracy.webp"
 ---
 
 The time for playing defense is over. Democrats living in red states and red communities need to stop apologizing for existing and start taking what's theirs: political power at the local level.
