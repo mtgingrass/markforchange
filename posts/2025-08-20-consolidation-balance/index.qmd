@@ -1,5 +1,5 @@
 ---
-title: 'The Consolidation Pendulum: Finding Balance in an Age of Endless Reorganization'
+title: 'The Consolidation Pendulum'
 author: 'Mark'
 date: '2025-08-20'
 categories: ['Business', 'Economics', 'Politics']
@@ -18,13 +18,13 @@ image: consolidation-balance.jpg
 - **Gradual beats shock treatment.** Iterative changes work better than massive overnight restructuring
 - **Local innovation gets lost.** Centralization sacrifices the experimentation that comes from diverse, smaller players
 
-# The Consolidation Pendulum: Finding Balance in an Age of Endless Reorganization
+# The Consolidation Pendulum
 
 I keep hearing about the latest corporate restructuring, government reorganization, or "efficiency initiative." And honestly? I'm tired of the black-and-white thinking around these moves. The normal folk don't understand that consolidation and reorganization can be both good and bad, sometimes simultaneously.
 
 The truth is more nuanced. These decisions affect real people, real jobs, and real communities. Whether we're talking about the public sector or private sector makes a huge difference in how we should think about the tradeoffs.
 
-## The Historical Pendulum: We've Been Here Before
+## The Historical Pendulum
 
 This isn't new. Historian Anthony Gregory observed that "the struggle between centralization and decentralization is at the core of American history." We've been swinging back and forth on this pendulum for centuries.
 
@@ -42,7 +42,7 @@ I've seen this play out repeatedly. A leader comes in talking about "eliminating
 
 The research backs this up. Corporate consolidation data shows that workers of firms targeted by takeovers experience heightened job loss. They're 6 percentage points less likely to remain employed, with average income dropping by over 1,000 euros for affected workers. Meanwhile, executives often see their compensation packages expand significantly.
 
-## Public Sector vs. Private Sector: Different Games
+## Public vs Private Sector
 
 This distinction is crucial. We can't treat government consolidation the same as corporate mergers. In the private sector, market forces provide some check on terrible decisions. If a company consolidates poorly and becomes inefficient, competitors can emerge. In government? No such luck.
 
