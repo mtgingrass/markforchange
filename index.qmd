@@ -203,6 +203,12 @@ async function loadBlogPosts() {
     // Fallback to sample posts if posts.json doesn't exist yet
     const samplePosts = [
       {
+        date: '2025-08-20',
+        title: 'The Consolidation Pendulum: Finding Balance in an Age of Endless Reorganization',
+        description: 'Corporate consolidation and government reorganization isn\'t inherently good or bad. It\'s about finding the right balance.',
+        path: 'posts/2025-08-20-consolidation-balance/'
+      },
+      {
         date: '2025-08-04',
         title: 'The Epstein Files: Why Transparency Matters',
         description: 'Congressional battles over releasing files expose troubling priorities.',
