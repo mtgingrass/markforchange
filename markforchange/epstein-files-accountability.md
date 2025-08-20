@@ -1,4 +1,4 @@
-# The Epstein Files: Why Transparency and Accountability Matter More Than Politics
+# The Epstein Files
 
 The recent Congressional battles over releasing the Jeffrey Epstein files have exposed a troubling reality: when it comes to protecting children and holding predators accountable, partisan politics too often gets in the way of justice.
 
