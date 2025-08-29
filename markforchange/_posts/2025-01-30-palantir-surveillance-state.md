@@ -1,0 +1,100 @@
+---
+layout: post
+title: "The Palantir Surveillance State: Peter Thiel's Growing Control"
+date: 2025-01-30
+categories: [politics, technology, surveillance]
+tags: [palantir, peter-thiel, surveillance, trump-administration]
+author: Mark Gingrass
+---
+
+*Note: This post is based on analysis originally shared by Reddit user nycdiveshack. Their detailed research provides a concerning picture of growing surveillance infrastructure in America.*
+
+## The Architects of Isolation
+
+The current political landscape is being shaped by figures operating largely behind the scenes. Russ Vought, head of the Office of Budget Management and primary author of Project 2025, along with Howard Lutnick, Commerce Secretary and former Cantor Fitzgerald executive (the Heritage Foundation's biggest supporter), are pushing for an era of American isolationism.
+
+Their vision centers on a belief that America can prosper through control of raw materials and labor. This explains several recent developments:
+
+* The systematic undermining of educational access
+* Trump's repeated statements about acquiring Canada and Greenland for resources and strategic positioning
+* The belief that AI, through companies like SpaceX, Starlink, and Palantir, will solve fundamental problems
+
+Elon Musk has already announced his support for J.D. Vance rather than any third party, signaling a continuation of this agenda beyond Trump.
+
+## Palantir's Expanding Reach
+
+Palantir Technologies has become central to this new power structure. The company recently secured a billion-dollar contract with the U.S. government and has become the largest defense contractor for the CIA and NSA based on publicly available DOD contract data.
+
+What many don't realize is that Palantir was responsible for finding Elon Musk's DOGE team members. DOGE itself is essentially a rebranding of USDS (United States Digital Service), which now has access to most federal agencies.
+
+The recent firing of the NSA chief and deputy may be one of the most significant moves yet. Timothy Haugh, like his two predecessors, had been restricting Palantir's access to CIA/NSA systems for domestic surveillance. With these restrictions potentially removed, Palantir's long-standing goal of comprehensive domestic surveillance becomes more achievable.
+
+Palantir provides:
+* Advanced intelligence analysis
+* Signal and open-source intelligence
+* Criminal and threat awareness systems
+* Kill chain efficiency improvements
+* Services to U.S., UK, and corporate agencies at all levels
+* Contracts with state and local governments and police departments
+
+## The Scapegoat Strategy
+
+Peter Thiel, Palantir's founder, is a strong believer in what he calls the "scapegoat mechanism." The concept is straightforward: have someone in power take controversial actions, then remove them, making the public believe the problems have been resolved.
+
+Elon Musk served as an early test case. Despite public backlash against DOGE, all federal investigations into Musk have disappeared while DOGE maintains its presence in federal agencies. Amanda Scales, Musk's employee, still operates the private server setup at OPM. The data collected from federal agencies and the Treasury Department remains under their control.
+
+Thiel has been grooming J.D. Vance since 2011:
+* Served as Vance's benefactor and mentor
+* Brought Vance to Mar-a-Lago to secure the VP position
+* Donated $15 million to Vance's Senate campaign, the largest single-candidate donation in Senate history
+
+With the gap fund bill expiring in September and the SSA/IRS data transfer to Palantir as part of DOGE's modernization plan, the groundwork for Trump's removal and Vance's ascension appears to be in place.
+
+## Global Surveillance Infrastructure
+
+Palantir's influence extends far beyond American borders:
+
+**United Kingdom:** Major defense contractor for UK intelligence, military, and police forces. Recently completed a contract to process all NHS England data, after which the government announced NHS England's shutdown.
+
+**Norway:** Full access to government and civilian surveillance services.
+
+**Israel:** Direct support for IDF operations from Gaza to the West Bank to Iran.
+
+## Thiel's Control Structure
+
+Despite being publicly traded, Peter Thiel maintains firm control over Palantir through a complex ownership structure:
+
+* 180 million publicly traded shares (7%) owned directly
+* 34 million shares through Rivendell 7 investment firm
+* 37 million shares through other vehicles
+* 32.5 million supervoting Class B shares (10 votes per share vs. 1 for public shares)
+* Sole investment power over 335,000 Class F shares with 49.99% voting interest
+
+## Alex Karp: The Public Face
+
+Alex Karp, Palantir's CEO since 2003, has made his positions clear:
+
+* Condemns "woke" thinking as a central risk to Palantir
+* Called pro-Palestine protests "an infection inside of our society"
+* Suggested peace activists should be sent to North Korea
+* Supports Palantir's ICE contracts and family separation capabilities
+* Advocates for Western superiority
+
+## Peter Thiel: The Background
+
+Understanding Thiel requires examining his history:
+
+* Born in West Germany, raised in Swakopmund, West South Africa, a city notorious for Nazi glorification
+* Father was an engineer working on uranium projects in violation of international law
+* PayPal partner with Elon Musk, early Facebook investor
+* Self-proclaimed Christian nationalist who questions women's suffrage
+* Admirer of Curtis Yarvin's philosophy of replacing democracy with authoritarianism
+* Palantir received crucial early funding from In-Q-Tel, the CIA's venture capital arm, after its 2003 founding
+
+## The Implications
+
+The consolidation of surveillance capabilities under Palantir, combined with access to SSA and IRS databases, represents an unprecedented expansion of domestic surveillance infrastructure. The removal of NSA leadership opposed to this expansion, the positioning of Vance as successor, and the scapegoat mechanism all point to a carefully orchestrated transition of power.
+
+As citizens, we must understand that these developments represent more than political maneuvering. They constitute the construction of a comprehensive surveillance state, operating under the guise of efficiency and modernization.
+
+*Credit: This analysis draws heavily from research by Reddit user nycdiveshack, whose detailed investigation into these connections deserves recognition.*
