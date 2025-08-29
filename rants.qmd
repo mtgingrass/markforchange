@@ -146,26 +146,6 @@ Sincerely,
 </div>
 </div>
 
-<div class="rant-entry" id="rant-2025-08-29-1756473908393">
-<div class="time-stamp">
-9:25 AM
-<a href="#rant-2025-08-29-1756473908393" class="rant-anchor" title="Link to this rant">🔗</a>
-</div>
-<div class="rant-content">
-Testing the Rants section on MarkForChange!
-</div>
-</div>
-
-<div class="rant-entry" id="rant-2025-08-29-1756473058974">
-<div class="time-stamp">
-9:10 AM
-<a href="#rant-2025-08-29-1756473058974" class="rant-anchor" title="Link to this rant">🔗</a>
-</div>
-<div class="rant-content">
-Test rant for MarkForChange site!
-</div>
-</div>
-
 </div>
 
 <!-- rants will be inserted here -->
