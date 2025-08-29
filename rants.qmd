@@ -61,6 +61,18 @@ No sugar-coating. No political correctness. Just the things that need to be said
 <span class="date">August 29, 2025</span>
 </div>
 
+<div class="rant-entry" id="rant-2025-08-29-1756483677475">
+<div class="time-stamp">
+12:07 PM
+<a href="#rant-2025-08-29-1756483677475" class="rant-anchor" title="Link to this rant">🔗</a>
+</div>
+<div class="rant-content">
+Beginning Monday, South Carolina's new hands-free driving law goes into effect.
+
+This new law **prohibits drivers from using mobile electronic devices** while operating a motor vehicle.
+</div>
+</div>
+
 <div class="rant-entry" id="rant-2025-08-29-1756474355923">
 <div class="time-stamp">
 9:32 AM
