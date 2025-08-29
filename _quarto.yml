@@ -16,6 +16,8 @@ website:
         text: Experience
       - href: posts.qmd
         text: Blog
+      - href: rants.qmd
+        text: Rants
     right:
       # - href: booklist.qmd
       #   text: Reading List
