@@ -111,25 +111,51 @@ div[class*="quarto"] {
 }
 
 .rants-container h1 {
-  font-size: 3rem;
-  font-weight: 800;
+  font-size: 4rem;
+  font-weight: 900;
   text-align: center;
   color: var(--rant-accent);
   margin-bottom: 1rem;
-  letter-spacing: -1px;
+  letter-spacing: -2px;
   text-transform: uppercase;
   background: var(--rant-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  position: relative;
+  animation: fireGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes fireGlow {
+  from {
+    text-shadow: 0 0 10px rgba(255, 107, 107, 0.5),
+                 0 0 20px rgba(255, 107, 107, 0.3),
+                 0 0 30px rgba(255, 107, 107, 0.2);
+  }
+  to {
+    text-shadow: 0 0 20px rgba(255, 107, 107, 0.6),
+                 0 0 30px rgba(255, 107, 107, 0.4),
+                 0 0 40px rgba(255, 107, 107, 0.3);
+  }
 }
 
 .rants-intro {
   text-align: center;
   color: var(--rant-text-muted);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-bottom: 3rem;
-  font-style: italic;
+  padding: 2rem;
+  border: 2px dashed var(--rant-accent);
+  border-radius: 12px;
+  background: rgba(255, 107, 107, 0.05);
+  position: relative;
+}
+
+.rants-intro strong {
+  color: var(--rant-accent);
+  font-weight: 800;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
 }
 
 /* Timeline Layout */
@@ -192,18 +218,31 @@ div[class*="quarto"] {
 .rant-entry {
   background: var(--rant-card-bg);
   border: 1px solid var(--rant-border);
+  border-left: 4px solid var(--rant-accent);
   border-radius: 12px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
   position: relative;
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px var(--rant-shadow);
+  overflow: hidden;
+}
+
+.rant-entry::after {
+  content: '🔥';
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  font-size: 60px;
+  opacity: 0.05;
+  transform: rotate(-15deg);
 }
 
 .rant-entry:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 16px var(--rant-shadow);
-  border-color: var(--rant-accent);
+  transform: translateX(5px);
+  box-shadow: 0 4px 20px var(--rant-shadow);
+  border-left-width: 6px;
+  background: linear-gradient(90deg, rgba(255, 107, 107, 0.05) 0%, transparent 50%);
 }
 
 .rant-entry::before {

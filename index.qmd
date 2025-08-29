@@ -30,6 +30,9 @@ website:
         </p>
         <div class="hero-buttons">
           <a href="#platform" class="btn btn-primary btn-lg">The Vision</a>
+          <a href="rants.html" class="btn btn-danger btn-lg">
+            <i class="bi bi-megaphone-fill"></i> Hot Takes
+          </a>
           <a href="#volunteer" class="btn btn-outline-light btn-lg">Join the Movement</a>
         </div>
         <div class="countdown-container mt-4">
@@ -53,6 +56,28 @@ website:
         Our district needs representation that listens to real concerns and delivers real solutions. 
         I'm ready to support any Democrat who will fight for working families and bring change to South Carolina.
       </p>
+    </div>
+  </div>
+</section>
+
+<!-- Rants Section -->
+<section class="rants-preview-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8">
+        <h2 class="section-title">
+          <i class="bi bi-fire text-danger"></i> Unfiltered Thoughts
+        </h2>
+        <p class="lead">
+          Raw opinions, hot takes, and things that need to be said about our political landscape.
+          No sugar-coating, no political correctness—just truth.
+        </p>
+      </div>
+      <div class="col-lg-4 text-lg-end">
+        <a href="rants.html" class="btn btn-danger btn-lg">
+          <i class="bi bi-megaphone-fill"></i> Read My Rants
+        </a>
+      </div>
     </div>
   </div>
 </section>

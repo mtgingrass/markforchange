@@ -232,6 +232,54 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--white) !important;
 }
 
+.btn-danger {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff5252 100%) !important;
+  border: none !important;
+  color: var(--white) !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3) !important;
+}
+
+.btn-danger:hover {
+  background: linear-gradient(135deg, #ff5252 0%, #ff3333 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4) !important;
+}
+
+/* Rants Preview Section */
+.rants-preview-section {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  position: relative;
+}
+
+.rants-preview-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ff6b6b' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+  opacity: 0.3;
+}
+
+.rants-preview-section .section-title {
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.rants-preview-section .lead {
+  color: #e0e0e0;
+  position: relative;
+  z-index: 1;
+}
+
+.text-danger {
+  color: #ff6b6b !important;
+}
+
 /* Message Section */
 .message-section {
   padding: 5rem 0;

@@ -46,10 +46,11 @@ main {
 
 <div class="rants-container" style="background-color: #0a0a0a; min-height: 100vh;">
 
-# Unfiltered Thoughts
+# 🔥 UNFILTERED THOUGHTS 🔥
 
 <div class="rants-intro">
-Raw opinions, hot takes, and things that need to be said.
+<strong>WARNING:</strong> Raw opinions, hot takes, and uncomfortable truths ahead.<br>
+No sugar-coating. No political correctness. Just the things that need to be said.
 </div>
 
 <div class="rants-timeline">
