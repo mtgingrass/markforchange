@@ -1,7 +1,7 @@
 ---
 title: "The Seven-Step Cover-Up"
 author: "Mark Gingrass"
-date: 2025-01-31
+date: 2025-09-08
 categories: ["Politics", "Justice", "Corruption"]
 summary: "A methodical breakdown of seven deliberate steps that reveal a systematic effort to bury evidence related to the Epstein-Maxwell trafficking network using taxpayer resources and government machinery."
 format:
@@ -10,6 +10,7 @@ format:
     toc-depth: 2
     toc-expand: true
 lightbox: true
+image: "images/epstein_trump.webp"
 ---
 
 # The Seven-Step Cover-Up

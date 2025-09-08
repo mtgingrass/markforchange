@@ -2,7 +2,7 @@
 title: "The Palantir Surveillance State: Peter Thiel's Growing Control"
 date: "2025-08-29"
 categories: [politics, technology, surveillance]
-image: "images/palantir-surveillance.png"
+image: "images/palantir.png"
 ---
 
 *Note: This post is based on analysis originally shared by Reddit user nycdiveshack. Their detailed research provides a concerning picture of growing surveillance infrastructure in America.*
