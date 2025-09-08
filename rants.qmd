@@ -59,7 +59,25 @@ No sugar-coating. No political correctness. Just the things that need to be said
 
 
 <!-- 2025-09-05 -->
-<div class="rant-day" data-date="2025-09-05">
+
+
+<!-- 2025-09-08 -->
+<div class="rant-day" data-date="2025-09-08">
+<div class="date-header">
+<span class="date">September 08, 2025</span>
+</div>
+
+<div class="rant-entry" id="rant-2025-09-08-1757366923607">
+<div class="time-stamp">
+5:28 PM
+<a href="#rant-2025-09-08-1757366923607" class="rant-anchor" title="Link to this rant">🔗</a>
+</div>
+<div class="rant-content">
+So, considering race in college admissions is racist, but presuming guilt based on race is not. This Supreme Court has gone bonkers.
+</div>
+</div>
+
+</div><div class="rant-day" data-date="2025-09-05">
 <div class="date-header">
 <span class="date">September 05, 2025</span>
 </div>
