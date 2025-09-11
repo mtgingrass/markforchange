@@ -62,7 +62,25 @@ No sugar-coating. No political correctness. Just the things that need to be said
 
 
 <!-- 2025-09-08 -->
-<div class="rant-day" data-date="2025-09-08">
+
+
+<!-- 2025-09-11 -->
+<div class="rant-day" data-date="2025-09-11">
+<div class="date-header">
+<span class="date">September 11, 2025</span>
+</div>
+
+<div class="rant-entry" id="rant-2025-09-11-1757605951689">
+<div class="time-stamp">
+11:52 AM
+<a href="#rant-2025-09-11-1757605951689" class="rant-anchor" title="Link to this rant">🔗</a>
+</div>
+<div class="rant-content">
+Have you SEEN the love for their martyr yesterday and the all out hate and calls for war against their radical left enemies that shot him? BEFORE the shooter is identified? You don't think JD Vance could take up Trump's cross?
+</div>
+</div>
+
+</div><div class="rant-day" data-date="2025-09-08">
 <div class="date-header">
 <span class="date">September 08, 2025</span>
 </div>
