@@ -73,6 +73,16 @@ No sugar-coating. No political correctness. Just the things that need to be said
 <span class="date">September 18, 2025</span>
 </div>
 
+<div class="rant-entry" id="rant-2025-09-18-1758192025417">
+<div class="time-stamp">
+10:40 AM
+<a href="#rant-2025-09-18-1758192025417" class="rant-anchor" title="Link to this rant">🔗</a>
+</div>
+<div class="rant-content">
+This is a test from digital ocean droplet 2
+</div>
+</div>
+
 <div class="rant-entry" id="rant-2025-09-18-1758191382083">
 <div class="time-stamp">
 10:29 AM
