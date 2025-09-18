@@ -65,7 +65,36 @@ No sugar-coating. No political correctness. Just the things that need to be said
 
 
 <!-- 2025-09-11 -->
-<div class="rant-day" data-date="2025-09-11">
+
+
+<!-- 2025-09-18 -->
+<div class="rant-day" data-date="2025-09-18">
+<div class="date-header">
+<span class="date">September 18, 2025</span>
+</div>
+
+<div class="rant-entry" id="rant-2025-09-18-1758187230494">
+<div class="time-stamp">
+5:20 AM
+<a href="#rant-2025-09-18-1758187230494" class="rant-anchor" title="Link to this rant">🔗</a>
+</div>
+<div class="rant-content">
+Let's be clear: It doesn't matter what Kimmel said. It only matters that he was silenced by the government. 
+
+Strike back with the only language they understand: **money**. 
+
+Cancel subscriptions to:
+- Disney
+- ESPN  
+- Hulu
+- Paramount
+- etc.
+
+Contact them and tell them it's because they are bending the knee to Trump.
+</div>
+</div>
+
+</div><div class="rant-day" data-date="2025-09-11">
 <div class="date-header">
 <span class="date">September 11, 2025</span>
 </div>
