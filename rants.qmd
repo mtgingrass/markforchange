@@ -68,7 +68,27 @@ No sugar-coating. No political correctness. Just the things that need to be said
 
 
 <!-- 2025-09-18 -->
-<div class="rant-day" data-date="2025-09-18">
+
+
+<!-- 2025-10-02 -->
+<div class="rant-day" data-date="2025-10-02">
+<div class="date-header">
+<span class="date">October 02, 2025</span>
+</div>
+
+<div class="rant-entry" id="rant-2025-10-02-1759413607701">
+<div class="time-stamp">
+10:00 AM
+<a href="#rant-2025-10-02-1759413607701" class="rant-anchor" title="Link to this rant">🔗</a>
+</div>
+<div class="rant-content">
+Republicans are shutting it down so they can delay swearing in the new democrat which would put them over the required number of petitioners to release the epstein files. All democrats have signed on, but only 4 
+  (FOUR!) republicans have signed on. They needed the one new democrat who won their special election last week to sign on, but mike johnson and republicans refuse to swear her in to prevent that from happening. Republicans are literally protecting
+   billionaires who raped children.
+</div>
+</div>
+
+</div><div class="rant-day" data-date="2025-09-18">
 <div class="date-header">
 <span class="date">September 18, 2025</span>
 </div>
