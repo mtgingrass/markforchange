@@ -55,19 +55,29 @@ No sugar-coating. No political correctness. Just the things that need to be said
 
 <div class="rants-timeline">
 
-<!-- 2025-08-29 -->
+<!-- 2026-01-09 -->
+<div class="rant-day" data-date="2026-01-09">
+<div class="date-header">
+<span class="date">January 09, 2026</span>
+</div>
 
+<div class="rant-entry" id="rant-2026-01-09-17679626073N">
+<div class="time-stamp">
+7:44 AM
+<a href="#rant-2026-01-09-17679626073N" 
+class="rant-anchor" title="Link to this rant">🔗</a>
+</div>
+<div class="rant-content">
 
-<!-- 2025-09-05 -->
+Shooting our citizens in the street. Causing an entire city to close schools…
 
+What the fuck. What the fuck is wrong with these people?
 
-<!-- 2025-09-08 -->
+American schools are being closed due to the threat of violence from the federal government. 
 
-
-<!-- 2025-09-11 -->
-
-
-<!-- 2025-09-18 -->
+I think a lot of people are not understanding the full gravity of the situation.
+</div>
+</div>
 
 
 <!-- 2025-10-02 -->
