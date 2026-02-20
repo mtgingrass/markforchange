@@ -171,9 +171,9 @@ website:
 <section id="volunteer" class="cta-section">
   <div class="container">
     <div class="cta-card">
-      <h2 class="cta-title">Ready to Turn District 3 Blue?</h2>
+      <h2 class="cta-title">Ready to Change District 3 for the Better?</h2>
       <p class="cta-subtitle">
-        Whether I run or support another Democrat, we need your help to build a movement that puts people first.
+        We need your help to build a movement that puts people first. People Over Party!
       </p>
       <div class="cta-buttons">
         <a href="contact.html" class="btn btn-light btn-lg">Get in Touch</a>
@@ -225,40 +225,15 @@ async function loadBlogPosts() {
       blogScroll.innerHTML += postCard;
     });
   } catch (error) {
-    // Fallback to sample posts if posts.json doesn't exist yet
-    const samplePosts = [
-      {
-        date: '2025-08-20',
-        title: 'The Consolidation Pendulum: Finding Balance in an Age of Endless Reorganization',
-        description: 'Corporate consolidation and government reorganization isn\'t inherently good or bad. It\'s about finding the right balance.',
-        path: 'posts/2025-08-20-consolidation-balance/'
-      },
-      {
-        date: '2025-08-04',
-        title: 'The Epstein Files: Why Transparency Matters',
-        description: 'Congressional battles over releasing files expose troubling priorities.',
-        path: 'posts/2025-08-04-epstein-files-accountability/'
-      },
-      {
-        date: '2025-08-01',
-        title: 'Why Vote Democrat in a Red State?',
-        description: 'Building a future that works for all South Carolinians.',
-        path: 'posts/2025-08-01-why-vote-democrat-building-future/'
-      }
-    ];
-    
+    // Show message when no posts exist
     const blogScroll = document.getElementById('blogScroll');
-    samplePosts.forEach(post => {
-      const postCard = `
-        <div class="blog-card">
-          <div class="blog-date">${formatDate(post.date)}</div>
-          <h3 class="blog-title">${post.title}</h3>
-          <p class="blog-excerpt">${post.description}</p>
-          <a href="${post.path}" class="blog-link">Read More <i class="bi bi-arrow-right"></i></a>
-        </div>
-      `;
-      blogScroll.innerHTML += postCard;
-    });
+    blogScroll.innerHTML = `
+      <div class="blog-card no-posts">
+        <div class="blog-date">Coming Soon</div>
+        <h3 class="blog-title">New Content Coming Soon</h3>
+        <p class="blog-excerpt">Check back soon for the latest updates and insights.</p>
+      </div>
+    `;
   }
 }
 
