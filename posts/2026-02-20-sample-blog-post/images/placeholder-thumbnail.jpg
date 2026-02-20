@@ -1,0 +1,13 @@
+PLACEHOLDER_IMAGE_FILE
+
+This is a placeholder file for the blog post thumbnail image. In a real implementation, this would be replaced with an actual JPG image file that serves as the featured image for the blog post.
+
+The image should be:
+- Approximately 1200x600 pixels for optimal social media sharing
+- Relevant to the blog post content
+- High quality and professional looking
+- Properly compressed for web use
+
+To replace this placeholder:
+1. Delete this text file
+2. Add your actual JPG image with the same filename: placeholder-thumbnail.jpg

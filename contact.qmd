@@ -83,7 +83,7 @@ about:
 
 <div class="contact-container">
   <h1>Join the Movement</h1>
-  <p>Whether you want to support my potential candidacy or help another Democrat turn District 3 blue, let's connect and build this movement together.</p>
+  <p>Whether you want to support my potential candidacy or help another lead D3, let's connect and build this movement together.</p>
 
   <form name="contact" method="POST" netlify>
     <label for="name">Name:</label>

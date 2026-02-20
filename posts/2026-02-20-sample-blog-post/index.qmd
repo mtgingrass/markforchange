@@ -1,0 +1,27 @@
+---
+title: "Sample Blog Post"
+date: "2026-02-20"
+categories: ["politics", "district-3"]
+image: "images/placeholder-thumbnail.jpg"
+---
+
+This is a placeholder blog post to demonstrate the structure and layout of the blog section. 
+
+## What This Post Would Cover
+
+In a real blog post, I would discuss important issues affecting District 3, share updates on policy positions, and provide analysis on current events impacting South Carolina families.
+
+### Key Topics Might Include:
+
+- **Economic Development**: How we can bring more good-paying jobs to our district
+- **Healthcare Access**: Making quality healthcare affordable for all families
+- **Education Funding**: Supporting our schools and teachers
+- **Infrastructure**: Improving roads, bridges, and broadband access
+
+## Community Engagement
+
+Real posts would also highlight community events, town halls, and opportunities for residents to get involved in the political process.
+
+---
+
+*This is just a sample post. Real content coming soon as we build momentum for positive change in District 3.*

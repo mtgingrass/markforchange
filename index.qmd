@@ -1,5 +1,5 @@
 ---
-title: "Mark for Change - Building a Democratic Future in South Carolina"
+title: "Mark for Change - Building a Better Future in South Carolina"
 format:
   html:
     page-layout: custom

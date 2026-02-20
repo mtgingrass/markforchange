@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "title": "Sample Blog Post",
+    "date": "2026-02-20",
+    "categories": [
+      "\"politics\"",
+      "\"district-3\""
+    ],
+    "path": "posts/2026-02-20-sample-blog-post/",
+    "description": "This is a placeholder blog post to demonstrate the structure and layout of the blog section...."
+  }
+]
