@@ -112,7 +112,7 @@ website:
             <i class="bi bi-people-fill"></i>
           </div>
           <h3>Working Families First</h3>
-          <p>Supporting policies that help middle-class families thrive, not just survive.</p>
+          <p>Supporting policies that help all families economically.</p>
         </div>
       </div>
       <div class="col-md-4">
