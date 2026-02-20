@@ -41,7 +41,7 @@ main {
   main {
     background-color: #ffffff !important;
   }
-}
+} 
 </style>
 
 <div class="rants-container" style="background-color: #0a0a0a; min-height: 100vh;">
