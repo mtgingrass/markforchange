@@ -105,7 +105,7 @@ website:
 <!-- Platform Section -->
 <section id="platform" class="platform-section">
   <div class="container">
-    <h2 class="section-title text-center">What Democrats Should Fight For</h2>
+    <h2 class="section-title text-center">What We Should Fight For</h2>
     <div class="row g-4">
       <div class="col-md-4">
         <div class="platform-card">
@@ -145,7 +145,7 @@ website:
       <div class="col-lg-6">
         <h2 class="section-title">Ready to Serve</h2>
         <p class="lead">
-          Whether as a candidate or supporting another Democrat, I bring real-world experience: veteran, business leader, and problem solver ready to help transform District 3.
+          I bring real-world experience: veteran, business leader, and problem solver ready to help transform District 3.
         </p>
         <ul class="experience-list">
           <li>U.S. Air Force Veteran</li>
@@ -158,7 +158,7 @@ website:
       <div class="col-lg-6">
         <div class="quote-card">
           <blockquote>
-            "District 3 deserves a Democrat who will listen, learn, and act with courage—whether that's me or someone else ready to lead."
+            "District 3 deserves a leader who will listen, learn, and act with courage."
           </blockquote>
           <cite>- Mark Gingrass</cite>
         </div>
