@@ -26,7 +26,7 @@ website:
           So Are We.
         </h1>
         <p class="hero-subtitle">
-          Whether it's me or another strong Democrat, District 3 deserves leadership that puts people first. Let's build a movement together.
+          District 3 deserves leadership that puts people first. Let's build a movement together.
         </p>
         <div class="hero-buttons">
           <a href="#platform" class="btn btn-primary btn-lg">The Vision</a>
@@ -51,10 +51,10 @@ website:
 <section class="message-section">
   <div class="container">
     <div class="message-card">
-      <h2 class="section-title text-center">Time for a Democratic Voice in District 3</h2>
+      <h2 class="section-title text-center">Time for a Real Voice in District 3</h2>
       <p class="lead text-center">
         Our district needs representation that listens to real concerns and delivers real solutions. 
-        I'm ready to support any Democrat who will fight for working families and bring change to South Carolina.
+        I'm ready to support any a candidate who will fight for working families and bring change to South Carolina.
       </p>
     </div>
   </div>
