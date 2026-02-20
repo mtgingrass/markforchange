@@ -26,7 +26,7 @@ website:
           So Are We.
         </h1>
         <p class="hero-subtitle">
-          District 3 deserves leadership that puts people first. Let's build a movement together.
+          District 3 deserves leadership that puts people first. People Over Party!
         </p>
         <div class="hero-buttons">
           <a href="#platform" class="btn btn-primary btn-lg">The Vision</a>
