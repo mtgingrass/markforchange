@@ -53,8 +53,7 @@ website:
     <div class="message-card">
       <h2 class="section-title text-center">Time for a Real Voice in District 3</h2>
       <p class="lead text-center">
-        Our district needs representation that listens to real concerns and delivers real solutions. 
-        I'm ready to support any a candidate who will fight for working families and bring change to South Carolina.
+      Our district deserves representation that actually listens to our concerns and delivers tangible solutions. I'm ready to support any candidate who will fight for working families and bring change to South Carolina.
       </p>
     </div>
   </div>
@@ -69,8 +68,8 @@ website:
           <i class="bi bi-fire text-danger"></i> Unfiltered Thoughts
         </h2>
         <p class="lead">
-          Raw opinions, hot takes, and things that need to be said about our political landscape.
-          No sugar-coating, no political correctness—just truth.
+          Things that need to be said.
+          No sugar-coating, no political correctness. Just the hard truth.
         </p>
       </div>
       <div class="col-lg-4 text-lg-end">
